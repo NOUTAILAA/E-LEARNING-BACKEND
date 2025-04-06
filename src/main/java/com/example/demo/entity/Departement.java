@@ -1,8 +1,14 @@
 package com.example.demo.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Departement {
@@ -16,6 +22,9 @@ public class Departement {
     @OneToMany(mappedBy = "departement")  // mappedBy indique que l'association est gérée par la propriété departement dans Apprenant
     @JsonIgnore  // Ignorer la sérialisation de la relation apprenants pour éviter la boucle infinie
     private List<Apprenant> apprenants;
+    @OneToMany(mappedBy = "departement")  // mappedBy indique que l'association est gérée par la propriété departement dans Manager
+    @JsonIgnore  // Ignorer la sérialisation de la relation apprenants pour éviter la boucle infinie
+    private List<Manager> managers;
 
     // Getters et Setters
     public Long getId() {
@@ -41,4 +50,13 @@ public class Departement {
     public void setApprenants(List<Apprenant> apprenants) {
         this.apprenants = apprenants;
     }
+
+	public List<Manager> getManagers() {
+		return managers;
+	}
+
+	public void setManagers(List<Manager> managers) {
+		this.managers = managers;
+	}
+    
 }

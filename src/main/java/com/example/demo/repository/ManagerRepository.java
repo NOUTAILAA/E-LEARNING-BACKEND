@@ -10,5 +10,7 @@ import com.example.demo.entity.Manager;
 @Repository
 public interface ManagerRepository extends JpaRepository<Manager, Long> {
     Optional<Manager> findByEmailAndPassword(String email, String password);
+    Optional<Manager> findByEmail(String email);
+    Optional<Manager> findByTelephone(String telephone);
 
 }

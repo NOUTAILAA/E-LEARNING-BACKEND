@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -41,5 +42,17 @@ public class DepartementController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
         departementService.delete(id);
+    }
+    @PutMapping("/{id}")
+    public ResponseEntity<Departement> update(@PathVariable Long id, @RequestBody Departement departementDetails) {
+        return departementService.findById(id)
+                .map(departement -> {
+                    // Mettez à jour les informations du département avec les nouvelles données
+                    departement.setNom(departementDetails.getNom());
+                    // Sauvegardez les changements
+                    Departement updatedDepartement = departementService.save(departement);
+                    return ResponseEntity.ok(updatedDepartement);
+                })
+                .orElse(ResponseEntity.notFound().build());
     }
 }
