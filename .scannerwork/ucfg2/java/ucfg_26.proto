@@ -1,0 +1,16 @@
+
+Vcom.example.demo.service.ManagerService#findById(Ljava/lang/Long;)Ljava/util/Optional;y
+oC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/ManagerService.javaI I(%"1*Ì
+1J J( ¨
+¥
+J J( 3
+%0-com.example.demo.repository.ManagerRepository"__id*^
+
+__unknown_file (B*@)
+'com.example.demo.service.ManagerService"
+managerRepository"
+J J(.
+"": 
+I& I(-
+idjava.lang.LongB+)
+'com.example.demo.service.ManagerServiceH

@@ -1,0 +1,5 @@
+com.example.demo.controller.CoursController#createCours(Lcom/example/demo/entity/Cours;)Lcom/example/demo/entity/Cours;
+false
+142abbd33962bccee98bac4511e08aba
+==
+saveCours com.example.demo.service.CoursService#saveCours(Lcom/example/demo/entity/Cours;)Lcom/example/demo/entity/Cours;

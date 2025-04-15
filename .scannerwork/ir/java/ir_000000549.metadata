@@ -1,0 +1,5 @@
+com.example.demo.controller.QuizController#getQuizzesByChapitre(Ljava/lang/Long;)Ljava/util/List;
+false
+cd7c3cee95f6ce7f64a785313aa89e66
+==
+getQuizzesByChapitreId com.example.demo.service.QuizService#getQuizzesByChapitreId(Ljava/lang/Long;)Ljava/util/List;

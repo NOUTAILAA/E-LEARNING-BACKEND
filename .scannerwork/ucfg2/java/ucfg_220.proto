@@ -1,0 +1,14 @@
+
+Ccom.example.demo.service.ApprenantService#findAll()Ljava/util/List;{
+qC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/ApprenantService.java (""1*Ò
+1 ("®
+«
+ ("5
+%0/com.example.demo.repository.ApprenantRepository"__id*b
+
+__unknown_file (F*D+
+)com.example.demo.service.ApprenantService"
+apprenantRepository"
+ (-
+""B-+
+)com.example.demo.service.ApprenantServiceH

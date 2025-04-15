@@ -1,0 +1,5 @@
+com.example.demo.controller.ProjetController#create(Lcom/example/demo/entity/Projet;)Lcom/example/demo/entity/Projet;
+false
+ca981fb36297f48d6a1b21f34239ee50
+==
+save com.example.demo.service.ProjetService#save(Lcom/example/demo/entity/Projet;)Lcom/example/demo/entity/Projet;

@@ -1,0 +1,7 @@
+com.example.demo.service.UtilisateurService#setDefaultRole(Lcom/example/demo/entity/Utilisateur;)V
+false
+bca8bdfc518957ad8243c227170c190b
+java.lang.String#isEmpty()Z
+==
+getRole com.example.demo.entity.Utilisateur#getRole()Ljava/lang/String;
+setRole com.example.demo.entity.Utilisateur#setRole(Ljava/lang/String;)V

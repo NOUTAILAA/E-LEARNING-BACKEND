@@ -1,0 +1,140 @@
+
+1.0'noutailaa_elearning-application-backendJavaFrontend"1744384114033*java2.B∑
+G
+Bsrc/main/java/com/example/demo/repository/ApprenantRepository.java2
+
+package4
+ 
+com.example.demo.repository5
+4
+/com.example.demo.repository.ApprenantRepository7
+
+	interface8
+
+access9
+
+public10
+
+simple name11
+
+ApprenantRepository12
++
+%Recovered#typeBindingLJpaRepository;014
+
+unknown15
+
+
+implements16
+
+
+Repository18
+
+annotated by19
+(
+"Recovered#typeBindingLRepository;021
+
+
+uses22
+'
+!com.example.demo.entity.Apprenant24
+á
+Äcom.example.demo.repository.ApprenantRepository#findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;26
+
+method27
+
+findByEmailAndPassword28
+i
+ccom.example.demo.repository.ApprenantRepository#findByEmail(Ljava/lang/String;)Ljava/util/Optional;30
+
+findByEmail31
+{
+ucom.example.demo.repository.ApprenantRepository#findByManagerIsNullAndDepartementId(Ljava/lang/Long;)Ljava/util/List;33
+)
+#findByManagerIsNullAndDepartementId34J
+
+1
+12Z
+
+3	
+354j—
+9
+64
+678 *
+1 (%:3B
+	
+9
+10
+
+
+11
+12
+
+13
+131415
+
+17
+171815
+@
+25:
+252627 *
+1 (26:3B
+	
+9
+10
+
+
+11
+28
+@
+32:
+323327 *
+1 (	26:3B
+	
+9
+10
+
+
+11
+34
+
+20
+202115
+@
+29:
+293027 *
+1 (26:3B
+	
+9
+10
+
+
+11
+31
+
+23
+232415r”
+
+61316*
+1. (;
+
+61719*
+1 (
+
+62022*
+1 (
+
+61322*
+1. (;
+
+62322*
+1< (E
+
+252322*
+1 (
+
+292322*
+1 (
+
+322322*
+1
+ (

@@ -1,0 +1,5 @@
+com.example.demo.controller.ChapitreController#getChapitresByCoursId(Ljava/lang/Long;)Ljava/util/List;
+false
+37c40d9e02b462abb6807b703e78d932
+==
+getChapitresByCoursId com.example.demo.service.ChapitreService#getChapitresByCoursId(Ljava/lang/Long;)Ljava/util/List;

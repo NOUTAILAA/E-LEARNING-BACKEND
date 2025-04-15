@@ -1,0 +1,16 @@
+
+kcom.example.demo.service.QuizService#saveQuiz(Lcom/example/demo/entity/Quiz;)Lcom/example/demo/entity/Quiz;v
+lC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/QuizService.java ("1*Ã
+1 (Ÿ
+œ
+ (0
+%0*com.example.demo.repository.QuizRepository"__id*X
+
+__unknown_file (<*:&
+$com.example.demo.service.QuizService"
+quizRepository"
+ ()
+"":0
+ ("$
+quizcom.example.demo.entity.QuizB(&
+$com.example.demo.service.QuizServiceH

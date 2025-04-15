@@ -1,0 +1,33 @@
+
+{com.example.demo.service.SuperAdminService#findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;|
+rC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/SuperAdminService.java,  ,(6"1*†
+1- -(#±
+Æ
+- -(#6
+%00com.example.demo.repository.SuperAdminRepository"__id*d
+
+__unknown_file (H*F,
+*com.example.demo.service.SuperAdminService"
+superAdminRepository¥±
+- -(K
+%1java.util.Optional"Åcom.example.demo.repository.SuperAdminRepository#findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;*T
+
+__unknown_file (8
+6
+%00com.example.demo.repository.SuperAdminRepository*7
+
+__unknown_file (
+
+emailjava.lang.String*:
+
+__unknown_file (
+
+passwordjava.lang.String2<findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)"&
+- -(L
+
+%1java.util.Optional:%
+,7 ,(D
+emailjava.lang.String:(
+,E ,(T
+passwordjava.lang.StringB.,
+*com.example.demo.service.SuperAdminServiceH

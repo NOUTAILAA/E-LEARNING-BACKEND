@@ -1,0 +1,5 @@
+com.example.demo.controller.CoursController#getCoursByProjet(Ljava/lang/Long;)Ljava/util/List;
+false
+d820bb1841add6ac4d99d4a94e20e444
+==
+getCoursByProjetId com.example.demo.service.CoursService#getCoursByProjetId(Ljava/lang/Long;)Ljava/util/List;

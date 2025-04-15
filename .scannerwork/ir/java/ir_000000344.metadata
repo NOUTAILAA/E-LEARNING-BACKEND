@@ -1,0 +1,7 @@
+com.example.demo.controller.ManagerController#getApprenantsByManager(Ljava/lang/Long;)LResponseEntity;
+false
+8b8670f5e5e03c6622b745690301ec2d
+java.util.Optional#map(Ljava/util/function/Function;)Ljava/util/Optional;
+==
+!unknownMethod! !unknownMethod!
+findById com.example.demo.service.ManagerService#findById(Ljava/lang/Long;)Ljava/util/Optional;

@@ -1,0 +1,33 @@
+
+xcom.example.demo.service.ManagerService#findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;y
+oC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/ManagerService.javaU U(3"1*ê
+1V V( ®
+•
+V V( 3
+%0-com.example.demo.repository.ManagerRepository"__id*^
+
+__unknown_file (B*@)
+'com.example.demo.service.ManagerService"
+managerRepository≠™
+V V(H
+%1java.util.Optional"~com.example.demo.repository.ManagerRepository#findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;*Q
+
+__unknown_file (5
+3
+%0-com.example.demo.repository.ManagerRepository*7
+
+__unknown_file (
+
+emailjava.lang.String*:
+
+__unknown_file (
+
+passwordjava.lang.String2<findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)"&
+V V(I
+
+%1java.util.Optional:%
+U4 U(A
+emailjava.lang.String:(
+UB U(Q
+passwordjava.lang.StringB+)
+'com.example.demo.service.ManagerServiceH

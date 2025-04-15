@@ -1,0 +1,21 @@
+
+Icom.example.demo.controller.SuperAdminController#getAll()Ljava/util/List;‚
+xC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/SuperAdminController.java (""1*©
+1 ( ®
+«
+ ( 0
+%0*com.example.demo.service.SuperAdminService"__id*g
+
+__unknown_file (K*I2
+0com.example.demo.controller.SuperAdminController"
+superAdminServiceÄÁ
+ (*
+%1java.util.List"Dcom.example.demo.service.SuperAdminService#findAll()Ljava/util/List;*N
+
+__unknown_file (2
+0
+%0*com.example.demo.service.SuperAdminService2	findAll()""
+ (+
+
+%1java.util.ListB42
+0com.example.demo.controller.SuperAdminControllerH

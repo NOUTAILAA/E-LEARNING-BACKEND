@@ -1,0 +1,7 @@
+com.example.demo.controller.ManagerController#update(Ljava/lang/Long;Lcom/example/demo/entity/Manager;)Lcom/example/demo/entity/Manager;
+false
+94b732b3f9e1ea69b9da531e3ddd3c5f
+java.util.Optional#map(Ljava/util/function/Function;)Ljava/util/Optional;
+java.util.Optional#orElseThrow(Ljava/util/function/Supplier;)Ljava/lang/Object;
+==
+findById com.example.demo.service.ManagerService#findById(Ljava/lang/Long;)Ljava/util/Optional;

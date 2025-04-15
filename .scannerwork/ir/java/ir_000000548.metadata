@@ -1,0 +1,5 @@
+com.example.demo.controller.QuizController#getQuizById(Ljava/lang/Long;)Lcom/example/demo/entity/Quiz;
+false
+0a750bda9b854386c0f895b4239b0883
+==
+getQuizById com.example.demo.service.QuizService#getQuizById(Ljava/lang/Long;)Lcom/example/demo/entity/Quiz;

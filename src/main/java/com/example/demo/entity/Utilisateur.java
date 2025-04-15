@@ -4,8 +4,7 @@ import lombok.*;
 import java.util.Date;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Inheritance(strategy = InheritanceType.JOINED) // Stratégie JOINED
 
 @Entity

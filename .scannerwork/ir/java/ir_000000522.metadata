@@ -1,0 +1,5 @@
+com.example.demo.controller.CoursController#getCoursById(Ljava/lang/Long;)Lcom/example/demo/entity/Cours;
+false
+bf665f4ce4ccf22f91fead75adff5518
+==
+getCoursById com.example.demo.service.CoursService#getCoursById(Ljava/lang/Long;)Lcom/example/demo/entity/Cours;

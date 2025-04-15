@@ -1,0 +1,5 @@
+com.example.demo.controller.ChapitreController#deleteChapitre(Ljava/lang/Long;)V
+false
+f915dfe6b3b8327ca9b6cee8d0da0c89
+==
+deleteChapitre com.example.demo.service.ChapitreService#deleteChapitre(Ljava/lang/Long;)V

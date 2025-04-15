@@ -1,0 +1,13 @@
+com.example.demo.service.ManagerService#assignApprenantsToManager(Ljava/lang/Long;Ljava/util/List;)Lcom/example/demo/entity/Manager;
+false
+a41a66d05afb18063d1cef903d8a73e6
+java.lang.IllegalArgumentException#<init>(Ljava/lang/String;)V
+java.lang.IllegalArgumentException#instance-init#
+java.lang.Long#equals(Ljava/lang/Object;)Z
+==
+!unknownMethod! !unknownMethod!
+getDepartement com.example.demo.entity.Apprenant#getDepartement()Lcom/example/demo/entity/Departement;
+getDepartement com.example.demo.entity.Manager#getDepartement()Lcom/example/demo/entity/Departement;
+getId com.example.demo.entity.Departement#getId()Ljava/lang/Long;
+getId com.example.demo.entity.Utilisateur#getId()Ljava/lang/Long;
+setManager com.example.demo.entity.Apprenant#setManager(Lcom/example/demo/entity/Manager;)V

@@ -1,0 +1,62 @@
+
+„com.example.demo.controller.DepartementController#create(Lcom/example/demo/entity/Departement;)Lcom/example/demo/entity/Departement;ƒ
+yC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/DepartementController.java ("startingBlock*ú
+startingBlock (Cž
+›
+ (
+%2"
+__annotate*+
+
+__unknown_file (
+PostMapping*P
+
+__unknown_file (4
+2
+departement#com.example.demo.entity.Departementž
+›
+ (*
+%3"
+__annotate*+
+
+__unknown_file (
+RequestBody*P
+
+__unknown_file (4
+2
+departement#com.example.demo.entity.Departement—
+”
+7 (B2
+departement#com.example.demo.entity.Departement"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*ƒ
+1   (!±
+®
+   (!1
+%0+com.example.demo.service.DepartementService"__id*i
+
+__unknown_file (M*K3
+1com.example.demo.controller.DepartementController"
+departementService†ƒ
+   (3)
+%1#com.example.demo.entity.Departement"|com.example.demo.service.DepartementService#save(Lcom/example/demo/entity/Departement;)Lcom/example/demo/entity/Departement;*O
+
+__unknown_file (3
+1
+%0+com.example.demo.service.DepartementService*P
+
+__unknown_file (4
+2
+departement#com.example.demo.entity.Departement2+save(Lcom/example/demo/entity/Departement;)"7
+   (4+
+)
+%1#com.example.demo.entity.Departement:>
+ (B2
+departement#com.example.demo.entity.DepartementB53
+1com.example.demo.controller.DepartementControllerH

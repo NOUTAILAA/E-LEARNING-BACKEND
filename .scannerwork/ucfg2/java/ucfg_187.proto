@@ -1,0 +1,62 @@
+
+ƒcom.example.demo.controller.ChapitreController#createChapitre(Lcom/example/demo/entity/Chapitre;)Lcom/example/demo/entity/Chapitre;€
+vC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/ChapitreController.java! !(""startingBlock*è
+startingBlock!" !(B˜
+•
+   (
+%2"
+__annotate*+
+
+__unknown_file (
+PostMapping*J
+
+__unknown_file (.
+,
+chapitre com.example.demo.entity.Chapitre˜
+•
+!# !(/
+%3"
+__annotate*+
+
+__unknown_file (
+RequestBody*J
+
+__unknown_file (.
+,
+chapitre com.example.demo.entity.Chapitre‘
+Ž
+!9 !(A,
+chapitre com.example.demo.entity.Chapitre"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*ï
+1" "(¨
+¥
+" "(.
+%0(com.example.demo.service.ChapitreService"__id*c
+
+__unknown_file (G*E0
+.com.example.demo.controller.ChapitreController"
+chapitreServiceþû
+" "(5&
+%1 com.example.demo.entity.Chapitre"{com.example.demo.service.ChapitreService#saveChapitre(Lcom/example/demo/entity/Chapitre;)Lcom/example/demo/entity/Chapitre;*L
+
+__unknown_file (0
+.
+%0(com.example.demo.service.ChapitreService*J
+
+__unknown_file (.
+,
+chapitre com.example.demo.entity.Chapitre20saveChapitre(Lcom/example/demo/entity/Chapitre;)"4
+" "(6(
+&
+%1 com.example.demo.entity.Chapitre:8
+!# !(A,
+chapitre com.example.demo.entity.ChapitreB20
+.com.example.demo.controller.ChapitreControllerH

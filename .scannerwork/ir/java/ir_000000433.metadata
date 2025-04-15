@@ -1,0 +1,5 @@
+com.example.demo.service.SuperAdminService#findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;
+false
+284646ca014a4edc05a41676ab8013f5
+==
+findByEmailAndPassword com.example.demo.repository.SuperAdminRepository#findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;

@@ -1,0 +1,16 @@
+com.example.demo.service.ApprenantService#save(Lcom/example/demo/entity/Apprenant;)Lcom/example/demo/entity/Apprenant;
+false
+59846bfce69002df289cdbcecb2d3a28
+com.example.demo.util.PasswordGenerator#generateRandomPassword()Ljava/lang/String;
+java.lang.String#isEmpty()Z
+==
+!unknownMethod! !unknownMethod!
+getDepartement com.example.demo.entity.Apprenant#getDepartement()Lcom/example/demo/entity/Departement;
+getEmail com.example.demo.entity.Utilisateur#getEmail()Ljava/lang/String;
+getId com.example.demo.entity.Departement#getId()Ljava/lang/Long;
+getNom com.example.demo.entity.Utilisateur#getNom()Ljava/lang/String;
+getRole com.example.demo.entity.Utilisateur#getRole()Ljava/lang/String;
+sendActivationEmail com.example.demo.service.EmailService#sendActivationEmail(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+setDepartement com.example.demo.entity.Apprenant#setDepartement(Lcom/example/demo/entity/Departement;)V
+setPassword com.example.demo.entity.Utilisateur#setPassword(Ljava/lang/String;)V
+setRole com.example.demo.entity.Utilisateur#setRole(Ljava/lang/String;)V

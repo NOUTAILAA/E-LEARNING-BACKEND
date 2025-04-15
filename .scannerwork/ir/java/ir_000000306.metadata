@@ -1,0 +1,8 @@
+com.example.demo.controller.ApprenantController#delete(Ljava/lang/Long;)LResponseEntity;
+false
+d63c924f2bd0c4260ab7c0945e3151fc
+java.util.Optional#isPresent()Z
+==
+!unknownMethod! !unknownMethod!
+delete com.example.demo.service.ApprenantService#delete(Ljava/lang/Long;)V
+findById com.example.demo.service.ApprenantService#findById(Ljava/lang/Long;)Ljava/util/Optional;

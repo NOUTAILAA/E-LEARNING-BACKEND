@@ -1,0 +1,109 @@
+
+1.0'noutailaa_elearning-application-backendJavaFrontend"1744384114332*java2.Bž
+<
+7src/main/java/com/example/demo/util/SecurityConfig.java2
+
+package4
+
+com.example.demo.util5
+)
+$com.example.demo.util.SecurityConfig7
+
+
+class8
+
+access9
+
+public10
+
+simple name11
+
+SecurityConfig12
+
+Configuration14
+
+unknown15
+
+annotated by16
++
+%Recovered#typeBindingLConfiguration;018
+
+
+uses19
+M
+Gcom.example.demo.util.SecurityConfig#passwordEncoder()LPasswordEncoder;21
+
+method22
+
+passwordEncoder23
+
+PasswordEncoder25
+
+returns26
+
+
+Bean28
+"
+Recovered#typeBindingLBean;030J
+
+1
+12Z
+
+3	
+354já
+
+13
+131415
+
+29
+293015
+
+24
+242515
+
+17
+171815
+@
+20:
+202122 *
+1 (26:3B
+	
+9
+10
+
+
+11
+23
+9
+64
+678 *
+1	 	(:3B
+	
+9
+10
+
+
+11
+12
+
+27
+272815r 
+
+61316*
+1 (
+
+61719*
+1 (
+
+202426*
+1 (
+
+202716*
+1 (
+
+202919*
+1 (
+
+
+202419*
+1 (

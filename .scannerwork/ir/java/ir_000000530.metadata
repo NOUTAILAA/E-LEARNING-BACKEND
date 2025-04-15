@@ -1,0 +1,20 @@
+com.example.demo.service.ApprenantService#update(Lcom/example/demo/entity/Apprenant;)Lcom/example/demo/entity/Apprenant;
+false
+a454a8cac730d596df1b2e2190d909d9
+==
+!unknownMethod! !unknownMethod!
+getDateNaissance com.example.demo.entity.Utilisateur#getDateNaissance()Ljava/util/Date;
+getEmail com.example.demo.entity.Utilisateur#getEmail()Ljava/lang/String;
+getId com.example.demo.entity.Utilisateur#getId()Ljava/lang/Long;
+getNom com.example.demo.entity.Utilisateur#getNom()Ljava/lang/String;
+getPassword com.example.demo.entity.Utilisateur#getPassword()Ljava/lang/String;
+getPrenom com.example.demo.entity.Utilisateur#getPrenom()Ljava/lang/String;
+getSexe com.example.demo.entity.Utilisateur#getSexe()Ljava/lang/String;
+getTelephone com.example.demo.entity.Utilisateur#getTelephone()Ljava/lang/String;
+setDateNaissance com.example.demo.entity.Utilisateur#setDateNaissance(Ljava/util/Date;)V
+setEmail com.example.demo.entity.Utilisateur#setEmail(Ljava/lang/String;)V
+setNom com.example.demo.entity.Utilisateur#setNom(Ljava/lang/String;)V
+setPassword com.example.demo.entity.Utilisateur#setPassword(Ljava/lang/String;)V
+setPrenom com.example.demo.entity.Utilisateur#setPrenom(Ljava/lang/String;)V
+setSexe com.example.demo.entity.Utilisateur#setSexe(Ljava/lang/String;)V
+setTelephone com.example.demo.entity.Utilisateur#setTelephone(Ljava/lang/String;)V

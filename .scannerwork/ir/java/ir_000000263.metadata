@@ -1,0 +1,5 @@
+com.example.demo.controller.ProjetController#getByManager(Ljava/lang/Long;)Ljava/util/List;
+false
+7c16dec9880f36908e6204d1624a6807
+==
+findByManagerId com.example.demo.service.ProjetService#findByManagerId(Ljava/lang/Long;)Ljava/util/List;

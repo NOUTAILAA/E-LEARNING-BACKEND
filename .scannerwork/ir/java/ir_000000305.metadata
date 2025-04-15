@@ -1,0 +1,8 @@
+com.example.demo.controller.ApprenantController#getById(Ljava/lang/Long;)LResponseEntity;
+false
+59f5fa3ca9f50b36f83523fad10b63f5
+java.util.Optional#get()Ljava/lang/Object;
+java.util.Optional#isPresent()Z
+==
+!unknownMethod! !unknownMethod!
+findById com.example.demo.service.ApprenantService#findById(Ljava/lang/Long;)Ljava/util/Optional;

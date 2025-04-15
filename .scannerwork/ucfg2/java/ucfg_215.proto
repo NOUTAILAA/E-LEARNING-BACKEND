@@ -1,0 +1,63 @@
+
+icom.example.demo.controller.CoursController#getCoursById(Ljava/lang/Long;)Lcom/example/demo/entity/Cours;}
+sC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/CoursController.java ("startingBlock*›
+startingBlock (4~
+|
+ (
+%2"
+__annotate**
+
+__unknown_file (
+
+GetMapping*2
+
+__unknown_file (
+
+idjava.lang.Long€
+~
+ (+
+%3"
+__annotate*,
+
+__unknown_file (
+PathVariable*2
+
+__unknown_file (
+
+idjava.lang.Longx
+v
+1 (3
+idjava.lang.Long"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*›
+1 (Ÿ
+œ
+ (+
+%0%com.example.demo.service.CoursService"__id*]
+
+__unknown_file (A*?-
++com.example.demo.controller.CoursController"
+coursService¶³
+ (,#
+%1com.example.demo.entity.Cours"ccom.example.demo.service.CoursService#getCoursById(Ljava/lang/Long;)Lcom/example/demo/entity/Cours;*I
+
+__unknown_file (-
++
+%0%com.example.demo.service.CoursService*2
+
+__unknown_file (
+
+idjava.lang.Long2getCoursById(Ljava/lang/Long;)"1
+ (-%
+#
+%1com.example.demo.entity.Cours: 
+ (3
+idjava.lang.LongB/-
++com.example.demo.controller.CoursControllerH

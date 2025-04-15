@@ -1,0 +1,5 @@
+com.example.demo.service.ManagerService#findByEmail(Ljava/lang/String;)Ljava/util/Optional;
+false
+8de2fc99844d8c6c7818acfcc6b41290
+==
+findByEmail com.example.demo.repository.ManagerRepository#findByEmail(Ljava/lang/String;)Ljava/util/Optional;

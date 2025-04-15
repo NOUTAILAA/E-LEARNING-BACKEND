@@ -1,0 +1,63 @@
+
+fcom.example.demo.controller.ChapitreController#getChapitresByCoursId(Ljava/lang/Long;)Ljava/util/List;€
+vC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/ChapitreController.java (/"startingBlock*­
+startingBlock/ (K„
+
+ (#
+%2"
+__annotate**
+
+__unknown_file (
+
+GetMapping*7
+
+__unknown_file (
+
+coursIdjava.lang.Long†
+ƒ
+0 (=
+%3"
+__annotate*,
+
+__unknown_file (
+PathVariable*7
+
+__unknown_file (
+
+coursIdjava.lang.Long}
+{
+C (J
+coursIdjava.lang.Long"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*”
+1 (¨
+¥
+ (.
+%0(com.example.demo.service.ChapitreService"__id*c
+
+__unknown_file (G*E0
+.com.example.demo.controller.ChapitreController"
+chapitreServiceµ²
+ (=
+%1java.util.List"`com.example.demo.service.ChapitreService#getChapitresByCoursId(Ljava/lang/Long;)Ljava/util/List;*L
+
+__unknown_file (0
+.
+%0(com.example.demo.service.ChapitreService*7
+
+__unknown_file (
+
+coursIdjava.lang.Long2'getChapitresByCoursId(Ljava/lang/Long;)""
+ (>
+
+%1java.util.List:%
+0 (J
+coursIdjava.lang.LongB20
+.com.example.demo.controller.ChapitreControllerH

@@ -1,0 +1,14 @@
+
+Acom.example.demo.service.ManagerService#findAll()Ljava/util/List;y
+oC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/ManagerService.java ( "1*Ì
+1   ( ¨
+¥
+   ( 3
+%0-com.example.demo.repository.ManagerRepository"__id*^
+
+__unknown_file (B*@)
+'com.example.demo.service.ManagerService"
+managerRepository"
+   (+
+""B+)
+'com.example.demo.service.ManagerServiceH

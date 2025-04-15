@@ -1,0 +1,47 @@
+
+>__sonar_lambda_4$com.example.demo.controller.ManagerController
+uC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/ManagerController.javaJ J(h"startingBlock*±
+startingBlockJ J(h
+
+
+__unknown_file (
+idjava.lang.Long"__id*U
+
+__unknown_file (9*7/
+-com.example.demo.controller.ManagerController"
+id*
+1*ç
+1J@ J(Ru
+s
+J@ J(W
+%36java.lang.String"__concat* 
+J@ J(R
+Manager avec ID *"
+JU J(W
+
+idjava.lang.Longt
+r
+J@ J(g
+%37java.lang.String"__concat*%
+J@ J(W
+
+%36java.lang.String*
+JZ J(g
+ non trouvÃ©[Y
+J' J(?)
+%38"java.lang.IllegalArgumentException""java.lang.IllegalArgumentExceptionÔ
+Ñ
+J# J(h
+%39">java.lang.IllegalArgumentException#<init>(Ljava/lang/String;)V*G
+
+__unknown_file (+
+)
+%38"java.lang.IllegalArgumentException*5
+
+__unknown_file (
+
+%37java.lang.String"7
+J# J(h+
+)
+%38"java.lang.IllegalArgumentExceptionB
+java.util.function.Supplier

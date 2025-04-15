@@ -4,22 +4,23 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.example.demo.entity.Admin;
 import com.example.demo.entity.Apprenant;
 import com.example.demo.entity.LoginRequest;
 import com.example.demo.entity.Manager;
 import com.example.demo.entity.SuperAdmin;
 import com.example.demo.entity.Utilisateur;
+import com.example.demo.repository.ManagerRepository;
 import com.example.demo.service.AdminService;
 import com.example.demo.service.ApprenantService;
 import com.example.demo.service.ManagerService;
 import com.example.demo.service.SuperAdminService;
-
+import com.example.demo.repository.ApprenantRepository;
     @RestController
     @RequestMapping("/api/")
     public class LoginController {
@@ -32,15 +33,35 @@ import com.example.demo.service.SuperAdminService;
         
         @Autowired
         private ManagerService managerService;
-        
+        @Autowired
+        private ManagerRepository managerRepository;
+        @Autowired
+        private ApprenantRepository apprenantRepository;
         @Autowired
         private SuperAdminService superAdminService;
-
+        @Autowired
+        private PasswordEncoder passwordEncoder;
+        
         @PostMapping("login")
         public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest) {
             String email = loginRequest.getEmail();
             String password = loginRequest.getPassword();
-
+            // Vérification pour Manager
+            Optional<Manager> managerOpt = managerRepository.findByEmail(email);
+                if (managerOpt.isPresent()) {
+                    Manager manager = managerOpt.get();
+                    if (passwordEncoder.matches(password, manager.getPassword())) {
+                        return ResponseEntity.ok("Bonjour " + manager.getNom() + ", vous êtes un " + manager.getRole());
+                    }
+                }
+    
+                Optional<Apprenant> apprenantOpt = apprenantRepository.findByEmail(email);
+                if (apprenantOpt.isPresent()) {
+                    Apprenant apprenant = apprenantOpt.get();
+                    if (passwordEncoder.matches(password, apprenant.getPassword())) {
+                        return ResponseEntity.ok("Bonjour " + apprenant.getNom() + ", vous êtes un " + apprenant.getRole());
+                    }
+                }
             // Vérification pour Admin
             Optional<Admin> admin = adminService.findByEmailAndPassword(email, password);
             if (admin.isPresent()) {
@@ -54,11 +75,7 @@ import com.example.demo.service.SuperAdminService;
                 return ResponseEntity.ok("Bonjour " + apprenant.get().getNom() + ", vous êtes un " + apprenant.get().getRole() + " dans le département : " + departementName);
             }
 
-            // Vérification pour Manager
-            Optional<Manager> manager = managerService.findByEmailAndPassword(email, password);
-            if (manager.isPresent()) {
-                return ResponseEntity.ok("Bonjour " + manager.get().getNom() + ", vous êtes un " + manager.get().getRole());
-            }
+            
 
             // Vérification pour SuperAdmin
             Optional<SuperAdmin> superAdmin = superAdminService.findByEmailAndPassword(email, password);

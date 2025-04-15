@@ -1,0 +1,5 @@
+com.example.demo.controller.ApprenantController#getAll()Ljava/util/List;
+false
+cc8bf25cc1a4963028f16121bab665fa
+==
+findAll com.example.demo.service.ApprenantService#findAll()Ljava/util/List;

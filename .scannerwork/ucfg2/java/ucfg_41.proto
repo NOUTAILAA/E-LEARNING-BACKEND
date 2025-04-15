@@ -1,0 +1,62 @@
+
+rcom.example.demo.controller.AdminController#create(Lcom/example/demo/entity/Admin;)Lcom/example/demo/entity/Admin;}
+sC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/AdminController.java# #("startingBlock*÷
+startingBlock# #(1í
+è
+" "(
+%2"
+__annotate*+
+
+__unknown_file (
+PostMapping*D
+
+__unknown_file ((
+&
+admincom.example.demo.entity.Adminí
+è
+# #($
+%3"
+__annotate*+
+
+__unknown_file (
+RequestBody*D
+
+__unknown_file ((
+&
+admincom.example.demo.entity.Adminã
+à
+#+ #(0&
+admincom.example.demo.entity.Admin"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*ª
+1$ $(ü
+ú
+$ $(+
+%0%com.example.demo.service.AdminService"__id*]
+
+__unknown_file (A*?-
++com.example.demo.controller.AdminController"
+adminService÷”
+$ $('#
+%1com.example.demo.entity.Admin"jcom.example.demo.service.AdminService#save(Lcom/example/demo/entity/Admin;)Lcom/example/demo/entity/Admin;*I
+
+__unknown_file (-
++
+%0%com.example.demo.service.AdminService*D
+
+__unknown_file ((
+&
+admincom.example.demo.entity.Admin2%save(Lcom/example/demo/entity/Admin;)"1
+$ $((%
+#
+%1com.example.demo.entity.Admin:2
+# #(0&
+admincom.example.demo.entity.AdminB/-
++com.example.demo.controller.AdminControllerH

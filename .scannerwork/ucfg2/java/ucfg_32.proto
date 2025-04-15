@@ -1,0 +1,27 @@
+
+qcom.example.demo.service.ManagerService#getApprenantsNonAssignesDansDepartement(Ljava/lang/Long;)Ljava/util/List;y
+oC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/ManagerService.javao o(B"1*È
+1p p("¬
+©
+p p("5
+%0/com.example.demo.repository.ApprenantRepository"__id*`
+
+__unknown_file (D*B)
+'com.example.demo.service.ManagerService"
+apprenantRepositoryåâ
+p p(U
+%1java.util.List"ucom.example.demo.repository.ApprenantRepository#findByManagerIsNullAndDepartementId(Ljava/lang/Long;)Ljava/util/List;*S
+
+__unknown_file (7
+5
+%0/com.example.demo.repository.ApprenantRepository*=
+
+__unknown_file (!
+
+departementIdjava.lang.Long25findByManagerIsNullAndDepartementId(Ljava/lang/Long;)""
+p p(V
+
+%1java.util.List:+
+oC o(U
+departementIdjava.lang.LongB+)
+'com.example.demo.service.ManagerServiceH

@@ -1,0 +1,27 @@
+
+Xcom.example.demo.service.ProjetService#findByManagerId(Ljava/lang/Long;)Ljava/util/List;x
+nC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/ProjetService.java ('"1*
+1   (¥
+¢
+   (2
+%0,com.example.demo.repository.ProjetRepository"__id*\
+
+__unknown_file (@*>(
+&com.example.demo.service.ProjetService"
+projetRepository³°
+   (:
+%1java.util.List"^com.example.demo.repository.ProjetRepository#findByManagerId(Ljava/lang/Long;)Ljava/util/List;*P
+
+__unknown_file (4
+2
+%0,com.example.demo.repository.ProjetRepository*9
+
+__unknown_file (
+
+	managerIdjava.lang.Long2!findByManagerId(Ljava/lang/Long;)""
+   (;
+
+%1java.util.List:'
+( (6
+	managerIdjava.lang.LongB*(
+&com.example.demo.service.ProjetServiceH

@@ -1,0 +1,290 @@
+
+1.0'noutailaa_elearning-application-backendJavaFrontend"1744384114644*java2.B†
+@
+;src/main/java/com/example/demo/service/ChapitreService.java2
+
+package4
+
+com.example.demo.service5
+-
+(com.example.demo.service.ChapitreService7
+
+
+class8
+
+access9
+
+public10
+
+simple name11
+
+ChapitreService12
+
+Service14
+
+unknown15
+
+annotated by16
+%
+Recovered#typeBindingLService;018
+
+
+uses19
+A
+;com.example.demo.service.ChapitreService.chapitreRepository21
+
+field22
+
+private23
+
+chapitreRepository24
+4
+.com.example.demo.repository.ChapitreRepository26
+
+is type27
+
+	Autowired29
+'
+!Recovered#typeBindingLAutowired;031
+P
+Jcom.example.demo.service.ChapitreService#getAllChapitres()Ljava/util/List;33
+
+method34
+
+getAllChapitres35
+&
+ com.example.demo.entity.Chapitre37
+
+
+references38
+r
+lcom.example.demo.service.ChapitreService#getChapitreById(Ljava/lang/Long;)Lcom/example/demo/entity/Chapitre;40
+
+getChapitreById41
+
+returns42
+f
+`com.example.demo.service.ChapitreService#getChapitresByCoursId(Ljava/lang/Long;)Ljava/util/List;44
+
+getChapitresByCoursId45
+d
+^com.example.demo.repository.ChapitreRepository#findByCoursId(Ljava/lang/Long;)Ljava/util/List;47
+
+calls48
+Å
+{com.example.demo.service.ChapitreService#saveChapitre(Lcom/example/demo/entity/Chapitre;)Lcom/example/demo/entity/Chapitre;50
+
+saveChapitre51
+
+	has param52
+P
+Jcom.example.demo.service.ChapitreService#deleteChapitre(Ljava/lang/Long;)V54
+
+deleteChapitre55J
+
+1
+12Z
+
+3	
+354j”
+@
+39:
+394034 *
+1 (26:3B
+	
+9
+10
+
+
+11
+41
+
+17
+171815
+
+13
+131415
+@
+32:
+323334 *
+1 (26:3B
+	
+9
+10
+
+
+11
+35
+9
+64
+678 *
+1 (:3B
+	
+9
+10
+
+
+11
+12
+
+25
+252615
+
+36
+363715
+
+28
+282915
+@
+49:
+495034 *
+1 (26:3B
+	
+9
+10
+
+
+11
+51
+
+30
+303115
+
+46
+464715
+@
+20:
+202122 *
+1 (26:3B
+	
+9
+23
+
+
+11
+24
+@
+43:
+434434 *
+1 (26:3B
+	
+9
+10
+
+
+11
+45
+@
+53:
+535434 *
+1   (26:3B
+	
+9
+10
+
+
+11
+55r˘
+
+61316*
+1
+ 
+(
+
+61719*
+1
+ 
+(	
+
+202527*
+1 (
+
+202816*
+1 (
+
+203019*
+1 (
+
+202519*
+1 (
+
+202519*
+1  (2
+
+323619*
+1 (
+
+322038*
+1 ("
+
+322519*
+1 ("
+
+322038*
+1 ("
+
+393642*
+1 (
+
+393619*
+1 (
+
+392038*
+1 ("
+
+392519*
+1 ("
+
+392038*
+1 ("
+
+433619*
+1 (
+
+432538*
+1 ("
+
+434648*
+1# (0
+
+432038*
+1 ("
+
+432519*
+1 ("
+
+432038*
+1 ("
+
+493642*
+1 (
+
+493652*
+1" (*
+
+493619*
+1 (
+
+493627*
+1+ (3
+
+493619*
+1" (*
+
+492038*
+1 ("
+
+492519*
+1 ("
+
+492038*
+1 ("
+
+532038*
+1!	 !(
+
+532519*
+1!	 !(
+
+532038*
+1!	 !(

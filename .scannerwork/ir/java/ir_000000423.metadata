@@ -1,0 +1,5 @@
+com.example.demo.service.CoursService#getCoursByProjetId(Ljava/lang/Long;)Ljava/util/List;
+false
+67879bf5e51acc004a20e6c17e712b03
+==
+findByProjetId com.example.demo.repository.CoursRepository#findByProjetId(Ljava/lang/Long;)Ljava/util/List;

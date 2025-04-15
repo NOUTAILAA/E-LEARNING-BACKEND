@@ -1,0 +1,5 @@
+com.example.demo.service.ManagerService#getApprenantsNonAssignesDansDepartement(Ljava/lang/Long;)Ljava/util/List;
+false
+411421ac355a9ba60eadaee7f0f4f904
+==
+findByManagerIsNullAndDepartementId com.example.demo.repository.ApprenantRepository#findByManagerIsNullAndDepartementId(Ljava/lang/Long;)Ljava/util/List;

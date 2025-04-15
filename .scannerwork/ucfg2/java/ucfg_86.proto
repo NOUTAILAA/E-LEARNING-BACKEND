@@ -1,0 +1,62 @@
+
+xcom.example.demo.controller.ManagerController#create(Lcom/example/demo/entity/Manager;)Lcom/example/demo/entity/Manager;
+uC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/ManagerController.java( (("startingBlock*‚
+startingBlock( ((7ñ
+ì
+' '(
+%2"
+__annotate*+
+
+__unknown_file (
+PostMapping*H
+
+__unknown_file (,
+*
+managercom.example.demo.entity.Managerñ
+ì
+( ((&
+%3"
+__annotate*+
+
+__unknown_file (
+RequestBody*H
+
+__unknown_file (,
+*
+managercom.example.demo.entity.Managerè
+å
+(/ ((6*
+managercom.example.demo.entity.Manager"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*”
+1) )(•
+¢
+) )(-
+%0'com.example.demo.service.ManagerService"__id*a
+
+__unknown_file (E*C/
+-com.example.demo.controller.ManagerController"
+managerServiceÊ„
+) )(+%
+%1com.example.demo.entity.Manager"pcom.example.demo.service.ManagerService#save(Lcom/example/demo/entity/Manager;)Lcom/example/demo/entity/Manager;*K
+
+__unknown_file (/
+-
+%0'com.example.demo.service.ManagerService*H
+
+__unknown_file (,
+*
+managercom.example.demo.entity.Manager2'save(Lcom/example/demo/entity/Manager;)"3
+) )(,'
+%
+%1com.example.demo.entity.Manager:6
+( ((6*
+managercom.example.demo.entity.ManagerB1/
+-com.example.demo.controller.ManagerControllerH

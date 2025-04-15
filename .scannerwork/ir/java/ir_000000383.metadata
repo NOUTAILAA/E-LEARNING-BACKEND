@@ -1,0 +1,5 @@
+com.example.demo.service.ChapitreService#getChapitresByCoursId(Ljava/lang/Long;)Ljava/util/List;
+false
+f7bbf1ad5cdcbc3932d9cdc443dafa1e
+==
+findByCoursId com.example.demo.repository.ChapitreRepository#findByCoursId(Ljava/lang/Long;)Ljava/util/List;

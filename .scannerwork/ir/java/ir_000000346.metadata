@@ -1,0 +1,9 @@
+com.example.demo.controller.ManagerController#getApprenantsByManagerEmail(Ljava/lang/String;)LResponseEntity;
+false
+a4e929868fa66a186c40687b0cf5f0a3
+java.util.Optional#get()Ljava/lang/Object;
+java.util.Optional#isPresent()Z
+==
+!unknownMethod! !unknownMethod!
+findByEmail com.example.demo.service.ManagerService#findByEmail(Ljava/lang/String;)Ljava/util/Optional;
+getApprenants com.example.demo.entity.Manager#getApprenants()Ljava/util/List;

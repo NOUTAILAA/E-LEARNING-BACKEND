@@ -1,0 +1,29 @@
+
+]com.example.demo.service.QuizService#getQuizzesByChapitreId(Ljava/lang/Long;)Ljava/util/List;v
+lC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/QuizService.java (,"1*ˆ
+1 (Ÿ
+œ
+ (0
+%0*com.example.demo.repository.QuizRepository"__id*X
+
+__unknown_file (<*:&
+$com.example.demo.service.QuizService"
+quizRepository²¯
+ (:
+%1java.util.List"]com.example.demo.repository.QuizRepository#findByChapitreId(Ljava/lang/Long;)Ljava/util/List;*N
+
+__unknown_file (2
+0
+%0*com.example.demo.repository.QuizRepository*:
+
+__unknown_file (
+
+
+chapitreIdjava.lang.Long2"findByChapitreId(Ljava/lang/Long;)""
+ (;
+
+%1java.util.List:(
+- (<
+
+chapitreIdjava.lang.LongB(&
+$com.example.demo.service.QuizServiceH

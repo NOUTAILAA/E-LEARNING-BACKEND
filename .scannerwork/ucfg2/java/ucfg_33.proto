@@ -1,0 +1,27 @@
+
+[com.example.demo.service.ManagerService#findByEmail(Ljava/lang/String;)Ljava/util/Optional;y
+oC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/ManagerService.javar r(("1*š
+1s s( ¨
+¥
+s s( 3
+%0-com.example.demo.repository.ManagerRepository"__id*^
+
+__unknown_file (B*@)
+'com.example.demo.service.ManagerService"
+managerRepository·´
+s s(3
+%1java.util.Optional"acom.example.demo.repository.ManagerRepository#findByEmail(Ljava/lang/String;)Ljava/util/Optional;*Q
+
+__unknown_file (5
+3
+%0-com.example.demo.repository.ManagerRepository*7
+
+__unknown_file (
+
+emailjava.lang.String2findByEmail(Ljava/lang/String;)"&
+s s(4
+
+%1java.util.Optional:%
+r) r(5
+emailjava.lang.StringB+)
+'com.example.demo.service.ManagerServiceH

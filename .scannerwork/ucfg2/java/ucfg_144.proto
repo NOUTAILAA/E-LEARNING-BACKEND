@@ -1,0 +1,16 @@
+
+ccom.example.demo.service.CoursService#getCoursById(Ljava/lang/Long;)Lcom/example/demo/entity/Cours;w
+mC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/CoursService.java ("1*Æ
+1 (¢
+Ÿ
+ (1
+%0+com.example.demo.repository.CoursRepository"__id*Z
+
+__unknown_file (>*<'
+%com.example.demo.service.CoursService"
+coursRepository"
+ (9
+"": 
+ (%
+idjava.lang.LongB)'
+%com.example.demo.service.CoursServiceH

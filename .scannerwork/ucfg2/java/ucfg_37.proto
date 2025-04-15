@@ -1,0 +1,62 @@
+
+ucom.example.demo.controller.ProjetController#create(Lcom/example/demo/entity/Projet;)Lcom/example/demo/entity/Projet;~
+tC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/ProjetController.java3 3("startingBlock*‹
+startingBlock3 3(4î
+ë
+2 2(
+%2"
+__annotate*+
+
+__unknown_file (
+PostMapping*F
+
+__unknown_file (*
+(
+projetcom.example.demo.entity.Projetî
+ë
+3 3(%
+%3"
+__annotate*+
+
+__unknown_file (
+RequestBody*F
+
+__unknown_file (*
+(
+projetcom.example.demo.entity.Projetç
+ä
+3- 3(3(
+projetcom.example.demo.entity.Projet"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*«
+14 4(¢
+ü
+4 4(,
+%0&com.example.demo.service.ProjetService"__id*_
+
+__unknown_file (C*A.
+,com.example.demo.controller.ProjetController"
+projetServiceﬁ€
+4 4()$
+%1com.example.demo.entity.Projet"mcom.example.demo.service.ProjetService#save(Lcom/example/demo/entity/Projet;)Lcom/example/demo/entity/Projet;*J
+
+__unknown_file (.
+,
+%0&com.example.demo.service.ProjetService*F
+
+__unknown_file (*
+(
+projetcom.example.demo.entity.Projet2&save(Lcom/example/demo/entity/Projet;)"2
+4 4(*&
+$
+%1com.example.demo.entity.Projet:4
+3 3(3(
+projetcom.example.demo.entity.ProjetB0.
+,com.example.demo.controller.ProjetControllerH

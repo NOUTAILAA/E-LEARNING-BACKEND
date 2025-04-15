@@ -1,0 +1,5 @@
+com.example.demo.controller.ChapitreController#getAllChapitres()Ljava/util/List;
+false
+dc71ed16cb60238a1802d4134a4a264c
+==
+getAllChapitres com.example.demo.service.ChapitreService#getAllChapitres()Ljava/util/List;

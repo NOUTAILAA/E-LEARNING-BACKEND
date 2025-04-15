@@ -1,0 +1,1165 @@
+
+1.0'noutailaa_elearning-application-backendJavaFrontend"1744384114123*java2.BÌ)
+E
+@src/main/java/com/example/demo/controller/ManagerController.java2
+
+package4
+ 
+com.example.demo.controller5
+2
+-com.example.demo.controller.ManagerController7
+
+
+class8
+
+access9
+
+public10
+
+simple name11
+
+ManagerController12
+
+RestController14
+
+unknown15
+
+annotated by16
+,
+&Recovered#typeBindingLRestController;018
+
+
+uses19
+
+RequestMapping21
+,
+&Recovered#typeBindingLRequestMapping;023
+B
+<com.example.demo.controller.ManagerController.managerService25
+
+field26
+
+private27
+
+managerService28
+-
+'com.example.demo.service.ManagerService30
+
+is type31
+
+	Autowired33
+'
+!Recovered#typeBindingLAutowired;035
+F
+@com.example.demo.controller.ManagerController.departementService37
+
+departementService38
+1
++com.example.demo.service.DepartementService40
+L
+Fcom.example.demo.controller.ManagerController#getAll()Ljava/util/List;42
+
+method43
+
+getAll44
+
+
+GetMapping46
+(
+"Recovered#typeBindingLGetMapping;048
+%
+com.example.demo.entity.Manager50
+
+
+references51
+G
+Acom.example.demo.service.ManagerService#findAll()Ljava/util/List;53
+
+calls54
+U
+Ocom.example.demo.controller.ManagerController#getDepartements()Ljava/util/List;56
+
+getDepartements57
+)
+#com.example.demo.entity.Departement59
+K
+Ecom.example.demo.service.DepartementService#findAll()Ljava/util/List;61
+~
+xcom.example.demo.controller.ManagerController#create(Lcom/example/demo/entity/Manager;)Lcom/example/demo/entity/Manager;63
+
+create64
+
+returns65
+
+	has param66
+
+PostMapping68
+)
+#Recovered#typeBindingLPostMapping;070
+
+RequestBody72
+)
+#Recovered#typeBindingLRequestBody;074
+v
+pcom.example.demo.service.ManagerService#save(Lcom/example/demo/entity/Manager;)Lcom/example/demo/entity/Manager;76
+]
+Wcom.example.demo.controller.ManagerController#getById(Ljava/lang/Long;)LResponseEntity;78
+
+getById79
+
+ResponseEntity81
+
+PathVariable83
+*
+$Recovered#typeBindingLPathVariable;085
+\
+Vcom.example.demo.service.ManagerService#findById(Ljava/lang/Long;)Ljava/util/Optional;87
+
+ˆcom.example.demo.controller.ManagerController#update(Ljava/lang/Long;Lcom/example/demo/entity/Manager;)Lcom/example/demo/entity/Manager;89
+
+update90
+
+
+PutMapping92
+(
+"Recovered#typeBindingLPutMapping;094
+)
+#com.example.demo.entity.Utilisateur96
+E
+?com.example.demo.entity.Utilisateur#setNom(Ljava/lang/String;)V98
+E
+>com.example.demo.entity.Utilisateur#getNom()Ljava/lang/String;100
+I
+Bcom.example.demo.entity.Utilisateur#setPrenom(Ljava/lang/String;)V102
+H
+Acom.example.demo.entity.Utilisateur#getPrenom()Ljava/lang/String;104
+N
+Gcom.example.demo.entity.Utilisateur#setDateNaissance(Ljava/util/Date;)V106
+M
+Fcom.example.demo.entity.Utilisateur#getDateNaissance()Ljava/util/Date;108
+L
+Ecom.example.demo.entity.Utilisateur#setTelephone(Ljava/lang/String;)V110
+K
+Dcom.example.demo.entity.Utilisateur#getTelephone()Ljava/lang/String;112
+G
+@com.example.demo.entity.Utilisateur#setSexe(Ljava/lang/String;)V114
+F
+?com.example.demo.entity.Utilisateur#getSexe()Ljava/lang/String;116
+H
+Acom.example.demo.entity.Utilisateur#setEmail(Ljava/lang/String;)V118
+G
+@com.example.demo.entity.Utilisateur#getEmail()Ljava/lang/String;120
+G
+@com.example.demo.entity.Utilisateur#setRole(Ljava/lang/String;)V122
+F
+?com.example.demo.entity.Utilisateur#getRole()Ljava/lang/String;124
+H
+Acom.example.demo.entity.Utilisateur#setEtat(Ljava/lang/Boolean;)V126
+G
+@com.example.demo.entity.Utilisateur#getEtat()Ljava/lang/Boolean;128
+8
+1com.example.demo.entity.Utilisateur#setPhoto([B)V130
+7
+0com.example.demo.entity.Utilisateur#getPhoto()[B132
+\
+Ucom.example.demo.entity.Manager#getDepartement()Lcom/example/demo/entity/Departement;134
+a
+Zcom.example.demo.service.DepartementService#findById(Ljava/lang/Long;)Ljava/util/Optional;136
+B
+;com.example.demo.entity.Departement#getId()Ljava/lang/Long;138
+]
+Vcom.example.demo.entity.Manager#setDepartement(Lcom/example/demo/entity/Departement;)V140
+N
+Gcom.example.demo.controller.ManagerController#delete(Ljava/lang/Long;)V142
+
+delete143
+
+DeleteMapping145
+,
+%Recovered#typeBindingLDeleteMapping;0147
+H
+Acom.example.demo.service.ManagerService#delete(Ljava/lang/Long;)V149
+w
+pcom.example.demo.controller.ManagerController#assignApprenants(Ljava/lang/Long;Ljava/util/List;)LResponseEntity;151
+
+assignApprenants152
+Œ
+„com.example.demo.service.ManagerService#assignApprenantsToManager(Ljava/lang/Long;Ljava/util/List;)Lcom/example/demo/entity/Manager;154
+m
+fcom.example.demo.controller.ManagerController#getApprenantsByManager(Ljava/lang/Long;)LResponseEntity;156
+
+getApprenantsByManager157
+(
+!com.example.demo.entity.Apprenant159
+F
+?com.example.demo.entity.Manager#getApprenants()Ljava/util/List;161
+|
+ucom.example.demo.controller.ManagerController#getApprenantsNonAssignesDuDepartement(Ljava/lang/Long;)Ljava/util/List;163
+,
+%getApprenantsNonAssignesDuDepartement164
+x
+qcom.example.demo.service.ManagerService#getApprenantsNonAssignesDansDepartement(Ljava/lang/Long;)Ljava/util/List;166
+t
+mcom.example.demo.controller.ManagerController#getApprenantsByManagerEmail(Ljava/lang/String;)LResponseEntity;168
+"
+getApprenantsByManagerEmail169
+b
+[com.example.demo.service.ManagerService#findByEmail(Ljava/lang/String;)Ljava/util/Optional;171J
+
+1
+12Z
+
+3	
+354jœ
+
+17
+171815
+
+97
+979815
+
+84
+848515
+
+158
+15815915
+
+29
+293015
+D
+167=
+16716843 *
+1e e(26:3B
+	
+9
+10
+
+11
+169
+
+123
+12312415
+
+119
+11912015
+@
+55:
+555643 *
+1# #(26:3B
+	
+9
+10
+
+
+11
+57
+
+105
+10510615
+D
+150=
+15015143 *
+1P P(26:3B
+	
+9
+10
+
+11
+152
+
+22
+222315
+@
+24:
+242526 *
+1 (26:3B
+	
+9
+27
+
+
+11
+28
+
+75
+757615
+
+47
+474815
+@
+41:
+414243 *
+1 (26:3B
+	
+9
+10
+
+
+11
+44
+
+60
+606115
+@
+62:
+626343 *
+1' '(26:3B
+	
+9
+10
+
+
+11
+64
+
+170
+17017115
+
+115
+11511615
+
+93
+939415
+
+73
+737415
+@
+77:
+777843 *
+1+ +(26:3B
+	
+9
+10
+
+
+11
+79
+
+133
+13313415
+
+45
+454615
+@
+36:
+363726 *
+1 (26:3B
+	
+9
+27
+
+
+11
+38
+
+107
+10710815
+
+109
+10911015
+
+91
+919215
+
+99
+9910015
+
+121
+12112215
+
+139
+13914015
+
+52
+525315
+
+146
+14614715
+
+13
+131415
+
+39
+394015
+
+103
+10310415
+
+20
+202115
+
+86
+868715
+
+160
+16016115
+
+137
+13713815
+
+32
+323315
+
+67
+676815
+
+131
+13113215
+
+144
+14414515
+D
+155=
+15515643 *
+1W W(26:3B
+	
+9
+10
+
+11
+157
+
+127
+12712815
+@
+88:
+888943 *
+12 2(26:3B
+	
+9
+10
+
+
+11
+90
+
+125
+12512615
+9
+64
+678 *
+1 (:3B
+	
+9
+10
+
+
+11
+12
+
+49
+495015
+D
+141=
+14114243 *
+1L L(26:3B
+	
+9
+10
+
+11
+143
+
+71
+717215
+
+129
+12913015
+
+148
+14814915
+
+95
+959615
+
+101
+10110215
+
+153
+15315415
+
+165
+16516615
+
+117
+11711815
+
+69
+697015
+
+80
+808115
+
+111
+11111215
+
+34
+343515
+
+58
+585915
+
+113
+11311415
+D
+162=
+16216343 *
+1] ](26:3B
+	
+9
+10
+
+11
+164
+
+135
+13513615
+
+82
+828315rÿ-
+
+61316*
+1 (
+
+61719*
+1 (
+
+62016*
+1 (
+
+62219*
+1 (
+
+242931*
+1 (
+
+243216*
+1 (
+
+243419*
+1 (
+
+242919*
+1 (
+
+242919*
+1 (*
+
+363931*
+1 (
+
+363216*
+1 (
+
+363419*
+1 (
+
+363919*
+1 (
+
+363919*
+1  (2
+
+414516*
+1 (
+
+414719*
+1 (
+
+414919*
+1   (
+
+412951*
+1! !(
+
+415254*
+1! !(&
+
+412451*
+1! !(
+
+412919*
+1! !(
+
+412451*
+1! !(
+
+554516*
+1# #(
+
+554719*
+1# #(
+
+555819*
+1$ $(
+
+553951*
+1% %("
+
+556054*
+1%# %(*
+
+553651*
+1% %("
+
+553919*
+1% %("
+
+553651*
+1% %("
+
+624965*
+1( ((
+
+624966*
+1(( ((/
+
+626716*
+1' '(
+
+626919*
+1' '(
+
+624919*
+1( ((
+
+624931*
+1(0 ((7
+
+627116*
+1( ((
+
+627319*
+1( (('
+
+624919*
+1(( ((/
+
+624965*
+1) )(
+
+622951*
+1) )(
+
+627554*
+1) )(#
+
+622451*
+1) )(
+
+622919*
+1) )(
+
+622451*
+1) )(
+
+778065*
+1, ,(
+
+774516*
+1+ +(
+
+774719*
+1+ +(
+
+778019*
+1, ,(
+
+774919*
+1, ,("
+
+778216*
+1,, ,(-
+
+778419*
+1,- ,(9
+
+772951*
+1- -(
+
+778654*
+1- -('
+
+772451*
+1- -(
+
+772919*
+1- -(
+
+772451*
+1- -(
+
+884965*
+13 3(
+
+884966*
+13? 3(F
+
+889116*
+12 2(
+
+889319*
+12 2(
+
+884919*
+13 3(
+
+888216*
+13 3(
+
+888419*
+13 3((
+
+884931*
+13G 3(U
+
+887116*
+132 3(3
+
+887319*
+133 3(>
+
+884919*
+13? 3(F
+
+884965*
+14 4(
+
+882951*
+14 4(
+
+888654*
+14 4('
+
+882451*
+14 4(
+
+882919*
+14 4(
+
+882451*
+14 4(
+
+884931*
+15 5(
+
+889551*
+17 7(
+
+889754*
+17 7(#
+
+889551*
+17$ 7(2
+
+889954*
+173 7(9
+
+889551*
+18 8(
+
+8810154*
+18 8(&
+
+889551*
+18' 8(5
+
+8810354*
+186 8(?
+
+889551*
+19 9(
+
+8810554*
+19 9(-
+
+889551*
+19. 9(<
+
+8810754*
+19= 9(M
+
+889551*
+1: :(
+
+8810954*
+1: :()
+
+889551*
+1:* :(8
+
+8811154*
+1:9 :(E
+
+889551*
+1; ;(
+
+8811354*
+1; ;($
+
+889551*
+1;% ;(3
+
+8811554*
+1;4 ;(;
+
+889551*
+1< <(
+
+8811754*
+1< <(%
+
+889551*
+1<& <(4
+
+8811954*
+1<5 <(=
+
+889551*
+1= =(
+
+8812154*
+1= =($
+
+889551*
+1=% =(3
+
+8812354*
+1=4 =(;
+
+889551*
+1> >(
+
+8812554*
+1> >($
+
+889551*
+1>% >(3
+
+8812754*
+1>4 >(;
+
+889551*
+1? ?(
+
+8812954*
+1? ?(%
+
+889551*
+1?& ?(4
+
+8813154*
+1?5 ?(=
+
+885865*
+1B B('
+
+884951*
+1B B('
+
+8813354*
+1B( B(6
+
+885831*
+1C% C(0
+
+885819*
+1C C($
+
+885865*
+1C3 C(E
+
+883951*
+1C3 C(E
+
+8813554*
+1CF C(N
+
+883651*
+1C3 C(E
+
+883919*
+1C3 C(E
+
+883651*
+1C3 C(E
+
+885851*
+1CO C(]
+
+8813754*
+1Co C(t
+
+885865*
+1CO C(]
+
+884951*
+1CO C(]
+
+8813354*
+1C^ C(l
+
+884951*
+1E E( 
+
+8813954*
+1E! E(/
+
+884965*
+1H H(*
+
+882951*
+1H H(*
+
+887554*
+1H+ H(/
+
+882451*
+1H H(*
+
+882919*
+1H H(*
+
+882451*
+1H H(*
+
+14114416*
+1L L(
+
+14114619*
+1L L(
+
+1418216*
+1M M(
+
+1418419*
+1M M(%
+
+1412951*
+1N	 N(
+
+14114854*
+1N N(
+
+1412451*
+1N	 N(
+
+1412919*
+1N	 N(
+
+1412451*
+1N	 N(
+
+1508065*
+1Q Q(
+
+1506716*
+1P P(
+
+1506919*
+1P P(
+
+1508019*
+1Q Q(
+
+1508216*
+1R	 R(
+
+
+1508419*
+1R
+ R(
+
+1507116*
+1S	 S(
+
+
+1507319*
+1S
+ S(
+
+1504931*
+1T T(
+
+1504919*
+1T T(
+
+1504965*
+1T T(%
+
+1502951*
+1T T(%
+
+15015354*
+1T& T(?
+
+1502451*
+1T T(%
+
+1502919*
+1T T(%
+
+1502451*
+1T T(%
+
+1558065*
+1X X(
+
+1554516*
+1W W(
+
+1554719*
+1W W(
+
+1558019*
+1X X(
+
+15515819*
+1X X(%
+
+1558216*
+1X? X(@
+
+1558419*
+1X@ X(L
+
+1552951*
+1Y Y(
+
+1558654*
+1Y Y(#
+
+1552451*
+1Y Y(
+
+1552919*
+1Y Y(
+
+1552451*
+1Y Y(
+
+1554931*
+1Z Z(
+
+1554951*
+1Z/ Z(6
+
+15516054*
+1Z7 Z(D
+
+1624516*
+1] ](
+
+1624719*
+1] ](
+
+16215819*
+1^ ^(
+
+1628216*
+1^> ^(?
+
+1628419*
+1^? ^(K
+
+1624931*
+1_ _(
+
+1624919*
+1_ _(
+
+1624965*
+1_ _(%
+
+1622951*
+1_ _(%
+
+1628654*
+1_& _(.
+
+1622451*
+1_ _(%
+
+1622919*
+1_ _(%
+
+1622451*
+1_ _(%
+
+1625851*
+1b b(!
+
+16213754*
+1b3 b(8
+
+1625865*
+1b b(!
+
+1624951*
+1b b(!
+
+16213354*
+1b" b(0
+
+1622951*
+1c c(
+
+16216554*
+1c c(B
+
+1622451*
+1c c(
+
+1622919*
+1c c(
+
+1622451*
+1c c(
+
+1678065*
+1f f(
+
+1674516*
+1e e(
+
+1674719*
+1e e(
+
+1678019*
+1f f(
+
+16715819*
+1f f(%
+
+1678216*
+1fD f(E
+
+1678419*
+1fE f(Q
+
+1674919*
+1g g(
+
+1672951*
+1g$ g(2
+
+16717054*
+1g3 g(>
+
+1672451*
+1g$ g(2
+
+1672919*
+1g$ g(2
+
+1672451*
+1g$ g(2
+
+1674951*
+1i" i(,
+
+16716054*
+1i3 i(@
+
+1674965*
+1i" i(,

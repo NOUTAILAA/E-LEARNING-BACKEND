@@ -1,0 +1,5 @@
+com.example.demo.controller.SectionController#getSectionsByChapitreId(Ljava/lang/Long;)Ljava/util/List;
+false
+14d0f0d46651ed02eb7d260464b7d1f0
+==
+getSectionsByChapitreId com.example.demo.service.SectionService#getSectionsByChapitreId(Ljava/lang/Long;)Ljava/util/List;

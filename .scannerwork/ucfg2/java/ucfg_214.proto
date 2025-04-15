@@ -1,0 +1,21 @@
+
+Icom.example.demo.controller.CoursController#getAllCours()Ljava/util/List;}
+sC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/CoursController.java (""1*˜
+1 (Ÿ
+œ
+ (+
+%0%com.example.demo.service.CoursService"__id*]
+
+__unknown_file (A*?-
++com.example.demo.controller.CoursController"
+coursServiceÂ¿
+ ()
+%1java.util.List"Ccom.example.demo.service.CoursService#getAllCours()Ljava/util/List;*I
+
+__unknown_file (-
++
+%0%com.example.demo.service.CoursService2getAllCours()""
+ (*
+
+%1java.util.ListB/-
++com.example.demo.controller.CoursControllerH

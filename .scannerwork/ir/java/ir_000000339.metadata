@@ -1,0 +1,5 @@
+com.example.demo.controller.ManagerController#create(Lcom/example/demo/entity/Manager;)Lcom/example/demo/entity/Manager;
+false
+66192a15f25c37f0e6291771a8ebab59
+==
+save com.example.demo.service.ManagerService#save(Lcom/example/demo/entity/Manager;)Lcom/example/demo/entity/Manager;

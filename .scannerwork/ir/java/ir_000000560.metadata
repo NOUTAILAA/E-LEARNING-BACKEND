@@ -1,0 +1,5 @@
+com.example.demo.service.QuizService#getQuizzesByChapitreId(Ljava/lang/Long;)Ljava/util/List;
+false
+aaccbe1abdef8ac47382d575266317b1
+==
+findByChapitreId com.example.demo.repository.QuizRepository#findByChapitreId(Ljava/lang/Long;)Ljava/util/List;

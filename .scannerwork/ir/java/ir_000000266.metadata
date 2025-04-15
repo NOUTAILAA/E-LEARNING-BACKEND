@@ -1,0 +1,5 @@
+com.example.demo.controller.ProjetController#delete(Ljava/lang/Long;)V
+false
+dfd6a09927c9d739d115e4a2cc9f14f4
+==
+delete com.example.demo.service.ProjetService#delete(Ljava/lang/Long;)V

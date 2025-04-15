@@ -1,0 +1,122 @@
+
+rcom.example.demo.controller.QuizController#getApprenantsNonAssignesDuDepartement(Ljava/lang/Long;)Ljava/util/List;|
+rC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/QuizController.java/ /(<"startingBlock*¸
+startingBlock/< /(Z‡
+„
+. .(7
+%10"
+__annotate**
+
+__unknown_file (
+
+GetMapping*9
+
+__unknown_file (
+
+	managerIdjava.lang.Long‰
+†
+/= /(J
+%11"
+__annotate*,
+
+__unknown_file (
+PathVariable*9
+
+__unknown_file (
+
+	managerIdjava.lang.Long
+
+/P /(Y
+	managerIdjava.lang.Long"__annotation*#
+
+__unknown_file (
+
+%10*#
+
+__unknown_file (
+
+%11*
+1*ä
+10 0($¢
+Ÿ
+0 0($-
+%0'com.example.demo.service.ManagerService"__id*^
+
+__unknown_file (B*@,
+*com.example.demo.controller.QuizController"
+managerService£ 
+0 0(8
+%1java.util.Optional"Vcom.example.demo.service.ManagerService#findById(Ljava/lang/Long;)Ljava/util/Optional;*K
+
+__unknown_file (/
+-
+%0'com.example.demo.service.ManagerService*9
+
+__unknown_file (
+
+	managerIdjava.lang.Long2findById(Ljava/lang/Long;) 
+
+1 1(M!
+%2java.util.function.Supplier"__declareFunction*[
+
+__unknown_file (?=
+;__sonar_lambda_9$com.example.demo.controller.QuizControllerª§
+0 1(N%
+%5com.example.demo.entity.Manager"Ojava.util.Optional#orElseThrow(Ljava/util/function/Supplier;)Ljava/lang/Object;*6
+
+__unknown_file (
+
+%1java.util.Optional*?
+
+__unknown_file (#
+!
+%2java.util.function.Supplier2*orElseThrow(Ljava/util/function/Supplier;)„
+
+0 1(O*
+managercom.example.demo.entity.Manager"__id*C
+
+__unknown_file ('
+%
+%5com.example.demo.entity.Managerëè
+2 2(1)
+%6#com.example.demo.entity.Departement"Ucom.example.demo.entity.Manager#getDepartement()Lcom/example/demo/entity/Departement;*H
+
+__unknown_file (,
+*
+managercom.example.demo.entity.Manager2getDepartement()²¯
+2 2(9
+%7java.lang.Long";com.example.demo.entity.Departement#getId()Ljava/lang/Long;*G
+
+__unknown_file (+
+)
+%6#com.example.demo.entity.Departement2getId()g
+e
+2 2(:
+departementIdjava.lang.Long"__id*2
+
+__unknown_file (
+
+%7java.lang.Long¢
+Ÿ
+3 3(-
+%8'com.example.demo.service.ManagerService"__id*^
+
+__unknown_file (B*@,
+*com.example.demo.controller.QuizController"
+managerServiceÝÚ
+3 3(P
+%9java.util.List"qcom.example.demo.service.ManagerService#getApprenantsNonAssignesDansDepartement(Ljava/lang/Long;)Ljava/util/List;*K
+
+__unknown_file (/
+-
+%8'com.example.demo.service.ManagerService*=
+
+__unknown_file (!
+
+departementIdjava.lang.Long29getApprenantsNonAssignesDansDepartement(Ljava/lang/Long;)""
+3 3(Q
+
+%9java.util.List:'
+/= /(Y
+	managerIdjava.lang.LongB.,
+*com.example.demo.controller.QuizControllerH

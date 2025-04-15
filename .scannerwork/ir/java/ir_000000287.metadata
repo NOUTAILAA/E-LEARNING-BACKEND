@@ -1,0 +1,5 @@
+com.example.demo.controller.SectionController#getSectionById(Ljava/lang/Long;)Lcom/example/demo/entity/Section;
+false
+99784c9ebaa8e194cedb8ff47291cafb
+==
+getSectionById com.example.demo.service.SectionService#getSectionById(Ljava/lang/Long;)Lcom/example/demo/entity/Section;

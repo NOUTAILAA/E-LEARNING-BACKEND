@@ -1,0 +1,9 @@
+com.example.demo.controller.AdminController#updateAdmin(Ljava/lang/Long;Lcom/example/demo/entity/Admin;)LResponseEntity;
+false
+f500974c20dd471b2310f9be069172b9
+java.util.Optional#isPresent()Z
+==
+!unknownMethod! !unknownMethod!
+findById com.example.demo.service.AdminService#findById(Ljava/lang/Long;)Ljava/util/Optional;
+save com.example.demo.service.AdminService#save(Lcom/example/demo/entity/Admin;)Lcom/example/demo/entity/Admin;
+setId com.example.demo.entity.Utilisateur#setId(Ljava/lang/Long;)V

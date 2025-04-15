@@ -1,0 +1,5 @@
+com.example.demo.controller.ApprenantController#create(Lcom/example/demo/entity/Apprenant;)Lcom/example/demo/entity/Apprenant;
+false
+16a39146bd8c5008d1e6eed883bd31e1
+==
+save com.example.demo.service.ApprenantService#save(Lcom/example/demo/entity/Apprenant;)Lcom/example/demo/entity/Apprenant;

@@ -1,0 +1,85 @@
+
+1.0'noutailaa_elearning-application-backendJavaFrontend"1744384113506*java2.BŠ
+D
+?src/main/java/com/example/demo/repository/ProjetRepository.java2
+
+package4
+ 
+com.example.demo.repository5
+1
+,com.example.demo.repository.ProjetRepository7
+
+	interface8
+
+access9
+
+public10
+
+simple name11
+
+ProjetRepository12
++
+%Recovered#typeBindingLJpaRepository;014
+
+unknown15
+
+
+implements16
+
+
+uses17
+$
+com.example.demo.entity.Projet19
+d
+^com.example.demo.repository.ProjetRepository#findByManagerId(Ljava/lang/Long;)Ljava/util/List;21
+
+method22
+
+findByManagerId23J
+
+1
+12Z
+
+3	
+354j¥
+9
+64
+678 *
+1 (":3B
+	
+9
+10
+
+
+11
+12
+
+13
+131415
+@
+20:
+202122 *
+1	 	(	26:3B
+	
+9
+10
+
+
+11
+23
+
+18
+181915ri
+
+61316*
+1+ (8
+
+61317*
+1+ (8
+
+61817*
+19 (?
+
+201817*
+1	
+ 	(

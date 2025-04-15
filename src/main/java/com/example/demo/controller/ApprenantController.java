@@ -58,6 +58,17 @@ public class ApprenantController {
         Optional<Apprenant> optionalApprenant = apprenantService.findById(id);
         if (optionalApprenant.isPresent()) {
             Apprenant apprenant = optionalApprenant.get();
+    
+            // Vérifie si l'apprenant change de département
+            if (apprenant.getDepartement() != null &&
+                apprenantDetails.getDepartement() != null &&
+                !apprenant.getDepartement().getId().equals(apprenantDetails.getDepartement().getId())) {
+    
+                // Déassigner le manager s'il y a une incohérence de département
+                apprenant.setManager(null);
+            }
+    
+            // Mise à jour des infos de base
             apprenant.setNom(apprenantDetails.getNom());
             apprenant.setPrenom(apprenantDetails.getPrenom());
             apprenant.setDateNaissance(apprenantDetails.getDateNaissance());
@@ -66,12 +77,11 @@ public class ApprenantController {
             apprenant.setEmail(apprenantDetails.getEmail());
             apprenant.setPassword(apprenantDetails.getPassword());
             apprenant.setDepartement(apprenantDetails.getDepartement());
-
-            // Sauvegarder les modifications
+    
             Apprenant updatedApprenant = apprenantService.save(apprenant);
-            return ResponseEntity.ok(updatedApprenant);  // Retourne l'apprenant mis à jour
+            return ResponseEntity.ok(updatedApprenant);
         } else {
-            return ResponseEntity.notFound().build();  // Retourne une réponse 404 si l'apprenant n'est pas trouvé
+            return ResponseEntity.notFound().build();
         }
     }
 }

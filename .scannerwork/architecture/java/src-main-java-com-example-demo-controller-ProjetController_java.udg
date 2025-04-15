@@ -1,0 +1,975 @@
+
+1.0'noutailaa_elearning-application-backendJavaFrontend"1744384113078*java2.B°
+D
+?src/main/java/com/example/demo/controller/ProjetController.java2
+
+package4
+ 
+com.example.demo.controller5
+1
+,com.example.demo.controller.ProjetController7
+
+
+class8
+
+access9
+
+public10
+
+simple name11
+
+ProjetController12
+
+RestController14
+
+unknown15
+
+annotated by16
+,
+&Recovered#typeBindingLRestController;018
+
+
+uses19
+
+RequestMapping21
+,
+&Recovered#typeBindingLRequestMapping;023
+@
+:com.example.demo.controller.ProjetController.projetService25
+
+field26
+
+private27
+
+projetService28
+,
+&com.example.demo.service.ProjetService30
+
+is type31
+
+	Autowired33
+'
+!Recovered#typeBindingLAutowired;035
+E
+?com.example.demo.controller.ProjetController.departementService37
+
+departementService38
+1
++com.example.demo.service.DepartementService40
+K
+Ecom.example.demo.controller.ProjetController#getAll()Ljava/util/List;42
+
+method43
+
+getAll44
+
+
+GetMapping46
+(
+"Recovered#typeBindingLGetMapping;048
+$
+com.example.demo.entity.Projet50
+
+
+references51
+F
+@com.example.demo.service.ProjetService#findAll()Ljava/util/List;53
+
+calls54
+\
+Vcom.example.demo.controller.ProjetController#getById(Ljava/lang/Long;)LResponseEntity;56
+
+getById57
+
+ResponseEntity59
+
+returns60
+
+PathVariable62
+*
+$Recovered#typeBindingLPathVariable;064
+[
+Ucom.example.demo.service.ProjetService#findById(Ljava/lang/Long;)Ljava/util/Optional;66
+a
+[com.example.demo.controller.ProjetController#getByManager(Ljava/lang/Long;)Ljava/util/List;68
+
+getByManager69
+^
+Xcom.example.demo.service.ProjetService#findByManagerId(Ljava/lang/Long;)Ljava/util/List;71
+{
+ucom.example.demo.controller.ProjetController#create(Lcom/example/demo/entity/Projet;)Lcom/example/demo/entity/Projet;73
+
+create74
+
+	has param75
+
+PostMapping77
+)
+#Recovered#typeBindingLPostMapping;079
+
+RequestBody81
+)
+#Recovered#typeBindingLRequestBody;083
+s
+mcom.example.demo.service.ProjetService#save(Lcom/example/demo/entity/Projet;)Lcom/example/demo/entity/Projet;85
+{
+ucom.example.demo.controller.ProjetController#update(Ljava/lang/Long;Lcom/example/demo/entity/Projet;)LResponseEntity;87
+
+update88
+
+
+PutMapping90
+(
+"Recovered#typeBindingLPutMapping;092
+@
+:com.example.demo.entity.Projet#setNom(Ljava/lang/String;)V94
+?
+9com.example.demo.entity.Projet#getNom()Ljava/lang/String;96
+F
+@com.example.demo.entity.Projet#setNomClient(Ljava/lang/String;)V98
+F
+?com.example.demo.entity.Projet#getNomClient()Ljava/lang/String;100
+I
+Bcom.example.demo.entity.Projet#setDescription(Ljava/lang/String;)V102
+H
+Acom.example.demo.entity.Projet#getDescription()Ljava/lang/String;104
+3
+,com.example.demo.entity.Projet#setPhoto([B)V106
+2
++com.example.demo.entity.Projet#getPhoto()[B108
+\
+Ucom.example.demo.entity.Projet#setDepartement(Lcom/example/demo/entity/Departement;)V110
+*
+#com.example.demo.entity.Departement112
+[
+Tcom.example.demo.entity.Projet#getDepartement()Lcom/example/demo/entity/Departement;114
+T
+Mcom.example.demo.entity.Projet#setManager(Lcom/example/demo/entity/Manager;)V116
+&
+com.example.demo.entity.Manager118
+S
+Lcom.example.demo.entity.Projet#getManager()Lcom/example/demo/entity/Manager;120
+M
+Fcom.example.demo.controller.ProjetController#delete(Ljava/lang/Long;)V122
+
+delete123
+
+DeleteMapping125
+,
+%Recovered#typeBindingLDeleteMapping;0127
+G
+@com.example.demo.service.ProjetService#delete(Ljava/lang/Long;)V129
+‹
+ƒcom.example.demo.controller.ProjetController#uploadProjetWithPhoto(Lcom/example/demo/entity/Projet;LMultipartFile;)LResponseEntity;131
+
+uploadProjetWithPhoto132
+,
+%Recovered#typeBindingLMultipartFile;0134
+
+RequestPart136
+*
+#Recovered#typeBindingLRequestPart;0138
+a
+Zcom.example.demo.service.DepartementService#findById(Ljava/lang/Long;)Ljava/util/Optional;140
+B
+;com.example.demo.entity.Departement#getId()Ljava/lang/Long;142
+d
+]com.example.demo.controller.ProjetController#getProjetPhoto(Ljava/lang/Long;)LResponseEntity;144
+
+getProjetPhoto145J
+
+1
+12Z
+
+3	
+354jª
+@
+24:
+242526 *
+1 (26:3B
+	
+9
+27
+
+
+11
+28
+@
+67:
+676843 *
+1- -(26:3B
+	
+9
+10
+
+
+11
+69
+D
+130=
+13013143 *
+1K K(26:3B
+	
+9
+10
+
+11
+132
+
+17
+171815
+
+63
+636415
+
+128
+12812915
+
+115
+11511615
+@
+41:
+414243 *
+1! !(26:3B
+	
+9
+10
+
+
+11
+44
+
+29
+293015
+
+22
+222315
+
+47
+474815
+
+101
+10110215
+
+107
+10710815
+D
+121=
+12112243 *
+1F F(26:3B
+	
+9
+10
+
+11
+123
+
+52
+525315
+
+133
+13313415
+
+91
+919215
+
+82
+828315
+
+84
+848515
+D
+143=
+14314443 *
+1c c(26:3B
+	
+9
+10
+
+11
+145
+
+45
+454615
+
+99
+9910015
+
+89
+899015
+
+65
+656615
+
+137
+13713815
+
+126
+12612715
+@
+86:
+868743 *
+17 7(26:3B
+	
+9
+10
+
+
+11
+88
+
+13
+131415
+
+39
+394015
+
+113
+11311415
+
+119
+11912015
+
+20
+202115
+@
+55:
+555643 *
+1& &(26:3B
+	
+9
+10
+
+
+11
+57
+
+141
+14114215
+
+32
+323315
+
+76
+767715
+
+97
+979815
+
+105
+10510615
+
+124
+12412515
+
+93
+939415
+9
+64
+678 *
+1 (:3B
+	
+9
+10
+
+
+11
+12
+
+49
+495015
+
+117
+11711815
+
+80
+808115
+
+103
+10310415
+@
+72:
+727343 *
+12 2(26:3B
+	
+9
+10
+
+
+11
+74
+
+109
+10911015
+
+95
+959615
+
+78
+787915
+
+58
+585915
+
+135
+13513615
+
+34
+343515
+
+111
+11111215
+
+139
+13914015
+
+70
+707115
+@
+36:
+363726 *
+1 (26:3B
+	
+9
+27
+
+
+11
+38
+
+61
+616215r¨&
+
+61316*
+1 (
+
+61719*
+1 (
+
+62016*
+1 (
+
+62219*
+1 (
+
+242931*
+1 (
+
+243216*
+1 (
+
+243419*
+1 (
+
+242919*
+1 (
+
+242919*
+1 ((
+
+363931*
+1   (
+
+363216*
+1 (
+
+363419*
+1 (
+
+363919*
+1   (
+
+363919*
+1    (2
+
+414516*
+1! !(
+
+414719*
+1! !(
+
+414919*
+1" "(
+
+412951*
+1# #(
+
+415254*
+1# #(%
+
+412451*
+1# #(
+
+412919*
+1# #(
+
+412451*
+1# #(
+
+555860*
+1' '(
+
+554516*
+1& &(
+
+554719*
+1& &(
+
+555819*
+1' '(
+
+554919*
+1' '(!
+
+556116*
+1'+ '(,
+
+556319*
+1', '(8
+
+552951*
+1( ((
+
+556554*
+1( ((&
+
+552451*
+1( ((
+
+552919*
+1( ((
+
+552451*
+1( ((
+
+674516*
+1- -(
+
+674719*
+1- -(
+
+674919*
+1. .(
+
+676116*
+1.& .('
+
+676319*
+1.' .(3
+
+672951*
+1/ /(
+
+677054*
+1/ /(-
+
+672451*
+1/ /(
+
+672919*
+1/ /(
+
+672451*
+1/ /(
+
+724960*
+13 3(
+
+724975*
+13' 3(-
+
+727616*
+12 2(
+
+727819*
+12 2(
+
+724919*
+13 3(
+
+724931*
+13. 3(4
+
+728016*
+13 3(
+
+728219*
+13 3(&
+
+724919*
+13' 3(-
+
+724960*
+14 4(
+
+722951*
+14 4(
+
+728454*
+14 4("
+
+722451*
+14 4(
+
+722919*
+14 4(
+
+722451*
+14 4(
+
+865860*
+18 8(
+
+864975*
+18N 8(T
+
+868916*
+17 7(
+
+869119*
+17 7(
+
+865819*
+18 8(
+
+864919*
+18 8(!
+
+866116*
+18* 8(+
+
+866319*
+18+ 8(7
+
+864931*
+18U 8(b
+
+868016*
+18A 8(B
+
+868219*
+18B 8(M
+
+864919*
+18N 8(T
+
+862951*
+19 9(
+
+866554*
+19 9(&
+
+862451*
+19 9(
+
+862919*
+19 9(
+
+862451*
+19 9(
+
+864931*
+1: :(
+
+864951*
+1; ;(
+
+869354*
+1; ;("
+
+864951*
+1;# ;(0
+
+869554*
+1;1 ;(7
+
+864951*
+1< <(
+
+869754*
+1< <((
+
+864951*
+1<) <(6
+
+869954*
+1<7 <(C
+
+864951*
+1= =(
+
+8610154*
+1= =(*
+
+864951*
+1=+ =(8
+
+8610354*
+1=9 =(G
+
+864951*
+1> >(
+
+8610554*
+1> >($
+
+864951*
+1>% >(2
+
+8610754*
+1>3 >(;
+
+864951*
+1? ?(
+
+8610954*
+1? ?(*
+
+8611160*
+1?+ ?(8
+
+864951*
+1?+ ?(8
+
+8611354*
+1?9 ?(G
+
+864951*
+1@ @(
+
+8611554*
+1@ @(&
+
+8611760*
+1@' @(4
+
+864951*
+1@' @(4
+
+8611954*
+1@5 @(?
+
+864960*
+1A. A(;
+
+862951*
+1A. A(;
+
+868454*
+1A< A(@
+
+862451*
+1A. A(;
+
+862919*
+1A. A(;
+
+862451*
+1A. A(;
+
+12112416*
+1F F(
+
+12112619*
+1F F(
+
+1216116*
+1G G(
+
+1216319*
+1G G(%
+
+1212951*
+1H	 H(
+
+12112854*
+1H H(
+
+1212451*
+1H	 H(
+
+1212919*
+1H	 H(
+
+1212451*
+1H	 H(
+
+1305860*
+1L L(
+
+1304975*
+1M$ M(*
+
+13013375*
+1N# N(0
+
+1307616*
+1K K(
+
+1307819*
+1K K(
+
+1305819*
+1L L(
+
+1304919*
+1L L(!
+
+1304931*
+1M+ M(1
+
+13013516*
+1M M(
+
+13013719*
+1M M(
+
+1304919*
+1M$ M(*
+
+13013331*
+1N1 N(5
+
+13013516*
+1N N(
+
+13013719*
+1N N(
+
+13013319*
+1N# N(0
+
+1304951*
+1R R(
+
+13010554*
+1R R( 
+
+13011160*
+1U U(
+
+1304951*
+1U U(
+
+13011354*
+1U U(&
+
+13011131*
+1V V((
+
+13011119*
+1V V(
+
+13011160*
+1V+ V(=
+
+1303951*
+1V+ V(=
+
+13013954*
+1V> V(F
+
+1303651*
+1V+ V(=
+
+1303919*
+1V+ V(=
+
+1303651*
+1V+ V(=
+
+13011151*
+1VG V(M
+
+13014154*
+1V_ V(d
+
+13011160*
+1VG V(M
+
+1304951*
+1VG V(M
+
+13011354*
+1VN V(\
+
+1304951*
+1X X(
+
+13010954*
+1X X(&
+
+1304931*
+1[ [(
+
+1304919*
+1[ [(
+
+1304960*
+1[ [()
+
+1302951*
+1[ [()
+
+1308454*
+1[* [(.
+
+1302451*
+1[ [()
+
+1302919*
+1[ [()
+
+1302451*
+1[ [()
+
+1435860*
+1d d(
+
+1434516*
+1c c(
+
+1434719*
+1c c(
+
+1435819*
+1d d(
+
+1436116*
+1d2 d(3
+
+1436319*
+1d3 d(?
+
+1434919*
+1e e(
+
+1432951*
+1e+ e(8
+
+1436554*
+1e9 e(A
+
+1432451*
+1e+ e(8
+
+1432919*
+1e+ e(8
+
+1432451*
+1e+ e(8
+
+1434931*
+1h h(
+
+1434919*
+1h h(
+
+1434960*
+1h h(+
+
+1434951*
+1i i("
+
+14310754*
+1i# i(+

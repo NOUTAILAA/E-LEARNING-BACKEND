@@ -1,0 +1,5 @@
+com.example.demo.controller.CoursController#deleteCours(Ljava/lang/Long;)V
+false
+beb3681becf2eabcca40219ebbf0b908
+==
+deleteCours com.example.demo.service.CoursService#deleteCours(Ljava/lang/Long;)V

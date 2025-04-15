@@ -1,0 +1,25 @@
+com.example.demo.service.ManagerService#save(Lcom/example/demo/entity/Manager;)Lcom/example/demo/entity/Manager;
+false
+49e458c062d8a9b15a614074f08f75b2
+com.example.demo.util.PasswordGenerator#generateRandomPassword()Ljava/lang/String;
+java.lang.IllegalArgumentException#<init>(Ljava/lang/String;)V
+java.lang.IllegalArgumentException#instance-init#
+java.lang.Long#equals(Ljava/lang/Object;)Z
+java.lang.String#isEmpty()Z
+java.util.Optional#get()Ljava/lang/Object;
+java.util.Optional#isPresent()Z
+==
+!unknownMethod! !unknownMethod!
+findByEmail com.example.demo.repository.ManagerRepository#findByEmail(Ljava/lang/String;)Ljava/util/Optional;
+findByTelephone com.example.demo.repository.ManagerRepository#findByTelephone(Ljava/lang/String;)Ljava/util/Optional;
+getDepartement com.example.demo.entity.Manager#getDepartement()Lcom/example/demo/entity/Departement;
+getEmail com.example.demo.entity.Utilisateur#getEmail()Ljava/lang/String;
+getId com.example.demo.entity.Departement#getId()Ljava/lang/Long;
+getId com.example.demo.entity.Utilisateur#getId()Ljava/lang/Long;
+getNom com.example.demo.entity.Utilisateur#getNom()Ljava/lang/String;
+getRole com.example.demo.entity.Utilisateur#getRole()Ljava/lang/String;
+getTelephone com.example.demo.entity.Utilisateur#getTelephone()Ljava/lang/String;
+sendActivationEmail com.example.demo.service.EmailService#sendActivationEmail(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+setDepartement com.example.demo.entity.Manager#setDepartement(Lcom/example/demo/entity/Departement;)V
+setPassword com.example.demo.entity.Utilisateur#setPassword(Ljava/lang/String;)V
+setRole com.example.demo.entity.Utilisateur#setRole(Ljava/lang/String;)V

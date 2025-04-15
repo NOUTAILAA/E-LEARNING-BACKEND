@@ -1,6 +1,13 @@
 package com.example.demo.entity;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -14,13 +21,41 @@ public class Projet {
     private String description;
 
     @Lob
+    @JsonIgnore
     private byte[] photo;
 
     @ManyToOne
-    @JoinColumn(name = "departement_id")
-    private Departement departement;
+@JoinColumn(name = "departement_id")
+@JsonManagedReference
+private Departement departement;
 
+    @OneToMany(mappedBy = "projet", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
+    private List<Cours> coursList = new ArrayList<>();
+
+    @ManyToOne
+    @JoinColumn(name = "manager_id")
+    @JsonBackReference
+    private Manager manager;
+    
+    public Manager getManager() {
+        return manager;
+    }
+    
+    public void setManager(Manager manager) {
+        this.manager = manager;
+    }
+    
     // Getters et Setters
+    
+    public List<Cours> getCoursList() {
+        return coursList;
+    }
+
+    public void setCoursList(List<Cours> coursList) {
+        this.coursList = coursList;
+    }
+
     public Long getId() {
         return id;
     }

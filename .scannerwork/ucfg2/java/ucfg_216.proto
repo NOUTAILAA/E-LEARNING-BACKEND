@@ -1,0 +1,63 @@
+
+^com.example.demo.controller.CoursController#getCoursByProjet(Ljava/lang/Long;)Ljava/util/List;}
+sC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/CoursController.java ('"startingBlock*°
+startingBlock' (D…
+‚
+ (%
+%2"
+__annotate**
+
+__unknown_file (
+
+GetMapping*8
+
+__unknown_file (
+
+projetIdjava.lang.Long‡
+„
+( (5
+%3"
+__annotate*,
+
+__unknown_file (
+PathVariable*8
+
+__unknown_file (
+
+projetIdjava.lang.Long~
+|
+; (C
+projetIdjava.lang.Long"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*€
+1 (Ÿ
+œ
+ (+
+%0%com.example.demo.service.CoursService"__id*]
+
+__unknown_file (A*?-
++com.example.demo.controller.CoursController"
+coursServiceª§
+ (8
+%1java.util.List"Zcom.example.demo.service.CoursService#getCoursByProjetId(Ljava/lang/Long;)Ljava/util/List;*I
+
+__unknown_file (-
++
+%0%com.example.demo.service.CoursService*8
+
+__unknown_file (
+
+projetIdjava.lang.Long2$getCoursByProjetId(Ljava/lang/Long;)""
+ (9
+
+%1java.util.List:&
+( (C
+projetIdjava.lang.LongB/-
++com.example.demo.controller.CoursControllerH

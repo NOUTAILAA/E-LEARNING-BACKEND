@@ -1,0 +1,27 @@
+
+Zcom.example.demo.service.CoursService#getCoursByProjetId(Ljava/lang/Long;)Ljava/util/List;w
+mC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/CoursService.java ()"1*‡
+1 (¢
+Ÿ
+ (1
+%0+com.example.demo.repository.CoursRepository"__id*Z
+
+__unknown_file (>*<'
+%com.example.demo.service.CoursService"
+coursRepository®«
+ (7
+%1java.util.List"\com.example.demo.repository.CoursRepository#findByProjetId(Ljava/lang/Long;)Ljava/util/List;*O
+
+__unknown_file (3
+1
+%0+com.example.demo.repository.CoursRepository*8
+
+__unknown_file (
+
+projetIdjava.lang.Long2 findByProjetId(Ljava/lang/Long;)""
+ (8
+
+%1java.util.List:&
+* (7
+projetIdjava.lang.LongB)'
+%com.example.demo.service.CoursServiceH

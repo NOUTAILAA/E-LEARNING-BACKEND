@@ -1,0 +1,5 @@
+com.example.demo.controller.SuperAdminController#create(Lcom/example/demo/entity/SuperAdmin;)Lcom/example/demo/entity/SuperAdmin;
+false
+bb8626462aff56c073520ab45f66df07
+==
+save com.example.demo.service.SuperAdminService#save(Lcom/example/demo/entity/SuperAdmin;)Lcom/example/demo/entity/SuperAdmin;

@@ -1,0 +1,5 @@
+com.example.demo.controller.QuizController#getAllQuizzes()Ljava/util/List;
+false
+4e62ed79faa9345589cfd97824e3ac15
+==
+getAllQuizzes com.example.demo.service.QuizService#getAllQuizzes()Ljava/util/List;

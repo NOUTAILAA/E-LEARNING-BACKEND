@@ -1,0 +1,5 @@
+com.example.demo.controller.QuizController#deleteQuiz(Ljava/lang/Long;)V
+false
+7447e4a21e9b8ce72ba0ca6b159e8258
+==
+deleteQuiz com.example.demo.service.QuizService#deleteQuiz(Ljava/lang/Long;)V

@@ -1,0 +1,198 @@
+
+vcom.example.demo.service.ApprenantService#save(Lcom/example/demo/entity/Apprenant;)Lcom/example/demo/entity/Apprenant;{
+qC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/ApprenantService.java& &("6*∞	
+2,& ,(;≤
+Ø
+,& ,(;7
+%71com.example.demo.repository.DepartementRepository"__id*d
+
+__unknown_file (H*F+
+)com.example.demo.service.ApprenantService"
+departementRepositoryÒÓ
+,E ,(_)
+%8#com.example.demo.entity.Departement"Wcom.example.demo.entity.Apprenant#getDepartement()Lcom/example/demo/entity/Departement;*L
+
+__unknown_file (0
+.
+	apprenant!com.example.demo.entity.Apprenant2getDepartement()≤Ø
+,E ,(g
+%9java.lang.Long";com.example.demo.entity.Departement#getId()Ljava/lang/Long;*G
+
+__unknown_file (+
+)
+%8#com.example.demo.entity.Departement2getId()É
+Ä
+- -(Y
+%10"__declareFunction*Z
+
+__unknown_file (><
+:__sonar_lambda_7$com.example.demo.service.ApprenantServicej
+h
+, -([2
+departement#com.example.demo.entity.Departement"__id*"
+
+__unknown_file (
+""À»
+. .(1
+%11void"Xcom.example.demo.entity.Apprenant#setDepartement(Lcom/example/demo/entity/Departement;)V*L
+
+__unknown_file (0
+.
+	apprenant!com.example.demo.entity.Apprenant*P
+
+__unknown_file (4
+2
+departement#com.example.demo.entity.Departement25setDepartement(Lcom/example/demo/entity/Departement;)*
+1*î
+3+ +(ÒÓ
++ +(&)
+%5#com.example.demo.entity.Departement"Wcom.example.demo.entity.Apprenant#getDepartement()Lcom/example/demo/entity/Departement;*L
+
+__unknown_file (0
+.
+	apprenant!com.example.demo.entity.Apprenant2getDepartement()à
+Ö
++ +(.
+%6boolean"	__compare*
++' +()
+!=*7
++ +(&+
+)
+%5#com.example.demo.entity.Departement*
++* +(.
+""*
+2
+1*Ü
+4( ((ÒÓ
+( ((*
+
+%4void"@com.example.demo.entity.Utilisateur#setRole(Ljava/lang/String;)V*L
+
+__unknown_file (0
+.
+	apprenant!com.example.demo.entity.Apprenant*)
+
+__unknown_file (
+	apprenant2setRole(Ljava/lang/String;)*
+3*“
+5'+ '(4øº
+'+ '(>
+%2java.lang.String"?com.example.demo.entity.Utilisateur#getRole()Ljava/lang/String;*L
+
+__unknown_file (0
+.
+	apprenant!com.example.demo.entity.Apprenant2	getRole()yw
+'+ '(H
+%3boolean"java.lang.String#isEmpty()Z*4
+
+__unknown_file (
+
+%2java.lang.String2	isEmpty()*
+3
+4*Õ
+6' '(øº
+' '(
+%0java.lang.String"?com.example.demo.entity.Utilisateur#getRole()Ljava/lang/String;*L
+
+__unknown_file (0
+.
+	apprenant!com.example.demo.entity.Apprenant2	getRole()t
+r
+' '('
+%1boolean"	__compare*
+'  '("
+==*$
+' '(
+
+%0java.lang.String*
+'# '('
+""*
+4
+5*ù
+12 2(0√
+¿
+2 2(I
+%12java.lang.String"Rcom.example.demo.util.PasswordGenerator#generateRandomPassword()Ljava/lang/String;*G
+
+__unknown_file (+")
+'com.example.demo.util.PasswordGeneratorl
+j
+2 2(J!
+plainPasswordjava.lang.String"__id*5
+
+__unknown_file (
+
+%12java.lang.StringZ
+X
+5 5(F"
+hashedPasswordjava.lang.String"__id*"
+
+__unknown_file (
+""ëé
+6 6(-
+%13void"Dcom.example.demo.entity.Utilisateur#setPassword(Ljava/lang/String;)V*L
+
+__unknown_file (0
+.
+	apprenant!com.example.demo.entity.Apprenant*@
+
+__unknown_file ($
+"
+hashedPasswordjava.lang.String2setPassword(Ljava/lang/String;)Ø
+¨
+9# 9(66
+%14/com.example.demo.repository.ApprenantRepository"__id*b
+
+__unknown_file (F*D+
+)com.example.demo.service.ApprenantService"
+apprenantRepositoryk
+i
+9 9(G3
+savedApprenant!com.example.demo.entity.Apprenant"__id*"
+
+__unknown_file (
+""û
+õ
+< <(,
+%15%com.example.demo.service.EmailService"__id*[
+
+__unknown_file (?*=+
+)com.example.demo.service.ApprenantService"
+emailService«ƒ
+<) <(B
+%16java.lang.String"@com.example.demo.entity.Utilisateur#getEmail()Ljava/lang/String;*Q
+
+__unknown_file (5
+3
+savedApprenant!com.example.demo.entity.Apprenant2
+getEmail()√¿
+<D <([
+%17java.lang.String">com.example.demo.entity.Utilisateur#getNom()Ljava/lang/String;*Q
+
+__unknown_file (5
+3
+savedApprenant!com.example.demo.entity.Apprenant2getNom()÷”
+< <(k
+%18void"rcom.example.demo.service.EmailService#sendActivationEmail(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*J
+
+__unknown_file (.
+,
+%15%com.example.demo.service.EmailService*5
+
+__unknown_file (
+
+%16java.lang.String*5
+
+__unknown_file (
+
+%17java.lang.String*?
+
+__unknown_file (#
+!
+plainPasswordjava.lang.String2KsendActivationEmail(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)"A
+> >(5
+3
+savedApprenant!com.example.demo.entity.Apprenant::
+& &(-.
+	apprenant!com.example.demo.entity.ApprenantB-+
+)com.example.demo.service.ApprenantServiceH

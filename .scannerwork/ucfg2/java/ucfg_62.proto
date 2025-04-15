@@ -1,0 +1,16 @@
+
+icom.example.demo.service.SectionService#getSectionById(Ljava/lang/Long;)Lcom/example/demo/entity/Section;y
+oC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/SectionService.java (!"1*Ì
+1 ( ¨
+¥
+ ( 3
+%0-com.example.demo.repository.SectionRepository"__id*^
+
+__unknown_file (B*@)
+'com.example.demo.service.SectionService"
+sectionRepository"
+ (;
+"": 
+" ()
+idjava.lang.LongB+)
+'com.example.demo.service.SectionServiceH

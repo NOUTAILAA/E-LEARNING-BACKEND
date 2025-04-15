@@ -1,0 +1,5 @@
+com.example.demo.controller.AdminController#create(Lcom/example/demo/entity/Admin;)Lcom/example/demo/entity/Admin;
+false
+67c618c9b9e37e0cce4ddee0a7edd043
+==
+save com.example.demo.service.AdminService#save(Lcom/example/demo/entity/Admin;)Lcom/example/demo/entity/Admin;

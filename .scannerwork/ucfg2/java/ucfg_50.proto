@@ -1,0 +1,68 @@
+
+gcom.example.demo.controller.SectionController#getSectionsByChapitreId(Ljava/lang/Long;)Ljava/util/List;
+uC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/SectionController.java (0"startingBlock*·
+startingBlock0 (O‡
+„
+ ()
+%2"
+__annotate**
+
+__unknown_file (
+
+GetMapping*:
+
+__unknown_file (
+
+
+chapitreIdjava.lang.Long‰
+†
+1 (>
+%3"
+__annotate*,
+
+__unknown_file (
+PathVariable*:
+
+__unknown_file (
+
+
+chapitreIdjava.lang.Long€
+~
+D (N
+
+chapitreIdjava.lang.Long"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*–
+1 (¥
+¢
+ (-
+%0'com.example.demo.service.SectionService"__id*a
+
+__unknown_file (E*C/
+-com.example.demo.controller.SectionController"
+sectionServiceº·
+ (A
+%1java.util.List"acom.example.demo.service.SectionService#getSectionsByChapitreId(Ljava/lang/Long;)Ljava/util/List;*K
+
+__unknown_file (/
+-
+%0'com.example.demo.service.SectionService*:
+
+__unknown_file (
+
+
+chapitreIdjava.lang.Long2)getSectionsByChapitreId(Ljava/lang/Long;)""
+ (B
+
+%1java.util.List:(
+1 (N
+
+chapitreIdjava.lang.LongB1/
+-com.example.demo.controller.SectionControllerH

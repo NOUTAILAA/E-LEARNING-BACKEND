@@ -1,0 +1,5 @@
+com.example.demo.controller.CoursController#getAllCours()Ljava/util/List;
+false
+568e9429b8b01cf233b1e9a56cbfa436
+==
+getAllCours com.example.demo.service.CoursService#getAllCours()Ljava/util/List;

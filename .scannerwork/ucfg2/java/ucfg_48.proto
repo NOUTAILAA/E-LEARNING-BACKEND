@@ -1,0 +1,21 @@
+
+Ncom.example.demo.controller.SectionController#getAllSections()Ljava/util/List;
+uC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/SectionController.java ('"1*¨
+1 (¥
+¢
+ (-
+%0'com.example.demo.service.SectionService"__id*a
+
+__unknown_file (E*C/
+-com.example.demo.controller.SectionController"
+sectionServiceÌÉ
+ (.
+%1java.util.List"Hcom.example.demo.service.SectionService#getAllSections()Ljava/util/List;*K
+
+__unknown_file (/
+-
+%0'com.example.demo.service.SectionService2getAllSections()""
+ (/
+
+%1java.util.ListB1/
+-com.example.demo.controller.SectionControllerH

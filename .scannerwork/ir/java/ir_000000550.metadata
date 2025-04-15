@@ -1,0 +1,5 @@
+com.example.demo.controller.QuizController#createQuiz(Lcom/example/demo/entity/Quiz;)Lcom/example/demo/entity/Quiz;
+false
+e11f54f4f5c4ba1cc21d022c46205fac
+==
+saveQuiz com.example.demo.service.QuizService#saveQuiz(Lcom/example/demo/entity/Quiz;)Lcom/example/demo/entity/Quiz;

@@ -1,0 +1,342 @@
+
+1.0'noutailaa_elearning-application-backendJavaFrontend"1744384110773*java2.B¬
+
+9
+4src/main/java/com/example/demo/entity/Apprenant.java2
+
+package4
+
+com.example.demo.entity5
+&
+!com.example.demo.entity.Apprenant7
+
+
+class8
+
+access9
+
+public10
+
+simple name11
+
+	Apprenant12
+)
+#com.example.demo.entity.Utilisateur14
+
+unknown15
+
+extends16
+
+Entity18
+
+annotated by19
+$
+Recovered#typeBindingLEntity;021
+
+
+uses22
+/
+)com.example.demo.entity.Apprenant.manager24
+
+field25
+
+private26
+
+manager27
+%
+com.example.demo.entity.Manager29
+
+is type30
+
+	ManyToOne32
+'
+!Recovered#typeBindingLManyToOne;034
+
+
+JoinColumn36
+(
+"Recovered#typeBindingLJoinColumn;038
+
+
+JsonIgnore40
+(
+"Recovered#typeBindingLJsonIgnore;042
+U
+Ocom.example.demo.entity.Apprenant#getManager()Lcom/example/demo/entity/Manager;44
+
+method45
+
+
+getManager46
+
+returns47
+
+
+references48
+V
+Pcom.example.demo.entity.Apprenant#setManager(Lcom/example/demo/entity/Manager;)V50
+
+
+setManager51
+
+	has param52
+3
+-com.example.demo.entity.Apprenant.departement54
+
+departement55
+)
+#com.example.demo.entity.Departement57
+]
+Wcom.example.demo.entity.Apprenant#getDepartement()Lcom/example/demo/entity/Departement;59
+
+getDepartement60
+^
+Xcom.example.demo.entity.Apprenant#setDepartement(Lcom/example/demo/entity/Departement;)V62
+
+setDepartement63J
+
+1
+12Z
+
+3	
+354j£
+@
+49:
+495045 *
+1 (26:3B
+	
+9
+10
+
+
+11
+51
+
+17
+171815
+
+13
+131415
+
+33
+333415
+
+39
+394015
+@
+58:
+585945 *
+1 (26:3B
+	
+9
+10
+
+
+11
+60
+@
+53:
+535425 *
+1 (26:3B
+	
+9
+26
+
+
+11
+55
+9
+64
+678 *
+1 (:3B
+	
+9
+10
+
+
+11
+12
+@
+43:
+434445 *
+1 (26:3B
+	
+9
+10
+
+
+11
+46
+
+31
+313215
+
+35
+353615
+@
+61:
+616245 *
+1 (26:3B
+	
+9
+10
+
+
+11
+63
+
+20
+202115
+
+41
+414215
+@
+23:
+232425 *
+1	 	(26:3B
+	
+9
+26
+
+
+11
+27
+
+56
+565715
+
+37
+373815
+
+28
+282915ræ
+
+61316*
+1  (+
+
+61719*
+1 (
+
+62022*
+1 (
+
+61322*
+1  (+
+
+232830*
+1 (
+
+233119*
+1	 	(
+
+233322*
+1	 	(
+
+233519*
+1
+ 
+(
+
+233722*
+1
+ 
+(
+
+233919*
+1 (
+
+234122*
+1 (
+
+232822*
+1 (
+
+232822*
+1 (
+
+432847*
+1 (
+
+432822*
+1 (
+
+432822*
+1 (
+
+432348*
+1 (
+
+492852*
+1 (#
+
+492830*
+1$ (+
+
+492822*
+1 (#
+
+49622*
+1	 (
+
+49648*
+1	 (
+
+492822*
+1 (
+
+492348*
+1 (
+
+535630*
+1 (
+
+533119*
+1 (
+
+533322*
+1 (
+
+533519*
+1 (
+
+533722*
+1 (
+
+535622*
+1 (
+
+535622*
+1 ($
+
+585647*
+1 (
+
+585622*
+1 (
+
+585622*
+1 (
+
+585348*
+1 (
+
+615652*
+1  (+
+
+615630*
+1, (7
+
+615622*
+1  (+
+
+61622*
+1 	  (
+
+61648*
+1 	  (
+
+615622*
+1   (
+
+615348*
+1   (

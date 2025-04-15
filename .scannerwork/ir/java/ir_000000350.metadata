@@ -1,0 +1,6 @@
+com.example.demo.service.UtilisateurService#greetUser(Lcom/example/demo/entity/Utilisateur;)Ljava/lang/String;
+false
+c8a19e391d8e0fc5a1a9165f74ca90b0
+==
+getNom com.example.demo.entity.Utilisateur#getNom()Ljava/lang/String;
+getRole com.example.demo.entity.Utilisateur#getRole()Ljava/lang/String;

@@ -1,0 +1,62 @@
+
+scom.example.demo.controller.QuizController#createQuiz(Lcom/example/demo/entity/Quiz;)Lcom/example/demo/entity/Quiz;|
+rC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/QuizController.java% %("startingBlock*–
+startingBlock% %(2ê
+ç
+$ $(
+%2"
+__annotate*+
+
+__unknown_file (
+PostMapping*B
+
+__unknown_file (&
+$
+quizcom.example.demo.entity.Quizê
+ç
+% %('
+%3"
+__annotate*+
+
+__unknown_file (
+RequestBody*B
+
+__unknown_file (&
+$
+quizcom.example.demo.entity.Quizâ
+Ü
+%- %(1$
+quizcom.example.demo.entity.Quiz"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*∑
+1& &(ú
+ô
+& &(*
+%0$com.example.demo.service.QuizService"__id*[
+
+__unknown_file (?*=,
+*com.example.demo.controller.QuizController"
+quizService÷”
+& &()"
+%1com.example.demo.entity.Quiz"kcom.example.demo.service.QuizService#saveQuiz(Lcom/example/demo/entity/Quiz;)Lcom/example/demo/entity/Quiz;*H
+
+__unknown_file (,
+*
+%0$com.example.demo.service.QuizService*B
+
+__unknown_file (&
+$
+quizcom.example.demo.entity.Quiz2(saveQuiz(Lcom/example/demo/entity/Quiz;)"0
+& &(*$
+"
+%1com.example.demo.entity.Quiz:0
+% %(1$
+quizcom.example.demo.entity.QuizB.,
+*com.example.demo.controller.QuizControllerH

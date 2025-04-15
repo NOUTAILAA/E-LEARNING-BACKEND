@@ -1,0 +1,5 @@
+com.example.demo.controller.DepartementController#create(Lcom/example/demo/entity/Departement;)Lcom/example/demo/entity/Departement;
+false
+a072cee008ea36ab7813d4d443288427
+==
+save com.example.demo.service.DepartementService#save(Lcom/example/demo/entity/Departement;)Lcom/example/demo/entity/Departement;

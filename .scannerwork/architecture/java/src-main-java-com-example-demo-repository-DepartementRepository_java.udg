@@ -1,0 +1,83 @@
+
+1.0'noutailaa_elearning-application-backendJavaFrontend"1744384115891*java2.Bã
+I
+Dsrc/main/java/com/example/demo/repository/DepartementRepository.java2
+
+package4
+ 
+com.example.demo.repository5
+6
+1com.example.demo.repository.DepartementRepository7
+
+	interface8
+
+access9
+
+public10
+
+simple name11
+
+DepartementRepository12
++
+%Recovered#typeBindingLJpaRepository;014
+
+unknown15
+
+
+implements16
+
+
+Repository18
+
+annotated by19
+(
+"Recovered#typeBindingLRepository;021
+
+
+uses22
+)
+#com.example.demo.entity.Departement24J
+
+1
+12Z
+
+3	
+354j‹
+
+13
+131415
+
+17
+171815
+9
+64
+678 *
+1	 	(':3B
+	
+9
+10
+
+
+11
+12
+
+20
+202115
+
+23
+232415r‚
+
+61316*
+1	0 	(=
+
+61719*
+1 (
+
+62022*
+1 (
+
+61322*
+1	0 	(=
+
+62322*
+1	> 	(I

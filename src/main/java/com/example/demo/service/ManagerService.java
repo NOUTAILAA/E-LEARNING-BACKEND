@@ -6,8 +6,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.entity.Apprenant;
 import com.example.demo.entity.Departement;
 import com.example.demo.entity.Manager;
+import com.example.demo.repository.ApprenantRepository;
 import com.example.demo.repository.DepartementRepository;
 import com.example.demo.repository.ManagerRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -37,8 +39,7 @@ public class ManagerService {
         if (existingByEmail.isPresent() && !existingByEmail.get().getId().equals(manager.getId())) {
             throw new IllegalArgumentException("Un utilisateur avec cet email existe déjà.");
         }
-
-        // Vérifier s’il existe un autre utilisateur avec ce téléphone
+    
         Optional<Manager> existingByPhone = managerRepository.findByTelephone(manager.getTelephone());
         if (existingByPhone.isPresent() && !existingByPhone.get().getId().equals(manager.getId())) {
             throw new IllegalArgumentException("Un utilisateur avec ce téléphone existe déjà.");
@@ -84,5 +85,35 @@ public class ManagerService {
     public Optional<Manager> findByEmailAndPassword(String email, String password) {
         return managerRepository.findByEmailAndPassword(email, password);  // Méthode à ajouter dans le repository
     }
+    @Autowired
+private ApprenantRepository apprenantRepository;
+
+public Manager assignApprenantsToManager(Long managerId, List<Long> apprenantIds) {
+    Manager manager = managerRepository.findById(managerId)
+            .orElseThrow(() -> new IllegalArgumentException("Manager non trouvé"));
+
+    List<Apprenant> apprenants = apprenantRepository.findAllById(apprenantIds);
+    
+    for (Apprenant apprenant : apprenants) {
+        // Vérifier que l'apprenant est dans le même département que le manager
+        if (apprenant.getDepartement() == null || !apprenant.getDepartement().getId().equals(manager.getDepartement().getId())) {
+            throw new IllegalArgumentException("L’apprenant avec l’ID " + apprenant.getId() +
+                " n’appartient pas au même département que le manager.");
+        }
+
+        apprenant.setManager(manager);
+        apprenantRepository.save(apprenant);
+    }
+
+    return manager;
+}
+
+    public List<Apprenant> getApprenantsNonAssignesDansDepartement(Long departementId) {
+        return apprenantRepository.findByManagerIsNullAndDepartementId(departementId);
+    }
+    public Optional<Manager> findByEmail(String email) {
+        return managerRepository.findByEmail(email);
+    }
+    
 }
 

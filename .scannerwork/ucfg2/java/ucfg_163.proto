@@ -1,0 +1,16 @@
+
+Acom.example.demo.entity.Departement#getManagers()Ljava/util/List;u
+kC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/entity/Departement.java6 6(!"1*®
+17	 7({
+y
+7	 7(
+%0java.util.List"__id*Q
+
+__unknown_file (5*3%
+#com.example.demo.entity.Departement"
+
+managers""
+7 7(
+
+%0java.util.ListB'%
+#com.example.demo.entity.DepartementH

@@ -1,0 +1,8 @@
+com.example.demo.service.ProjetService#save(Lcom/example/demo/entity/Projet;)Lcom/example/demo/entity/Projet;
+false
+c17895ee5c99a32500b9cfa4f0320101
+==
+!unknownMethod! !unknownMethod!
+getId com.example.demo.entity.Utilisateur#getId()Ljava/lang/Long;
+getManager com.example.demo.entity.Projet#getManager()Lcom/example/demo/entity/Manager;
+setManager com.example.demo.entity.Projet#setManager(Lcom/example/demo/entity/Manager;)V

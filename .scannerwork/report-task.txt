@@ -1,0 +1,7 @@
+organization=noutailaa
+projectKey=noutailaa_elearning-application-backend
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.61804
+dashboardUrl=https://sonarcloud.io/dashboard?id=noutailaa_elearning-application-backend
+ceTaskId=AZYlZWLfpzwuyb95e3Yb
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZYlZWLfpzwuyb95e3Yb

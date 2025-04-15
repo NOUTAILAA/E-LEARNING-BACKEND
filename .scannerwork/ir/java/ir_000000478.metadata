@@ -1,0 +1,5 @@
+com.example.demo.controller.ChapitreController#createChapitre(Lcom/example/demo/entity/Chapitre;)Lcom/example/demo/entity/Chapitre;
+false
+3fb9bcfedec0102629dad8f76312de01
+==
+saveChapitre com.example.demo.service.ChapitreService#saveChapitre(Lcom/example/demo/entity/Chapitre;)Lcom/example/demo/entity/Chapitre;

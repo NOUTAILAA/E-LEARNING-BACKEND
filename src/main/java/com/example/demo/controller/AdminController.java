@@ -12,9 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Admin;
+import com.example.demo.repository.AdminRepository;
 import com.example.demo.service.AdminService;
 
 @RestController
@@ -22,7 +24,8 @@ import com.example.demo.service.AdminService;
 public class AdminController {
     @Autowired
     private AdminService adminService;
-
+    @Autowired
+    private AdminRepository adminRepository;
     @GetMapping
     public List<Admin> getAll() {
         return adminService.findAll();
@@ -32,7 +35,10 @@ public class AdminController {
     public Admin create(@RequestBody Admin admin) {
         return adminService.save(admin);
     }
-
+    @GetMapping("/email")
+    public Admin getByEmail(@RequestParam String email) {
+        return adminRepository.findByEmail(email).orElse(null);
+    }
     @GetMapping("/{id}")
     public ResponseEntity<Admin> getById(@PathVariable Long id) {
         return adminService.findById(id)

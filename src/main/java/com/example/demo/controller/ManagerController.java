@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,11 +12,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entity.Admin;
+import com.example.demo.entity.Apprenant;
 import com.example.demo.entity.Departement;
 import com.example.demo.entity.Manager;
+import com.example.demo.repository.ManagerRepository;
 import com.example.demo.service.DepartementService;
 import com.example.demo.service.ManagerService;
 
@@ -26,7 +29,8 @@ public class ManagerController {
     private ManagerService managerService;
     @Autowired
     private DepartementService departementService; // Injecter le service des départements
-
+    @Autowired
+    private ManagerRepository managerRepository;
     @GetMapping
     public List<Manager> getAll() {
         return managerService.findAll();
@@ -76,4 +80,39 @@ public class ManagerController {
     public void delete(@PathVariable Long id) {
         managerService.delete(id);
     }
+    @PostMapping("/{managerId}/assign-apprenants")
+public ResponseEntity<?> assignApprenants(
+        @PathVariable Long managerId,
+        @RequestBody List<Long> apprenantIds) {
+    Manager manager = managerService.assignApprenantsToManager(managerId, apprenantIds);
+    return ResponseEntity.ok(manager);
+}
+@GetMapping("/{id}/apprenants")
+public ResponseEntity<List<Apprenant>> getApprenantsByManager(@PathVariable Long id) {
+    return managerService.findById(id)
+            .map(manager -> ResponseEntity.ok(manager.getApprenants()))
+            .orElse(ResponseEntity.notFound().build());
+}
+@GetMapping("/{managerId}/apprenants-non-assignes")
+public List<Apprenant> getApprenantsNonAssignesDuDepartement(@PathVariable Long managerId) {
+    Manager manager = managerService.findById(managerId)
+        .orElseThrow(() -> new IllegalArgumentException("Manager non trouvé"));
+    
+    Long departementId = manager.getDepartement().getId();
+    return managerService.getApprenantsNonAssignesDansDepartement(departementId);
+}
+@GetMapping("/email/{email}/apprenants")
+public ResponseEntity<List<Apprenant>> getApprenantsByManagerEmail(@PathVariable String email) {
+    Optional<Manager> managerOpt = managerService.findByEmail(email);
+    if (managerOpt.isPresent()) {
+        return ResponseEntity.ok(managerOpt.get().getApprenants());
+    } else {
+        return ResponseEntity.notFound().build();
+    }
+}
+@GetMapping("/email")
+public ResponseEntity<Manager> getByEmail(@RequestParam String email) {
+    Optional<Manager> manager = managerRepository.findByEmail(email);
+    return manager.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+}
 }

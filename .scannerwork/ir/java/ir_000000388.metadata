@@ -1,0 +1,6 @@
+com.example.demo.exception.GlobalExceptionHandler#handleIllegalArgumentException(Ljava/lang/IllegalArgumentException;)LResponseEntity;
+false
+62b3514df5e5d3c6f7d5379542186e0f
+==
+!unknownMethod! !unknownMethod!
+getMessage java.lang.Throwable#getMessage()Ljava/lang/String;

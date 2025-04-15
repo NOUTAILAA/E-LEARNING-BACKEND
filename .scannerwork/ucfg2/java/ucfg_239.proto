@@ -1,0 +1,63 @@
+
+fcom.example.demo.controller.QuizController#getQuizById(Ljava/lang/Long;)Lcom/example/demo/entity/Quiz;|
+rC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/QuizController.java ("startingBlock*›
+startingBlock (2~
+|
+ (
+%2"
+__annotate**
+
+__unknown_file (
+
+GetMapping*2
+
+__unknown_file (
+
+idjava.lang.Long€
+~
+ ()
+%3"
+__annotate*,
+
+__unknown_file (
+PathVariable*2
+
+__unknown_file (
+
+idjava.lang.Longx
+v
+/ (1
+idjava.lang.Long"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*‘
+1 (œ
+™
+ (*
+%0$com.example.demo.service.QuizService"__id*[
+
+__unknown_file (?*=,
+*com.example.demo.controller.QuizController"
+quizService°­
+ (*"
+%1com.example.demo.entity.Quiz"`com.example.demo.service.QuizService#getQuizById(Ljava/lang/Long;)Lcom/example/demo/entity/Quiz;*H
+
+__unknown_file (,
+*
+%0$com.example.demo.service.QuizService*2
+
+__unknown_file (
+
+idjava.lang.Long2getQuizById(Ljava/lang/Long;)"0
+ (+$
+"
+%1com.example.demo.entity.Quiz: 
+ (1
+idjava.lang.LongB.,
+*com.example.demo.controller.QuizControllerH

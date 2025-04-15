@@ -1,0 +1,6 @@
+com.example.demo.controller.SuperAdminController#getByEmail(Ljava/lang/String;)Lcom/example/demo/entity/SuperAdmin;
+false
+f5a16a96ffc2eeeb0697febf3e83905f
+java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;
+==
+findByEmail com.example.demo.repository.SuperAdminRepository#findByEmail(Ljava/lang/String;)Ljava/util/Optional;

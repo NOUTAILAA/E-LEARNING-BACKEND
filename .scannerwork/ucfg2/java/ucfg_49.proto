@@ -1,0 +1,63 @@
+
+ocom.example.demo.controller.SectionController#getSectionById(Ljava/lang/Long;)Lcom/example/demo/entity/Section;
+uC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/SectionController.java (!"startingBlock*›
+startingBlock! (8~
+|
+ (
+%2"
+__annotate**
+
+__unknown_file (
+
+GetMapping*2
+
+__unknown_file (
+
+idjava.lang.Long€
+~
+" (/
+%3"
+__annotate*,
+
+__unknown_file (
+PathVariable*2
+
+__unknown_file (
+
+idjava.lang.Longx
+v
+5 (7
+idjava.lang.Long"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*¯
+1 (¥
+¢
+ (-
+%0'com.example.demo.service.SectionService"__id*a
+
+__unknown_file (E*C/
+-com.example.demo.controller.SectionController"
+sectionServiceÂ¿
+ (0%
+%1com.example.demo.entity.Section"icom.example.demo.service.SectionService#getSectionById(Ljava/lang/Long;)Lcom/example/demo/entity/Section;*K
+
+__unknown_file (/
+-
+%0'com.example.demo.service.SectionService*2
+
+__unknown_file (
+
+idjava.lang.Long2 getSectionById(Ljava/lang/Long;)"3
+ (1'
+%
+%1com.example.demo.entity.Section: 
+" (7
+idjava.lang.LongB1/
+-com.example.demo.controller.SectionControllerH

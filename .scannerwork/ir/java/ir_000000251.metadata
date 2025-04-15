@@ -1,0 +1,5 @@
+com.example.demo.service.ManagerService#findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;
+false
+f240ad40f99b85b4a018d40d44eecab3
+==
+findByEmailAndPassword com.example.demo.repository.ManagerRepository#findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;

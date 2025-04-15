@@ -1,0 +1,5 @@
+com.example.demo.service.SectionService#getSectionsByChapitreId(Ljava/lang/Long;)Ljava/util/List;
+false
+8f7901b71fa94d6e1daebfbd57d3372a
+==
+findByChapitreId com.example.demo.repository.SectionRepository#findByChapitreId(Ljava/lang/Long;)Ljava/util/List;

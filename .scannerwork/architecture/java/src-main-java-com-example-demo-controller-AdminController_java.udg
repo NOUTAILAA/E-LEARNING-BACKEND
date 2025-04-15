@@ -1,0 +1,633 @@
+
+1.0'noutailaa_elearning-application-backendJavaFrontend"1744384113276*java2.B×
+C
+>src/main/java/com/example/demo/controller/AdminController.java2
+
+package4
+ 
+com.example.demo.controller5
+0
++com.example.demo.controller.AdminController7
+
+
+class8
+
+access9
+
+public10
+
+simple name11
+
+AdminController12
+
+RestController14
+
+unknown15
+
+annotated by16
+,
+&Recovered#typeBindingLRestController;018
+
+
+uses19
+
+RequestMapping21
+,
+&Recovered#typeBindingLRequestMapping;023
+>
+8com.example.demo.controller.AdminController.adminService25
+
+field26
+
+private27
+
+adminService28
++
+%com.example.demo.service.AdminService30
+
+is type31
+
+	Autowired33
+'
+!Recovered#typeBindingLAutowired;035
+A
+;com.example.demo.controller.AdminController.adminRepository37
+
+adminRepository38
+1
++com.example.demo.repository.AdminRepository40
+J
+Dcom.example.demo.controller.AdminController#getAll()Ljava/util/List;42
+
+method43
+
+getAll44
+
+
+GetMapping46
+(
+"Recovered#typeBindingLGetMapping;048
+#
+com.example.demo.entity.Admin50
+
+
+references51
+E
+?com.example.demo.service.AdminService#findAll()Ljava/util/List;53
+
+calls54
+x
+rcom.example.demo.controller.AdminController#create(Lcom/example/demo/entity/Admin;)Lcom/example/demo/entity/Admin;56
+
+create57
+
+returns58
+
+	has param59
+
+PostMapping61
+)
+#Recovered#typeBindingLPostMapping;063
+
+RequestBody65
+)
+#Recovered#typeBindingLRequestBody;067
+p
+jcom.example.demo.service.AdminService#save(Lcom/example/demo/entity/Admin;)Lcom/example/demo/entity/Admin;69
+o
+icom.example.demo.controller.AdminController#getByEmail(Ljava/lang/String;)Lcom/example/demo/entity/Admin;71
+
+
+getByEmail72
+
+RequestParam74
+*
+$Recovered#typeBindingLRequestParam;076
+e
+_com.example.demo.repository.AdminRepository#findByEmail(Ljava/lang/String;)Ljava/util/Optional;78
+[
+Ucom.example.demo.controller.AdminController#getById(Ljava/lang/Long;)LResponseEntity;80
+
+getById81
+
+ResponseEntity83
+
+PathVariable85
+*
+$Recovered#typeBindingLPathVariable;087
+Z
+Tcom.example.demo.service.AdminService#findById(Ljava/lang/Long;)Ljava/util/Optional;89
+K
+Ecom.example.demo.controller.AdminController#delete(Ljava/lang/Long;)V91
+
+delete92
+
+DeleteMapping94
++
+%Recovered#typeBindingLDeleteMapping;096
+E
+?com.example.demo.service.AdminService#delete(Ljava/lang/Long;)V98
+
+xcom.example.demo.controller.AdminController#updateAdmin(Ljava/lang/Long;Lcom/example/demo/entity/Admin;)LResponseEntity;100
+
+updateAdmin101
+
+
+PutMapping103
+)
+"Recovered#typeBindingLPutMapping;0105
+*
+#com.example.demo.entity.Utilisateur107
+C
+<com.example.demo.entity.Utilisateur#setId(Ljava/lang/Long;)V109J
+
+1
+12Z
+
+3	
+354jÅ	
+
+73
+737415
+
+95
+959615
+
+17
+171815
+
+49
+495015
+
+13
+131415
+
+86
+868715
+B
+99<
+9910043 *
+15 5(26:3B
+	
+9
+10
+
+11
+101
+@
+55:
+555643 *
+1" "(26:3B
+	
+9
+10
+
+
+11
+57
+@
+79:
+798043 *
+1* *(26:3B
+	
+9
+10
+
+
+11
+81
+
+20
+202115
+
+32
+323315
+
+60
+606115
+
+93
+939415
+
+52
+525315
+
+22
+222315
+9
+64
+678 *
+1 (:3B
+	
+9
+10
+
+
+11
+12
+
+47
+474815
+
+64
+646515
+
+88
+888915
+
+106
+10610715
+@
+90:
+909143 *
+11 1(26:3B
+	
+9
+10
+
+
+11
+92
+
+39
+394015
+
+104
+10410515
+
+66
+666715
+
+97
+979815
+
+62
+626315
+
+77
+777815
+
+68
+686915
+@
+41:
+414243 *
+1 (26:3B
+	
+9
+10
+
+
+11
+44
+
+82
+828315
+
+45
+454615
+@
+24:
+242526 *
+1 (26:3B
+	
+9
+27
+
+
+11
+28
+
+29
+293015
+@
+36:
+363726 *
+1 (26:3B
+	
+9
+27
+
+
+11
+38
+
+34
+343515
+
+102
+10210315
+
+75
+757615
+
+108
+10810915
+@
+70:
+707143 *
+1& &(26:3B
+	
+9
+10
+
+
+11
+72
+
+84
+848515rÖ
+
+61316*
+1 (
+
+61719*
+1 (
+
+62016*
+1 (
+
+62219*
+1 (
+
+242931*
+1 (
+
+243216*
+1 (
+
+243419*
+1 (
+
+242919*
+1 (
+
+242919*
+1 (&
+
+363931*
+1 (
+
+363216*
+1 (
+
+363419*
+1 (
+
+363919*
+1 (
+
+363919*
+1 (,
+
+414516*
+1 (
+
+414719*
+1 (
+
+414919*
+1 (
+
+412951*
+1 (
+
+415254*
+1 ($
+
+412451*
+1 (
+
+412919*
+1 (
+
+412451*
+1 (
+
+554958*
+1# #(
+
+554959*
+1#& #(+
+
+556016*
+1" "(
+
+556219*
+1" "(
+
+554919*
+1# #(
+
+554931*
+1#, #(1
+
+556416*
+1# #(
+
+556619*
+1# #(%
+
+554919*
+1#& #(+
+
+554958*
+1$ $(
+
+552951*
+1$ $(
+
+556854*
+1$ $(!
+
+552451*
+1$ $(
+
+552919*
+1$ $(
+
+552451*
+1$ $(
+
+704958*
+1' '(
+
+704516*
+1& &(
+
+704719*
+1& &(
+
+704919*
+1' '(
+
+707316*
+1' '(
+
+707519*
+1' '(*
+
+704958*
+1( ((
+
+703951*
+1( ((
+
+707754*
+1(  ((+
+
+703651*
+1( ((
+
+703919*
+1( ((
+
+703651*
+1( ((
+
+798258*
+1+ +(
+
+794516*
+1* *(
+
+794719*
+1* *(
+
+798219*
+1+ +(
+
+794919*
+1+ +( 
+
+798416*
+1+* +(+
+
+798619*
+1++ +(7
+
+792951*
+1, ,(
+
+798854*
+1, ,(%
+
+792451*
+1, ,(
+
+792919*
+1, ,(
+
+792451*
+1, ,(
+
+909316*
+11 1(
+
+909519*
+11 1(
+
+908416*
+12 2(
+
+908619*
+12 2(%
+
+902951*
+13	 3(
+
+909754*
+13 3(
+
+902451*
+13	 3(
+
+902919*
+13	 3(
+
+902451*
+13	 3(
+
+998258*
+16 6(
+
+994959*
+16R 6(W
+
+9910216*
+15 5(
+
+9910419*
+15 5(
+
+998219*
+16 6(
+
+994919*
+16 6( 
+
+998416*
+16. 6(/
+
+998619*
+16/ 6(;
+
+994931*
+16X 6(]
+
+996416*
+16E 6(F
+
+996619*
+16F 6(Q
+
+994919*
+16R 6(W
+
+994919*
+17 7(
+
+992951*
+17) 7(5
+
+998854*
+176 7(>
+
+992451*
+17) 7(5
+
+992919*
+17) 7(5
+
+992451*
+17) 7(5
+
+9910651*
+19 9(
+
+9910854*
+19 9(
+
+994931*
+1: :(
+
+994919*
+1: :(
+
+994958*
+1:" :(.
+
+992951*
+1:" :(.
+
+996854*
+1:/ :(3
+
+992451*
+1:" :(.
+
+992919*
+1:" :(.
+
+992451*
+1:" :(.

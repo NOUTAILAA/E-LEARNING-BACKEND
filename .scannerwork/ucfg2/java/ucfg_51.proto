@@ -1,0 +1,62 @@
+
+com.example.demo.controller.SectionController#createSection(Lcom/example/demo/entity/Section;)Lcom/example/demo/entity/Section;
+uC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/SectionController.java! !( "startingBlock*‚
+startingBlock!  !(>ñ
+ì
+   (
+%2"
+__annotate*+
+
+__unknown_file (
+PostMapping*H
+
+__unknown_file (,
+*
+sectioncom.example.demo.entity.Sectionñ
+ì
+!! !(-
+%3"
+__annotate*+
+
+__unknown_file (
+RequestBody*H
+
+__unknown_file (,
+*
+sectioncom.example.demo.entity.Sectionè
+å
+!6 !(=*
+sectioncom.example.demo.entity.Section"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*·
+1" "(•
+¢
+" "(-
+%0'com.example.demo.service.SectionService"__id*a
+
+__unknown_file (E*C/
+-com.example.demo.controller.SectionController"
+sectionServiceÙÒ
+" "(2%
+%1com.example.demo.entity.Section"wcom.example.demo.service.SectionService#saveSection(Lcom/example/demo/entity/Section;)Lcom/example/demo/entity/Section;*K
+
+__unknown_file (/
+-
+%0'com.example.demo.service.SectionService*H
+
+__unknown_file (,
+*
+sectioncom.example.demo.entity.Section2.saveSection(Lcom/example/demo/entity/Section;)"3
+" "(3'
+%
+%1com.example.demo.entity.Section:6
+!! !(=*
+sectioncom.example.demo.entity.SectionB1/
+-com.example.demo.controller.SectionControllerH

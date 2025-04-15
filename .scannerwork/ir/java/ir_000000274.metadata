@@ -1,0 +1,6 @@
+com.example.demo.controller.AdminController#getByEmail(Ljava/lang/String;)Lcom/example/demo/entity/Admin;
+false
+18a596559f96201f4257111eef311630
+java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;
+==
+findByEmail com.example.demo.repository.AdminRepository#findByEmail(Ljava/lang/String;)Ljava/util/Optional;

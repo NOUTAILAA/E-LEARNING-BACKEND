@@ -1,0 +1,19 @@
+com.example.demo.controller.LoginController#login(Lcom/example/demo/entity/LoginRequest;)LResponseEntity;
+false
+1adec06f2f6cc156e28dc87da3184a3f
+java.util.Optional#get()Ljava/lang/Object;
+java.util.Optional#isPresent()Z
+==
+!unknownMethod! !unknownMethod!
+findByEmail com.example.demo.repository.ApprenantRepository#findByEmail(Ljava/lang/String;)Ljava/util/Optional;
+findByEmail com.example.demo.repository.ManagerRepository#findByEmail(Ljava/lang/String;)Ljava/util/Optional;
+findByEmailAndPassword com.example.demo.service.AdminService#findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;
+findByEmailAndPassword com.example.demo.service.ApprenantService#findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;
+findByEmailAndPassword com.example.demo.service.SuperAdminService#findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;
+getDepartement com.example.demo.entity.Apprenant#getDepartement()Lcom/example/demo/entity/Departement;
+getEmail com.example.demo.entity.LoginRequest#getEmail()Ljava/lang/String;
+getNom com.example.demo.entity.Departement#getNom()Ljava/lang/String;
+getNom com.example.demo.entity.Utilisateur#getNom()Ljava/lang/String;
+getPassword com.example.demo.entity.LoginRequest#getPassword()Ljava/lang/String;
+getPassword com.example.demo.entity.Utilisateur#getPassword()Ljava/lang/String;
+getRole com.example.demo.entity.Utilisateur#getRole()Ljava/lang/String;

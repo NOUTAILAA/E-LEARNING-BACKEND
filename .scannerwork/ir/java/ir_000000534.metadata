@@ -1,0 +1,5 @@
+com.example.demo.service.ApprenantService#findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;
+false
+8df6fb89360de43fd3a21a91d32aa0ea
+==
+findByEmailAndPassword com.example.demo.repository.ApprenantRepository#findByEmailAndPassword(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;

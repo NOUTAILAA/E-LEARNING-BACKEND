@@ -1,0 +1,220 @@
+
+1.0'noutailaa_elearning-application-backendJavaFrontend"1744384114250*java2.BÐ
+C
+>src/main/java/com/example/demo/service/UtilisateurService.java2
+
+package4
+
+com.example.demo.service5
+0
++com.example.demo.service.UtilisateurService7
+
+
+class8
+
+access9
+
+public10
+
+simple name11
+
+UtilisateurService12
+
+Service14
+
+unknown15
+
+annotated by16
+%
+Recovered#typeBindingLService;018
+
+
+uses19
+h
+bcom.example.demo.service.UtilisateurService#setDefaultRole(Lcom/example/demo/entity/Utilisateur;)V21
+
+method22
+
+setDefaultRole23
+)
+#com.example.demo.entity.Utilisateur25
+
+	has param26
+
+is type27
+
+
+references28
+E
+?com.example.demo.entity.Utilisateur#getRole()Ljava/lang/String;30
+
+calls31
+#
+com.example.demo.entity.Admin33
+F
+@com.example.demo.entity.Utilisateur#setRole(Ljava/lang/String;)V35
+%
+com.example.demo.entity.Manager37
+'
+!com.example.demo.entity.Apprenant39
+(
+"com.example.demo.entity.SuperAdmin41
+t
+ncom.example.demo.service.UtilisateurService#greetUser(Lcom/example/demo/entity/Utilisateur;)Ljava/lang/String;43
+
+	greetUser44
+D
+>com.example.demo.entity.Utilisateur#getNom()Ljava/lang/String;46J
+
+1
+12Z
+
+3	
+354j‡
+
+24
+242515
+
+17
+171815
+
+40
+404115
+
+13
+131415
+
+32
+323315
+
+38
+383915
+@
+20:
+202122 *
+1 (26:3B
+	
+9
+10
+
+
+11
+23
+
+29
+293015
+9
+64
+678 *
+1 ( :3B
+	
+9
+10
+
+
+11
+12
+
+34
+343515
+
+45
+454615
+
+36
+363715
+@
+42:
+424322 *
+1   (26:3B
+	
+9
+10
+
+
+11
+44rò
+
+61316*
+1 (
+
+61719*
+1 (	
+
+202426*
+1  (+
+
+202427*
+1, (7
+
+202419*
+1  (+
+
+202428*
+1 (
+
+202931*
+1 ( 
+
+202428*
+1. (9
+
+202931*
+1: (A
+
+203219*
+1( (-
+
+202428*
+1 (
+
+203431*
+1 ($
+
+203619*
+1/ (6
+
+202428*
+1 (
+
+203431*
+1 ($
+
+203819*
+1/ (8
+
+202428*
+1 (
+
+203431*
+1 ($
+
+204019*
+1/ (9
+
+202428*
+1 (
+
+203431*
+1 ($
+
+422426*
+1   ((
+
+422427*
+1 )  (4
+
+422419*
+1   ((
+
+422428*
+1! !((
+
+424531*
+1!) !(/
+
+422428*
+1!G !(R
+
+422931*
+1!S !(Z

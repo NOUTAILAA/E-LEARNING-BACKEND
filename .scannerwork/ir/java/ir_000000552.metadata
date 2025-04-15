@@ -1,0 +1,9 @@
+com.example.demo.controller.QuizController#getApprenantsNonAssignesDuDepartement(Ljava/lang/Long;)Ljava/util/List;
+false
+d06e20c766630b85571e3d8255c2b81b
+java.util.Optional#orElseThrow(Ljava/util/function/Supplier;)Ljava/lang/Object;
+==
+findById com.example.demo.service.ManagerService#findById(Ljava/lang/Long;)Ljava/util/Optional;
+getApprenantsNonAssignesDansDepartement com.example.demo.service.ManagerService#getApprenantsNonAssignesDansDepartement(Ljava/lang/Long;)Ljava/util/List;
+getDepartement com.example.demo.entity.Manager#getDepartement()Lcom/example/demo/entity/Departement;
+getId com.example.demo.entity.Departement#getId()Ljava/lang/Long;

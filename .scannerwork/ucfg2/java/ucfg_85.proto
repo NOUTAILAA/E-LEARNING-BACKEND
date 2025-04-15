@@ -1,0 +1,21 @@
+
+Ocom.example.demo.controller.ManagerController#getDepartements()Ljava/util/List;
+uC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/ManagerController.java$ $(,"1*ª
+1% %(!­
+ª
+% %(!1
+%0+com.example.demo.service.DepartementService"__id*e
+
+__unknown_file (I*G/
+-com.example.demo.controller.ManagerController"
+departementServiceÆÃ
+% %(+
+%1java.util.List"Ecom.example.demo.service.DepartementService#findAll()Ljava/util/List;*O
+
+__unknown_file (3
+1
+%0+com.example.demo.service.DepartementService2	findAll()""
+% %(,
+
+%1java.util.ListB1/
+-com.example.demo.controller.ManagerControllerH

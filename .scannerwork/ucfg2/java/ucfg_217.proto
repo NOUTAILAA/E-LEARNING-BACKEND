@@ -1,0 +1,62 @@
+
+wcom.example.demo.controller.CoursController#createCours(Lcom/example/demo/entity/Cours;)Lcom/example/demo/entity/Cours;}
+sC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/CoursController.java! !("startingBlock*÷
+startingBlock! !(6í
+è
+   (
+%2"
+__annotate*+
+
+__unknown_file (
+PostMapping*D
+
+__unknown_file ((
+&
+courscom.example.demo.entity.Coursí
+è
+! !()
+%3"
+__annotate*+
+
+__unknown_file (
+RequestBody*D
+
+__unknown_file ((
+&
+courscom.example.demo.entity.Coursã
+à
+!0 !(5&
+courscom.example.demo.entity.Cours"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*≈
+1" "(ü
+ú
+" "(+
+%0%com.example.demo.service.CoursService"__id*]
+
+__unknown_file (A*?-
++com.example.demo.controller.CoursController"
+coursService‡›
+" "(,#
+%1com.example.demo.entity.Cours"ocom.example.demo.service.CoursService#saveCours(Lcom/example/demo/entity/Cours;)Lcom/example/demo/entity/Cours;*I
+
+__unknown_file (-
++
+%0%com.example.demo.service.CoursService*D
+
+__unknown_file ((
+&
+courscom.example.demo.entity.Cours2*saveCours(Lcom/example/demo/entity/Cours;)"1
+" "(-%
+#
+%1com.example.demo.entity.Cours:2
+! !(5&
+courscom.example.demo.entity.CoursB/-
++com.example.demo.controller.CoursControllerH

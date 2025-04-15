@@ -1,0 +1,5 @@
+com.example.demo.controller.SectionController#getAllSections()Ljava/util/List;
+false
+e5558fac09998b1113c452d2111ae272
+==
+getAllSections com.example.demo.service.SectionService#getAllSections()Ljava/util/List;

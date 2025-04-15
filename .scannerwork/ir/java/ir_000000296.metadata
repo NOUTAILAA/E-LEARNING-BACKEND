@@ -1,0 +1,8 @@
+com.example.demo.service.AdminService#save(Lcom/example/demo/entity/Admin;)Lcom/example/demo/entity/Admin;
+false
+dd0fcf27d23d8d3c70b96de4c89c1cae
+java.lang.String#isEmpty()Z
+==
+!unknownMethod! !unknownMethod!
+getRole com.example.demo.entity.Utilisateur#getRole()Ljava/lang/String;
+setRole com.example.demo.entity.Utilisateur#setRole(Ljava/lang/String;)V

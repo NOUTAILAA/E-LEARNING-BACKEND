@@ -1,0 +1,67 @@
+
+Åcom.example.demo.controller.SuperAdminController#create(Lcom/example/demo/entity/SuperAdmin;)Lcom/example/demo/entity/SuperAdmin;Ç
+xC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/SuperAdminController.java# #("startingBlock*Ù
+startingBlock# #(@ú
+ô
+" "(
+%2"
+__annotate*+
+
+__unknown_file (
+PostMapping*N
+
+__unknown_file (2
+0
+
+superAdmin"com.example.demo.entity.SuperAdminú
+ô
+# #()
+%3"
+__annotate*+
+
+__unknown_file (
+RequestBody*N
+
+__unknown_file (2
+0
+
+superAdmin"com.example.demo.entity.SuperAdminï
+í
+#5 #(?0
+
+superAdmin"com.example.demo.entity.SuperAdmin"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*˜
+1$ $( Æ
+´
+$ $( 0
+%0*com.example.demo.service.SuperAdminService"__id*g
+
+__unknown_file (K*I2
+0com.example.demo.controller.SuperAdminController"
+superAdminService˛˚
+$ $(1(
+%1"com.example.demo.entity.SuperAdmin"ycom.example.demo.service.SuperAdminService#save(Lcom/example/demo/entity/SuperAdmin;)Lcom/example/demo/entity/SuperAdmin;*N
+
+__unknown_file (2
+0
+%0*com.example.demo.service.SuperAdminService*N
+
+__unknown_file (2
+0
+
+superAdmin"com.example.demo.entity.SuperAdmin2*save(Lcom/example/demo/entity/SuperAdmin;)"6
+$ $(2*
+(
+%1"com.example.demo.entity.SuperAdmin:<
+# #(?0
+
+superAdmin"com.example.demo.entity.SuperAdminB42
+0com.example.demo.controller.SuperAdminControllerH

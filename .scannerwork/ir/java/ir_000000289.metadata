@@ -1,0 +1,5 @@
+com.example.demo.controller.SectionController#createSection(Lcom/example/demo/entity/Section;)Lcom/example/demo/entity/Section;
+false
+517e93e82ddfaaf3f33813915f990244
+==
+saveSection com.example.demo.service.SectionService#saveSection(Lcom/example/demo/entity/Section;)Lcom/example/demo/entity/Section;

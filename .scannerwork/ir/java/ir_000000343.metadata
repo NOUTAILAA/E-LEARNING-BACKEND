@@ -1,0 +1,6 @@
+com.example.demo.controller.ManagerController#assignApprenants(Ljava/lang/Long;Ljava/util/List;)LResponseEntity;
+false
+baa80d30d2f8d1d17cde844e22d57178
+==
+!unknownMethod! !unknownMethod!
+assignApprenantsToManager com.example.demo.service.ManagerService#assignApprenantsToManager(Ljava/lang/Long;Ljava/util/List;)Lcom/example/demo/entity/Manager;

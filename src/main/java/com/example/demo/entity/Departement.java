@@ -2,6 +2,7 @@ package com.example.demo.entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
@@ -18,6 +19,9 @@ public class Departement {
     private Long id;
     
     private String nom;
+@OneToMany(mappedBy = "departement")
+@JsonBackReference
+private List<Projet> projets;
 
     @OneToMany(mappedBy = "departement")  // mappedBy indique que l'association est gérée par la propriété departement dans Apprenant
     @JsonIgnore  // Ignorer la sérialisation de la relation apprenants pour éviter la boucle infinie

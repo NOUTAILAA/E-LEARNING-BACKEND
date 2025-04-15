@@ -1,0 +1,1 @@
+Erreur interne du serveur : Required request body is missing: public org.springframework.http.ResponseEntity<?> com.example.demo.controller.ManagerController.assignApprenants(java.lang.Long,java.util.List<java.lang.Long>)

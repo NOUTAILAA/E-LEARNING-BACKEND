@@ -1,0 +1,27 @@
+
+`com.example.demo.service.ChapitreService#getChapitresByCoursId(Ljava/lang/Long;)Ljava/util/List;z
+pC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/service/ChapitreService.java (/"1*“
+1 (!«
+¨
+ (!4
+%0.com.example.demo.repository.ChapitreRepository"__id*`
+
+__unknown_file (D*B*
+(com.example.demo.service.ChapitreService"
+chapitreRepository±®
+ (8
+%1java.util.List"^com.example.demo.repository.ChapitreRepository#findByCoursId(Ljava/lang/Long;)Ljava/util/List;*R
+
+__unknown_file (6
+4
+%0.com.example.demo.repository.ChapitreRepository*7
+
+__unknown_file (
+
+coursIdjava.lang.Long2findByCoursId(Ljava/lang/Long;)""
+ (9
+
+%1java.util.List:%
+0 (<
+coursIdjava.lang.LongB,*
+(com.example.demo.service.ChapitreServiceH

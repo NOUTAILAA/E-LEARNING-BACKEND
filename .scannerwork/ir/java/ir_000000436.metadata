@@ -1,0 +1,5 @@
+com.example.demo.controller.SuperAdminController#getAll()Ljava/util/List;
+false
+255a8b1434307706a807db61a535005b
+==
+findAll com.example.demo.service.SuperAdminService#findAll()Ljava/util/List;

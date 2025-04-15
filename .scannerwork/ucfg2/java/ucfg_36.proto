@@ -1,0 +1,63 @@
+
+[com.example.demo.controller.ProjetController#getByManager(Ljava/lang/Long;)Ljava/util/List;~
+tC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/ProjetController.java. .($"startingBlock*³
+startingBlock.$ .(B†
+ƒ
+- -('
+%2"
+__annotate**
+
+__unknown_file (
+
+GetMapping*9
+
+__unknown_file (
+
+	managerIdjava.lang.Longˆ
+…
+.% .(2
+%3"
+__annotate*,
+
+__unknown_file (
+PathVariable*9
+
+__unknown_file (
+
+	managerIdjava.lang.Long
+}
+.8 .(A
+	managerIdjava.lang.Long"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*€
+1/ /(¢
+Ÿ
+/ /(,
+%0&com.example.demo.service.ProjetService"__id*_
+
+__unknown_file (C*A.
+,com.example.demo.controller.ProjetController"
+projetService§¤
+/ /(7
+%1java.util.List"Xcom.example.demo.service.ProjetService#findByManagerId(Ljava/lang/Long;)Ljava/util/List;*J
+
+__unknown_file (.
+,
+%0&com.example.demo.service.ProjetService*9
+
+__unknown_file (
+
+	managerIdjava.lang.Long2!findByManagerId(Ljava/lang/Long;)""
+/ /(8
+
+%1java.util.List:'
+.% .(A
+	managerIdjava.lang.LongB0.
+,com.example.demo.controller.ProjetControllerH

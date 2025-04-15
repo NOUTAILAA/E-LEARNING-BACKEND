@@ -1,0 +1,62 @@
+
+~com.example.demo.controller.ApprenantController#create(Lcom/example/demo/entity/Apprenant;)Lcom/example/demo/entity/Apprenant;Å
+wC:/Users/nbenzala/Desktop/Nouveau dossier/E-learning/src/main/java/com/example/demo/controller/ApprenantController.java ("startingBlock*Ó
+startingBlock (=ö
+ó
+ (
+%2"
+__annotate*+
+
+__unknown_file (
+PostMapping*L
+
+__unknown_file (0
+.
+	apprenant!com.example.demo.entity.Apprenantö
+ó
+ ((
+%3"
+__annotate*+
+
+__unknown_file (
+RequestBody*L
+
+__unknown_file (0
+.
+	apprenant!com.example.demo.entity.Apprenantì
+ê
+3 (<.
+	apprenant!com.example.demo.entity.Apprenant"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*Î
+1 (´
+®
+ (/
+%0)com.example.demo.service.ApprenantService"__id*e
+
+__unknown_file (I*G1
+/com.example.demo.controller.ApprenantController"
+apprenantServiceˆÛ
+ (/'
+%1!com.example.demo.entity.Apprenant"vcom.example.demo.service.ApprenantService#save(Lcom/example/demo/entity/Apprenant;)Lcom/example/demo/entity/Apprenant;*M
+
+__unknown_file (1
+/
+%0)com.example.demo.service.ApprenantService*L
+
+__unknown_file (0
+.
+	apprenant!com.example.demo.entity.Apprenant2)save(Lcom/example/demo/entity/Apprenant;)"5
+ (0)
+'
+%1!com.example.demo.entity.Apprenant::
+ (<.
+	apprenant!com.example.demo.entity.ApprenantB31
+/com.example.demo.controller.ApprenantControllerH

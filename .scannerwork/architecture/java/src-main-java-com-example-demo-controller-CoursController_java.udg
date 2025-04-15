@@ -1,0 +1,461 @@
+
+1.0'noutailaa_elearning-application-backendJavaFrontend"1744384116618*java2.Bú
+C
+>src/main/java/com/example/demo/controller/CoursController.java2
+
+package4
+ 
+com.example.demo.controller5
+0
++com.example.demo.controller.CoursController7
+
+
+class8
+
+access9
+
+public10
+
+simple name11
+
+CoursController12
+
+RestController14
+
+unknown15
+
+annotated by16
+,
+&Recovered#typeBindingLRestController;018
+
+
+uses19
+
+RequestMapping21
+,
+&Recovered#typeBindingLRequestMapping;023
+>
+8com.example.demo.controller.CoursController.coursService25
+
+field26
+
+private27
+
+coursService28
++
+%com.example.demo.service.CoursService30
+
+is type31
+
+	Autowired33
+'
+!Recovered#typeBindingLAutowired;035
+O
+Icom.example.demo.controller.CoursController#getAllCours()Ljava/util/List;37
+
+method38
+
+getAllCours39
+
+
+GetMapping41
+(
+"Recovered#typeBindingLGetMapping;043
+#
+com.example.demo.entity.Cours45
+
+
+references46
+I
+Ccom.example.demo.service.CoursService#getAllCours()Ljava/util/List;48
+
+calls49
+o
+icom.example.demo.controller.CoursController#getCoursById(Ljava/lang/Long;)Lcom/example/demo/entity/Cours;51
+
+getCoursById52
+
+returns53
+
+PathVariable55
+*
+$Recovered#typeBindingLPathVariable;057
+i
+ccom.example.demo.service.CoursService#getCoursById(Ljava/lang/Long;)Lcom/example/demo/entity/Cours;59
+d
+^com.example.demo.controller.CoursController#getCoursByProjet(Ljava/lang/Long;)Ljava/util/List;61
+
+getCoursByProjet62
+`
+Zcom.example.demo.service.CoursService#getCoursByProjetId(Ljava/lang/Long;)Ljava/util/List;64
+}
+wcom.example.demo.controller.CoursController#createCours(Lcom/example/demo/entity/Cours;)Lcom/example/demo/entity/Cours;66
+
+createCours67
+
+	has param68
+
+PostMapping70
+)
+#Recovered#typeBindingLPostMapping;072
+
+RequestBody74
+)
+#Recovered#typeBindingLRequestBody;076
+u
+ocom.example.demo.service.CoursService#saveCours(Lcom/example/demo/entity/Cours;)Lcom/example/demo/entity/Cours;78
+P
+Jcom.example.demo.controller.CoursController#deleteCours(Ljava/lang/Long;)V80
+
+deleteCours81
+
+DeleteMapping83
++
+%Recovered#typeBindingLDeleteMapping;085
+J
+Dcom.example.demo.service.CoursService#deleteCours(Ljava/lang/Long;)V87J
+
+1
+12Z
+
+3	
+354j“
+
+29
+293015
+
+63
+636415
+
+84
+848515
+
+17
+171815
+
+77
+777815
+
+13
+131415
+
+56
+565715
+
+20
+202115
+9
+64
+678 *
+1 (:3B
+	
+9
+10
+
+
+11
+12
+
+32
+323315
+@
+50:
+505138 *
+1 (26:3B
+	
+9
+10
+
+
+11
+52
+
+69
+697015
+
+58
+585915
+
+82
+828315
+@
+65:
+656638 *
+1   (26:3B
+	
+9
+10
+
+
+11
+67
+
+22
+222315
+
+42
+424315
+
+73
+737415
+
+44
+444515
+@
+24:
+242526 *
+1 (26:3B
+	
+9
+27
+
+
+11
+28
+
+75
+757615
+
+71
+717215
+
+47
+474815
+
+40
+404115
+
+86
+868715
+@
+36:
+363738 *
+1 (26:3B
+	
+9
+10
+
+
+11
+39
+@
+60:
+606138 *
+1 (26:3B
+	
+9
+10
+
+
+11
+62
+
+34
+343515
+
+54
+545515
+@
+79:
+798038 *
+1% %(26:3B
+	
+9
+10
+
+
+11
+81r¡
+
+61316*
+1
+ 
+(
+
+61719*
+1
+ 
+(
+
+62016*
+1 (
+
+62219*
+1 (
+
+242931*
+1 (
+
+243216*
+1 (
+
+243419*
+1 (
+
+242919*
+1 (
+
+242919*
+1 (&
+
+364016*
+1 (
+
+364219*
+1 (
+
+364419*
+1 (
+
+362946*
+1 (
+
+364749*
+1 ((
+
+362446*
+1 (
+
+362919*
+1 (
+
+362446*
+1 (
+
+504453*
+1 (
+
+504016*
+1 (
+
+504219*
+1 (
+
+504419*
+1 (
+
+505416*
+1 ( 
+
+505619*
+1  (,
+
+504453*
+1 (
+
+502946*
+1 (
+
+505849*
+1 ()
+
+502446*
+1 (
+
+502919*
+1 (
+
+502446*
+1 (
+
+604016*
+1 (
+
+604219*
+1 (
+
+604419*
+1 (
+
+605416*
+1) (*
+
+605619*
+1* (6
+
+602946*
+1 (
+
+606349*
+1 (/
+
+602446*
+1 (
+
+602919*
+1 (
+
+602446*
+1 (
+
+654453*
+1! !(
+
+654468*
+1!+ !(0
+
+656916*
+1   (
+
+657119*
+1   (
+
+654419*
+1! !(
+
+654431*
+1!1 !(6
+
+657316*
+1! !(
+
+657519*
+1! !(*
+
+654419*
+1!+ !(0
+
+654453*
+1" "(
+
+652946*
+1" "(
+
+657749*
+1" "(&
+
+652446*
+1" "(
+
+652919*
+1" "(
+
+652446*
+1" "(
+
+798216*
+1% %(
+
+798419*
+1% %(
+
+795416*
+1& &(
+
+795619*
+1& &(*
+
+792946*
+1'	 '(
+
+798649*
+1' '(!
+
+792446*
+1'	 '(
+
+792919*
+1'	 '(
+
+792446*
+1'	 '(
