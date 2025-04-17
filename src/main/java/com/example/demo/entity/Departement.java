@@ -20,7 +20,7 @@ public class Departement {
     
     private String nom;
 @OneToMany(mappedBy = "departement")
-@JsonBackReference
+@JsonBackReference(value = "departement-projets")
 private List<Projet> projets;
 
     @OneToMany(mappedBy = "departement")  // mappedBy indique que l'association est gérée par la propriété departement dans Apprenant

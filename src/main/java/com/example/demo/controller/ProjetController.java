@@ -36,9 +36,10 @@ public class ProjetController {
     private DepartementService departementService;
 
     @GetMapping
-    public List<Projet> getAll() {
-        return projetService.findAll();
-    }
+public List<ProjetDTO> getAll() {
+    return projetService.findAll().stream().map(ProjetDTO::new).toList();
+}
+
 
     @GetMapping("/{id}")
     public ResponseEntity<Projet> getById(@PathVariable Long id) {

@@ -26,11 +26,11 @@ public class Projet {
 
     @ManyToOne
 @JoinColumn(name = "departement_id")
-@JsonManagedReference
+@JsonManagedReference(value = "departement-projets")
 private Departement departement;
 
     @OneToMany(mappedBy = "projet", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonIgnore
+    @JsonManagedReference(value = "projet-cours")
     private List<Cours> coursList = new ArrayList<>();
 
     @ManyToOne

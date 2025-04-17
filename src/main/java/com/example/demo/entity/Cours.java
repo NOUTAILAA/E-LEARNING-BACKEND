@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 @Entity
 public class Cours {
 
@@ -27,6 +29,8 @@ public class Cours {
     // Relation avec Projet
     @ManyToOne
     @JoinColumn(name = "projet_id")
+    @JsonBackReference(value = "projet-cours")
+
     private Projet projet;
 
     // Relation avec chapitre
