@@ -47,6 +47,13 @@ import com.example.demo.repository.ApprenantRepository;
             String email = loginRequest.getEmail();
             String password = loginRequest.getPassword();
             // Vérification pour Manager
+            Optional<Apprenant> apprenantOpt = apprenantRepository.findByEmail(email);
+                if (apprenantOpt.isPresent()) {
+                    Apprenant apprenant = apprenantOpt.get();
+                    if (passwordEncoder.matches(password, apprenant.getPassword())) {
+                        return ResponseEntity.ok("Bonjour " + apprenant.getNom() + ", vous êtes un " + apprenant.getRole());
+                    }
+                }
             Optional<Manager> managerOpt = managerRepository.findByEmail(email);
                 if (managerOpt.isPresent()) {
                     Manager manager = managerOpt.get();
@@ -55,13 +62,7 @@ import com.example.demo.repository.ApprenantRepository;
                     }
                 }
     
-                Optional<Apprenant> apprenantOpt = apprenantRepository.findByEmail(email);
-                if (apprenantOpt.isPresent()) {
-                    Apprenant apprenant = apprenantOpt.get();
-                    if (passwordEncoder.matches(password, apprenant.getPassword())) {
-                        return ResponseEntity.ok("Bonjour " + apprenant.getNom() + ", vous êtes un " + apprenant.getRole());
-                    }
-                }
+                
             // Vérification pour Admin
             Optional<Admin> admin = adminService.findByEmailAndPassword(email, password);
             if (admin.isPresent()) {

@@ -9,7 +9,6 @@ import com.example.demo.entity.Projet;
 import com.example.demo.repository.ProjetRepository;
 import com.example.demo.service.CoursService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
