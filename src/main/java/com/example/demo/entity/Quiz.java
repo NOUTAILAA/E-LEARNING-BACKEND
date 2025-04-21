@@ -3,6 +3,8 @@ package com.example.demo.entity;
 import jakarta.persistence.*;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Quiz {
 
@@ -20,6 +22,7 @@ public class Quiz {
 
     @ManyToOne
     @JoinColumn(name = "chapitre_id")
+    @JsonIgnore
     private Chapitre chapitre;
 
     // ====== Getters & Setters ======

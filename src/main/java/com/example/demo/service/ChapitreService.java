@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.Chapitre;
+import com.example.demo.entity.ChapitreProjection;
 import com.example.demo.repository.ChapitreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,10 +22,12 @@ public class ChapitreService {
         return chapitreRepository.findById(id).orElse(null);
     }
 
-    public List<Chapitre> getChapitresByCoursId(Long coursId) {
+   /*  public List<Chapitre> getChapitresByCoursId(Long coursId) {
         return chapitreRepository.findByCoursId(coursId);
-    }
-
+    }*/
+public List<ChapitreProjection> getLightChapitresByCoursId(Long coursId) {
+    return chapitreRepository.findLightByCoursId(coursId);
+}
     public Chapitre saveChapitre(Chapitre chapitre) {
         return chapitreRepository.save(chapitre);
     }

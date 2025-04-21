@@ -22,6 +22,7 @@ public class Projet {
 
     @Lob
     @JsonIgnore
+    @Basic(fetch = FetchType.LAZY)
     private byte[] photo;
 
     @ManyToOne

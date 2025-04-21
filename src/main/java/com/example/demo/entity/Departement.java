@@ -19,9 +19,9 @@ public class Departement {
     private Long id;
     
     private String nom;
-@OneToMany(mappedBy = "departement")
-@JsonBackReference(value = "departement-projets")
-private List<Projet> projets;
+    @OneToMany(mappedBy = "departement")
+    @JsonBackReference(value = "departement-projets")
+    private List<Projet> projets;
 
     @OneToMany(mappedBy = "departement")  // mappedBy indique que l'association est gérée par la propriété departement dans Apprenant
     @JsonIgnore  // Ignorer la sérialisation de la relation apprenants pour éviter la boucle infinie

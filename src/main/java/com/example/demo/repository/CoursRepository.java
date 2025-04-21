@@ -13,7 +13,9 @@ public interface CoursRepository extends JpaRepository<Cours, Long> {
     @Query("SELECT c.id as id, c.titre as titre, c.description as description, " +
     "c.tempsEstimer as tempsEstimer, c.dateCreation as dateCreation, " +
     "c.dateMAJ as dateMAJ, c.projet.nom as projetNom " +
-    "FROM Cours c WHERE c.projet.id = :projetId")
+    "FROM Cours c WHERE c.projet.id = :projetId" +
+    " ORDER BY c.id ASC"
+    )
 List<CoursProjection> findCoursSansProjet(@Param("projetId") Long projetId);
 //List<Cours> findByProjetId(Long projetId);
 

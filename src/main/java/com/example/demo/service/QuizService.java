@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.Quiz;
+import com.example.demo.entity.QuizProjection;
 import com.example.demo.repository.QuizRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,10 +22,9 @@ public class QuizService {
         return quizRepository.findById(id).orElse(null);
     }
 
-    public List<Quiz> getQuizzesByChapitreId(Long chapitreId) {
-        return quizRepository.findByChapitreId(chapitreId);
-    }
-
+public List<QuizProjection> getQuizLightByChapitreId(Long chapitreId) {
+    return quizRepository.findByChapitreIdLight(chapitreId);
+}
     public Quiz saveQuiz(Quiz quiz) {
         return quizRepository.save(quiz);
     }
