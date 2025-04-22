@@ -1,6 +1,9 @@
 package com.example.demo.controller;
 
 import com.example.demo.entity.Section;
+import com.example.demo.entity.SectionDTO;
+import com.example.demo.entity.SectionProjection;
+import com.example.demo.entity.SectionRequestDTO;
 import com.example.demo.service.SectionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,10 +27,7 @@ public class SectionController {
         return sectionService.getSectionById(id);
     }
 
-    @GetMapping("/chapitre/{chapitreId}")
-    public List<Section> getSectionsByChapitreId(@PathVariable Long chapitreId) {
-        return sectionService.getSectionsByChapitreId(chapitreId);
-    }
+  
 
     @PostMapping
     public Section createSection(@RequestBody Section section) {
@@ -38,4 +38,19 @@ public class SectionController {
     public void deleteSection(@PathVariable Long id) {
         sectionService.deleteSection(id);
     }
+
+@PostMapping("/add")
+public SectionDTO createSection(@RequestBody SectionRequestDTO dto) {
+    return sectionService.addSection(dto);
+}
+@GetMapping("/chapitre/{chapitreId}")
+public List<SectionProjection> getSectionsByChapitreId(@PathVariable Long chapitreId) {
+    return sectionService.getProjectedSectionsByChapitreId(chapitreId);
+}
+
+
+
+
+
+
 }
