@@ -7,7 +7,7 @@ public class ChapitreRequestDTO {
     private int tempsEstimer;
     private Long coursId;
 
-    // ✅ Constructeur sans paramètre (obligatoire pour Spring)
+// CONST PAR DEFAUT
     public ChapitreRequestDTO() {}
 
     // ✅ Constructeur avec tous les paramètres
