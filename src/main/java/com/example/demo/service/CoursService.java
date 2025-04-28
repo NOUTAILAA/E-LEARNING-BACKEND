@@ -1,19 +1,24 @@
 package com.example.demo.service;
 
+import com.example.demo.entity.Apprenant;
 import com.example.demo.entity.Cours;
+import com.example.demo.entity.CoursDTO;
 import com.example.demo.entity.CoursProjection;
+import com.example.demo.repository.ApprenantRepository;
 import com.example.demo.repository.CoursRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CoursService {
 
     @Autowired
     private CoursRepository coursRepository;
-
+    @Autowired
+    private ApprenantRepository apprenantRepository;
     public List<Cours> getAllCours() {
         return coursRepository.findAll();
     }
@@ -36,4 +41,20 @@ public class CoursService {
     public void deleteCours(Long id) {
         coursRepository.deleteById(id);
     }
+
+    public List<CoursProjection> getCoursNonConsultesParApprenant(Long apprenantId) {
+        Apprenant apprenant = apprenantRepository.findById(apprenantId).orElseThrow();
+        Long departementId = apprenant.getDepartement().getId();
+        return coursRepository.findCoursNonConsultesByApprenant(apprenantId, departementId);
+    }
+  
+       /*  public List<Cours> getCoursTermines(Long apprenantId) {
+            return coursRepository.findCoursTerminesParApprenant(apprenantId);
+        }*/
+        public List<CoursDTO> findCoursTerminesByApprenant(Long apprenantId) {
+    List<Cours> coursList = coursRepository.findCoursTermines(apprenantId);
+    return coursList.stream().map(CoursDTO::new).collect(Collectors.toList());
+}
+
+
 }

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.dto.DepartementRequestDTO;
 import com.example.demo.entity.Departement;
 import com.example.demo.service.DepartementService;
 
@@ -28,7 +29,9 @@ public class DepartementController {
     }
 
     @PostMapping
-    public Departement create(@RequestBody Departement departement) {
+    public Departement create(@RequestBody DepartementRequestDTO dto) {
+        Departement departement = new Departement();
+        departement.setNom(dto.getNom());
         return departementService.save(departement);
     }
 
@@ -44,15 +47,13 @@ public class DepartementController {
         departementService.delete(id);
     }
     @PutMapping("/{id}")
-    public ResponseEntity<Departement> update(@PathVariable Long id, @RequestBody Departement departementDetails) {
-        return departementService.findById(id)
-                .map(departement -> {
-                    // Mettez à jour les informations du département avec les nouvelles données
-                    departement.setNom(departementDetails.getNom());
-                    // Sauvegardez les changements
-                    Departement updatedDepartement = departementService.save(departement);
-                    return ResponseEntity.ok(updatedDepartement);
-                })
-                .orElse(ResponseEntity.notFound().build());
-    }
+public ResponseEntity<Departement> update(@PathVariable Long id, @RequestBody DepartementRequestDTO departementDetails) {
+    return departementService.findById(id)
+            .map(departement -> {
+                departement.setNom(departementDetails.getNom());
+                Departement updatedDepartement = departementService.save(departement);
+                return ResponseEntity.ok(updatedDepartement);
+            })
+            .orElse(ResponseEntity.notFound().build());
+}
 }

@@ -114,5 +114,13 @@ public ResponseEntity<CoursDTO> createCours(@RequestBody CoursRequestDTO dto) {
         cours = coursService.saveCours(cours);
         return ResponseEntity.ok(new CoursDTO(cours));
     }
-    
+    @GetMapping("/non-consultes/apprenant/{id}")
+    public List<CoursProjection> getCoursNonConsultes(@PathVariable Long id) {
+        return coursService.getCoursNonConsultesParApprenant(id);
+    }
+
+    @GetMapping("/termines/apprenant/{id}")
+    public List<CoursDTO> getCoursTermines(@PathVariable Long id) {
+        return coursService.findCoursTerminesByApprenant(id);
+    }
 }

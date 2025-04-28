@@ -19,4 +19,52 @@ public interface CoursRepository extends JpaRepository<Cours, Long> {
 List<CoursProjection> findCoursSansProjet(@Param("projetId") Long projetId);
 //List<Cours> findByProjetId(Long projetId);
 
+
+@Query("""
+    SELECT c.id AS id, c.titre AS titre, c.description AS description, 
+           c.tempsEstimer AS tempsEstimer, c.projet.nom AS projetNom
+    FROM Cours c
+    WHERE c.projet.departement.id = :departementId
+    AND c.id NOT IN (
+        SELECT DISTINCT s.chapitre.cours.id
+        FROM EtatSection es
+        JOIN es.section s
+        WHERE es.apprenant.id = :apprenantId AND es.etat = true
+    )
+""")
+List<CoursProjection> findCoursNonConsultesByApprenant(Long apprenantId, Long departementId); 
+
+
+
+
+@Query("""
+    SELECT c FROM Cours c
+    WHERE NOT EXISTS (
+        SELECT s FROM Section s
+        JOIN s.chapitre ch
+        WHERE ch.cours = c
+        AND NOT EXISTS (
+            SELECT es FROM EtatSection es
+            WHERE es.apprenant.id = :apprenantId
+            AND es.section = s
+            AND es.etat = true
+        )
+    )
+""")
+List<Cours> findCoursTerminesParApprenant(@Param("apprenantId") Long apprenantId);
+
+@Query("""
+    SELECT c FROM Cours c
+    JOIN c.chapitres ch
+    JOIN ch.sections s
+    WHERE c.projet.departement.id = (
+        SELECT a.departement.id FROM Apprenant a WHERE a.id = :apprenantId
+    )
+    AND NOT EXISTS (
+        SELECT es FROM EtatSection es
+        WHERE es.section = s AND es.apprenant.id = :apprenantId AND es.etat = false
+    )
+    GROUP BY c
+""")
+List<Cours> findCoursTermines(@Param("apprenantId") Long apprenantId);
 }
