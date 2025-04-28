@@ -21,6 +21,7 @@ public class Cours {
 
     @Temporal(TemporalType.DATE)
     private Date dateMAJ;
+    @Column(length = 10000)
 
     private String description;
 

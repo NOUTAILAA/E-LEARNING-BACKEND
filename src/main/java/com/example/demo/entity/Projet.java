@@ -18,6 +18,7 @@ public class Projet {
 
     private String nom;
     private String nomClient;
+    @Column(length = 10000)
     private String description;
 
     @Lob

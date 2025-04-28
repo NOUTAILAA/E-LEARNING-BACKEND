@@ -12,6 +12,7 @@ public class Section {
 
     private String titre;
     private String type;
+    @Column(length = 10000)
     private String description;
     private String file;
 
