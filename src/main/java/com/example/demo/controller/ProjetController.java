@@ -36,9 +36,9 @@ public class ProjetController {
     private DepartementService departementService;
 
     @GetMapping
-public List<ProjetDTO> getAll() {
-    return projetService.findAll().stream().map(ProjetDTO::new).toList();
-}
+    public List<ProjetDTO> getAll() {
+        return projetService.findAll().stream().map(ProjetDTO::new).toList();
+    }
 
 
     @GetMapping("/{id}")

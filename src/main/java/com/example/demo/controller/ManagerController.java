@@ -1,5 +1,8 @@
 package com.example.demo.controller;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.dto.ManagerRequestDTO;
 import com.example.demo.entity.Apprenant;
 import com.example.demo.entity.Departement;
 import com.example.demo.entity.Manager;
@@ -39,10 +43,7 @@ public class ManagerController {
     public List<Departement> getDepartements() {
         return departementService.findAll();  // Retourne la liste des départements
     }
-    @PostMapping
-    public Manager create(@RequestBody Manager manager) {
-        return managerService.save(manager);
-    }
+  
     @GetMapping("/{id}")
     public ResponseEntity<Manager> getById(@PathVariable Long id) {
         return managerService.findById(id)
@@ -114,5 +115,29 @@ public ResponseEntity<List<Apprenant>> getApprenantsByManagerEmail(@PathVariable
 public ResponseEntity<Manager> getByEmail(@RequestParam String email) {
     Optional<Manager> manager = managerRepository.findByEmail(email);
     return manager.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+}
+
+@PostMapping
+public ResponseEntity<Manager> create(@RequestBody ManagerRequestDTO dto) {
+    Manager manager = new Manager();
+    manager.setNom(dto.getNom());
+    manager.setPrenom(dto.getPrenom());
+    manager.setEmail(dto.getEmail());
+    manager.setTelephone(dto.getTelephone());
+    manager.setSexe(dto.getSexe());
+     // Conversion String → Date
+        LocalDate localDate = LocalDate.parse(dto.getDateNaissance());
+        Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+        manager.setDateNaissance(date);
+
+    manager.setRole(dto.getRole());
+
+    if (dto.getDepartementId() != null) {
+        Departement departement = departementService.findById(dto.getDepartementId())
+                .orElseThrow(() -> new IllegalArgumentException("Département introuvable"));
+        manager.setDepartement(departement);
+    }
+
+    return ResponseEntity.ok(managerService.save(manager));
 }
 }
