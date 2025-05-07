@@ -56,5 +56,9 @@ public class CoursService {
     return coursList.stream().map(CoursDTO::new).collect(Collectors.toList());
 }
 
+public List<CoursDTO> getCoursConsultesParApprenant(Long apprenantId) {
+    return coursRepository.findCoursConsultesParApprenant(apprenantId);
+}
+
 
 }

@@ -77,5 +77,10 @@ public List<SectionDTO> getSectionsByChapitreId(Long chapitreId) {
     List<Section> sections = sectionRepository.findByChapitreId(chapitreId);
     return sections.stream().map(SectionDTO::new).toList();
 }
+public SectionDTO getSectionDTOById(Long id) {
+    Section section = sectionRepository.findById(id)
+        .orElseThrow(() -> new RuntimeException("Section introuvable"));
+    return new SectionDTO(section);
+}
 
 }

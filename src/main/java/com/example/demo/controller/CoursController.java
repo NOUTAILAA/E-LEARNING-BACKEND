@@ -123,4 +123,9 @@ public ResponseEntity<CoursDTO> createCours(@RequestBody CoursRequestDTO dto) {
     public List<CoursDTO> getCoursTermines(@PathVariable Long id) {
         return coursService.findCoursTerminesByApprenant(id);
     }
+    @GetMapping("/consultes/apprenant/{id}")
+    public List<CoursDTO> getCoursConsultes(@PathVariable Long id) {
+        return coursService.getCoursConsultesParApprenant(id);
+    }
+    
 }

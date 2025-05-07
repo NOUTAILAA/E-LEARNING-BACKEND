@@ -34,4 +34,13 @@ public class CoursDTO {
     public void setProjetId(Long projetId) { this.projetId = projetId; }
     public void setTempsEstimer(int tempsEstimer) { this.tempsEstimer = tempsEstimer; }
     public void setProjetNom(String projetNom) { this.projetNom = projetNom; }
+    public CoursDTO(Long id, String titre, String description, int tempsEstimer, Long projetId, String projetNom) {
+        this.id = id;
+        this.titre = titre;
+        this.description = description;
+        this.tempsEstimer = tempsEstimer;
+        this.projetId = projetId;
+        this.projetNom = projetNom;
+    }
+    
 }

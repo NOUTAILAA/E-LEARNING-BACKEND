@@ -28,12 +28,7 @@ public class DepartementController {
         return departementService.findAll();
     }
 
-    @PostMapping
-    public Departement create(@RequestBody DepartementRequestDTO dto) {
-        Departement departement = new Departement();
-        departement.setNom(dto.getNom());
-        return departementService.save(departement);
-    }
+    
 
     @GetMapping("/{id}")
     public ResponseEntity<Departement> getById(@PathVariable Long id) {
@@ -46,13 +41,29 @@ public class DepartementController {
     public void delete(@PathVariable Long id) {
         departementService.delete(id);
     }
-    @PutMapping("/{id}")
-public ResponseEntity<Departement> update(@PathVariable Long id, @RequestBody DepartementRequestDTO departementDetails) {
+// DepartementController.java
+@PostMapping
+public ResponseEntity<?> create(@RequestBody DepartementRequestDTO dto) {
+    Departement departement = new Departement();
+    departement.setNom(dto.getNom());
+    try {
+        return ResponseEntity.ok(departementService.save(departement));
+    } catch (IllegalArgumentException e) {
+        return ResponseEntity.badRequest().body(e.getMessage());
+    }
+}
+
+@PutMapping("/{id}")
+public ResponseEntity<?> update(@PathVariable Long id, @RequestBody DepartementRequestDTO departementDetails) {
     return departementService.findById(id)
             .map(departement -> {
                 departement.setNom(departementDetails.getNom());
-                Departement updatedDepartement = departementService.save(departement);
-                return ResponseEntity.ok(updatedDepartement);
+                try {
+                    Departement updatedDepartement = departementService.save(departement);
+                    return ResponseEntity.ok(updatedDepartement);
+                } catch (IllegalArgumentException e) {
+                    return ResponseEntity.badRequest().body(e.getMessage());
+                }
             })
             .orElse(ResponseEntity.notFound().build());
 }

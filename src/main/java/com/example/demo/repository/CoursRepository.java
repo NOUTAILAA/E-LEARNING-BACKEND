@@ -1,6 +1,7 @@
 package com.example.demo.repository;
 
 import com.example.demo.entity.Cours;
+import com.example.demo.entity.CoursDTO;
 import com.example.demo.entity.CoursProjection;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -67,4 +68,17 @@ List<Cours> findCoursTerminesParApprenant(@Param("apprenantId") Long apprenantId
     GROUP BY c
 """)
 List<Cours> findCoursTermines(@Param("apprenantId") Long apprenantId);
+
+@Query("""
+    SELECT DISTINCT new com.example.demo.entity.CoursDTO(
+        c.id, c.titre, c.description, c.tempsEstimer, c.projet.id, c.projet.nom
+    )
+    FROM Cours c
+    JOIN c.chapitres ch
+    JOIN ch.sections s
+    JOIN EtatSection es ON es.section.id = s.id
+    WHERE es.apprenant.id = :apprenantId AND es.etat = true
+""")
+List<CoursDTO> findCoursConsultesParApprenant(@Param("apprenantId") Long apprenantId);
+
 }

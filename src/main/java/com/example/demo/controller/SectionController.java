@@ -39,18 +39,17 @@ public class SectionController {
         sectionService.deleteSection(id);
     }
 
-@PostMapping("/add")
-public SectionDTO createSection(@RequestBody SectionRequestDTO dto) {
-    return sectionService.addSection(dto);
+    @PostMapping("/add")
+    public SectionDTO createSection(@RequestBody SectionRequestDTO dto) {
+        return sectionService.addSection(dto);
+    }
+    @GetMapping("/chapitre/{chapitreId}")
+    public List<SectionProjection> getSectionsByChapitreId(@PathVariable Long chapitreId) {
+        return sectionService.getProjectedSectionsByChapitreId(chapitreId);
+    }
+    @GetMapping("/nouveau/{id}")
+public SectionDTO getSectionByIdN(@PathVariable Long id) {
+    return sectionService.getSectionDTOById(id);
 }
-@GetMapping("/chapitre/{chapitreId}")
-public List<SectionProjection> getSectionsByChapitreId(@PathVariable Long chapitreId) {
-    return sectionService.getProjectedSectionsByChapitreId(chapitreId);
-}
-
-
-
-
-
 
 }

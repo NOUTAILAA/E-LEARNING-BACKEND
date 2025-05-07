@@ -18,9 +18,15 @@ public class DepartementService {
         return departementRepository.findAll();
     }
 
+    // DepartementService.java
     public Departement save(Departement departement) {
+        Optional<Departement> existing = departementRepository.findByNomIgnoreCase(departement.getNom());
+        if (existing.isPresent() && !existing.get().getId().equals(departement.getId())) {
+            throw new IllegalArgumentException("Un département avec ce nom existe déjà.");
+        }
         return departementRepository.save(departement);
     }
+
 
     public Optional<Departement> findById(Long id) {
         return departementRepository.findById(id);
