@@ -3,7 +3,9 @@ package com.example.demo.controller;
 import com.example.demo.entity.Apprenant;
 import com.example.demo.entity.Chapitre;
 import com.example.demo.entity.Manager;
+import com.example.demo.entity.PropositionDTO;
 import com.example.demo.entity.Quiz;
+import com.example.demo.entity.QuizDTO;
 import com.example.demo.entity.QuizProjection;
 import com.example.demo.entity.QuizRequestDTO;
 import com.example.demo.service.ChapitreService;
@@ -68,6 +70,18 @@ public List<Apprenant> getApprenantsNonAssignesDuDepartement(@PathVariable Long 
         .orElseThrow(() -> new IllegalArgumentException("Manager non trouvé"));
     Long departementId = manager.getDepartement().getId();
     return managerService.getApprenantsNonAssignesDansDepartement(departementId);
+}
+@GetMapping("/with-propositions/{id}")
+public ResponseEntity<QuizDTO> getQuizWithPropositions(@PathVariable Long id) {
+    Quiz quiz = quizService.getQuizById(id);
+    if (quiz == null) return ResponseEntity.notFound().build();
+
+    List<PropositionDTO> propositions = quiz.getPropositions().stream()
+        .map(p -> new PropositionDTO(p.getId(), p.getReponse(), p.getCorrecte()))
+        .toList();
+
+    QuizDTO dto = new QuizDTO(quiz.getId(), quiz.getQuestion(), propositions);
+    return ResponseEntity.ok(dto);
 }
 
 }

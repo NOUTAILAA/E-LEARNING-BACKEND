@@ -1,7 +1,10 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -24,6 +27,16 @@ public class Quiz {
     @JoinColumn(name = "chapitre_id")
     @JsonIgnore
     private Chapitre chapitre;
+    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Proposition> propositions = new ArrayList<>();
+
+    public List<Proposition> getPropositions() {
+        return propositions;
+    }
+
+    public void setPropositions(List<Proposition> propositions) {
+        this.propositions = propositions;
+    }
 
     // ====== Getters & Setters ======
     public Long getId() {
