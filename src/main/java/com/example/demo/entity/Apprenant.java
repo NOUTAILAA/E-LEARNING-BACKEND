@@ -1,5 +1,7 @@
 package com.example.demo.entity;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.*;
@@ -15,7 +17,19 @@ public class Apprenant extends Utilisateur {
     @ManyToOne
     @JoinColumn(name = "departement_id")  // La clé étrangère qui lie un Apprenant à un Departement
     private Departement departement;
-
+    @OneToMany(mappedBy = "apprenant", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<ReponseQuiz> reponsesQuiz;
+    
+    // Getter et setter
+    public List<ReponseQuiz> getReponsesQuiz() {
+        return reponsesQuiz;
+    }
+    
+    public void setReponsesQuiz(List<ReponseQuiz> reponsesQuiz) {
+        this.reponsesQuiz = reponsesQuiz;
+    }
+    
     // Getters et Setters
     public Departement getDepartement() {
         return departement;

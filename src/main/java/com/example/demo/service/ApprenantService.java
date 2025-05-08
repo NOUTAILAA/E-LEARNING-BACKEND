@@ -101,4 +101,8 @@ public class ApprenantService {
     public Optional<Apprenant> findByEmailAndPassword(String email, String password) {
         return apprenantRepository.findByEmailAndPassword(email, password);  // Méthode à ajouter dans le repository
     }
+    public Apprenant getApprenantById(Long id) {
+        Optional<Apprenant> optional = apprenantRepository.findById(id);
+        return optional.orElse(null);
+    }
 }

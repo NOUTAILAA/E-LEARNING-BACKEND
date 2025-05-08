@@ -45,6 +45,7 @@ public class AdminService {
     public Optional<Admin> findByEmailAndPassword(String email, String password) {
         return adminRepository.findByEmailAndPassword(email, password);  // Méthode à ajouter dans le repository
     }
+    
 }
 
 
