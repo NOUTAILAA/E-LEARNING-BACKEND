@@ -33,4 +33,16 @@ public class ReponseQuizService {
     public void delete(ReponseQuizId id) {
         reponseQuizRepository.deleteById(id);
     }
+    public double calculerScorePourApprenantEtQuiz(Long apprenantId, Long quizId) {
+        List<Boolean> correctFlags = reponseQuizRepository.findCorrectFlagsByApprenantAndQuiz(apprenantId, quizId);
+    
+        if (correctFlags.isEmpty()) return 0.0;
+    
+        long total = correctFlags.size();
+        long bonnes = correctFlags.stream().filter(Boolean::booleanValue).count();
+    
+        return (bonnes * 100.0) / total;
+    }
+    
+    
 }

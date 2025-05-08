@@ -67,4 +67,13 @@ public class ReponseQuizController {
     public List<ReponseQuiz> getByApprenantAndQuiz(@PathVariable Long apprenantId, @PathVariable Long quizId) {
         return reponseQuizService.getByApprenantAndQuiz(apprenantId, quizId);
     }
+    @GetMapping("/score")
+public ResponseEntity<Double> getScore(
+    @RequestParam Long apprenantId,
+    @RequestParam Long quizId) {
+
+    double score = reponseQuizService.calculerScorePourApprenantEtQuiz(apprenantId, quizId);
+    return ResponseEntity.ok(score);
+}
+
 }
