@@ -36,6 +36,19 @@ public ResponseEntity<List<PropositionProjection>> getByQuiz(@PathVariable Long 
 }
 
 
+@PutMapping("/{id}")
+public ResponseEntity<Proposition> updateProposition(@PathVariable Long id, @RequestBody Proposition updatedProp) {
+    Proposition existing = propositionService.getById(id);
+    if (existing == null) {
+        return ResponseEntity.notFound().build();
+    }
+
+    existing.setReponse(updatedProp.getReponse());
+    existing.setCorrecte(updatedProp.getCorrecte());
+
+    Proposition saved = propositionService.save(existing);
+    return ResponseEntity.ok(saved);
+}
 
 
     @DeleteMapping("/{id}")

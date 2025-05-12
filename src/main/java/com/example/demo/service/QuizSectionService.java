@@ -25,6 +25,13 @@ public class QuizSectionService {
     public List<QuizSection> getQuizzesBySectionId(Long sectionId) {
         return quizSectionRepository.findBySectionId(sectionId);
     }
+public QuizSection updateQuiz(Long id, QuizSectionRequestDTO dto) {
+    QuizSection quiz = quizSectionRepository.findById(id)
+        .orElseThrow(() -> new RuntimeException("QuizSection non trouvé"));
+
+    quiz.setQuestion(dto.getQuestion());
+    return quizSectionRepository.save(quiz);
+}
 
     public QuizSection getQuizById(Long id) {
         return quizSectionRepository.findById(id).orElse(null);

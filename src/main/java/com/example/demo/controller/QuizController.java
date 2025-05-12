@@ -31,6 +31,20 @@ public class QuizController {
     public List<Quiz> getAllQuizzes() {
         return quizService.getAllQuizzes();
     }
+    @PutMapping("/{id}")
+public ResponseEntity<Quiz> updateQuiz(@PathVariable Long id, @RequestBody QuizRequestDTO dto) {
+    Quiz existing = quizService.getQuizById(id);
+    if (existing == null) {
+        return ResponseEntity.notFound().build();
+    }
+
+    existing.setQuestion(dto.getQuestion());
+    existing.setDateMAJ(new Date());
+
+    Quiz updated = quizService.saveQuiz(existing);
+    return ResponseEntity.ok(updated);
+}
+
 @PostMapping
 public ResponseEntity<Quiz> createQuiz(@RequestBody QuizRequestDTO dto) {
     Chapitre chapitre = chapitreService.getChapitreById(dto.getChapitreId());

@@ -28,13 +28,22 @@ public class PropositionSectionService {
             throw new RuntimeException("Quiz introuvable avec l'ID : " + quizId);
         }
 
+
         PropositionSection prop = new PropositionSection();
         prop.setReponse(reponse);
         prop.setCorrecte(correcte);
         prop.setQuiz(quizOpt.get());
         return propositionSectionRepository.save(prop);
     }
+public PropositionSection updateProposition(Long id, PropositionSectionDTO dto) {
+    PropositionSection proposition = propositionSectionRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Proposition non trouvée"));
 
+    proposition.setReponse(dto.getReponse());
+    proposition.setCorrecte(dto.isCorrecte());
+
+    return propositionSectionRepository.save(proposition);
+}
     public boolean deleteProposition(Long id) {
         if (propositionSectionRepository.existsById(id)) {
             propositionSectionRepository.deleteById(id);

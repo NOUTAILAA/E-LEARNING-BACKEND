@@ -35,6 +35,11 @@ public ResponseEntity<?> addQuizWithPropositions(@RequestBody QuizSectionRequest
     return ResponseEntity.status( 200).build(); // pas besoin de la variable
 }
 
+@PutMapping("/{id}")
+public ResponseEntity<QuizSection> updateQuiz(@PathVariable Long id, @RequestBody QuizSectionRequestDTO dto) {
+    QuizSection updated = quizSectionService.updateQuiz(id, dto);
+    return ResponseEntity.ok(updated);
+}
 
 
     @DeleteMapping("/{id}")

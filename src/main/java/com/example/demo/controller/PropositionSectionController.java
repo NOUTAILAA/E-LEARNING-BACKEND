@@ -36,6 +36,13 @@ public class PropositionSectionController {
 public List<PropositionSectionDTO> getPropositionsByQuiz(@PathVariable Long quizId) {
     return propositionSectionService.getPropositionsByQuizId(quizId);
 }
+@PutMapping("/{id}")
+public PropositionSection updateProposition(
+        @PathVariable Long id,
+        @RequestBody PropositionSectionDTO updatedProposition
+) {
+    return propositionSectionService.updateProposition(id, updatedProposition);
+}
 
 
 
