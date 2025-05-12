@@ -2,8 +2,10 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.QuizSection;
 import com.example.demo.entity.QuizSectionDTO;
+import com.example.demo.entity.QuizSectionRequestDTO;
 import com.example.demo.service.QuizSectionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,6 +29,13 @@ public List<QuizSectionDTO> getQuizzesBySection(@PathVariable Long sectionId) {
     public QuizSection addQuiz(@RequestParam String question, @RequestParam Long sectionId) {
         return quizSectionService.addQuiz(question, sectionId);
     }
+@PostMapping("/with-propositions")
+public ResponseEntity<?> addQuizWithPropositions(@RequestBody QuizSectionRequestDTO dto) {
+    quizSectionService.addQuizWithPropositions(dto);
+    return ResponseEntity.status( 200).build(); // pas besoin de la variable
+}
+
+
 
     @DeleteMapping("/{id}")
     public void deleteQuiz(@PathVariable Long id) {

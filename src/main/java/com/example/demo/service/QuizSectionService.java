@@ -1,7 +1,9 @@
 package com.example.demo.service;
 
+import com.example.demo.entity.PropositionSection;
 import com.example.demo.entity.QuizSection;
 import com.example.demo.entity.QuizSectionDTO;
+import com.example.demo.entity.QuizSectionRequestDTO;
 import com.example.demo.entity.Section;
 import com.example.demo.repository.QuizSectionRepository;
 import com.example.demo.repository.SectionRepository;
@@ -61,6 +63,28 @@ public class QuizSectionService {
     }
     public List<QuizSectionDTO> getQuizDTOBySectionId(Long sectionId) {
     return quizSectionRepository.findQuizDTOBySectionId(sectionId);
+}
+
+public QuizSection addQuizWithPropositions(QuizSectionRequestDTO dto) {
+    Section section = sectionRepository.findById(dto.getSectionId())
+        .orElseThrow(() -> new RuntimeException("Section introuvable"));
+
+    QuizSection quiz = new QuizSection();
+    quiz.setQuestion(dto.getQuestion());
+    quiz.setSection(section);
+
+    List<PropositionSection> props = dto.getPropositions().stream()
+        .map(p -> {
+            PropositionSection prop = new PropositionSection();
+            prop.setReponse(p.getReponse());
+            prop.setCorrecte(p.isCorrecte());
+            prop.setQuiz(quiz);
+            return prop;
+        }).toList();
+
+    quiz.setPropositions(props);
+
+    return quizSectionRepository.save(quiz); // cascade persist automatiquement les propositions
 }
 
 }
