@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Chapitre {
 
@@ -13,6 +15,9 @@ public class Chapitre {
     private Long id;
 
     private String titre;
+@OneToMany(mappedBy = "chapitre", cascade = CascadeType.ALL)
+@JsonIgnore
+private List<EtatChapitre> etatsChapitres;
 
     @Temporal(TemporalType.DATE)
     private Date dateCreation;

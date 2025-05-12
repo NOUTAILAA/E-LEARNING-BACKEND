@@ -13,7 +13,10 @@ public class Apprenant extends Utilisateur {
     @JoinColumn(name = "manager_id")
     @JsonIgnore
     private Manager manager;
-    
+    @OneToMany(mappedBy = "apprenant", cascade = CascadeType.ALL)
+@JsonIgnore
+private List<EtatChapitre> etatsChapitres;
+
     @ManyToOne
     @JoinColumn(name = "departement_id")  // La clé étrangère qui lie un Apprenant à un Departement
     private Departement departement;
