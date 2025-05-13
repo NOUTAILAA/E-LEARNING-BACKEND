@@ -10,6 +10,7 @@ import com.example.demo.entity.EtatChapitreProjection;
 import com.example.demo.repository.ApprenantRepository;
 import com.example.demo.repository.ChapitreRepository;
 import com.example.demo.repository.EtatChapitreRepository;
+import com.example.demo.repository.EtatSectionRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -28,34 +29,53 @@ public class EtatChapitreController {
     private ChapitreRepository chapitreRepository;
     @Autowired
     private EtatChapitreRepository etatChapitreRepository;
+@Autowired
+private EtatSectionRepository etatSectionRepository;
 
-    @PostMapping
-public ResponseEntity<EtatChapitreDTO> createEtat(@RequestBody EtatChapitreRequestDTO dto) {
-    Apprenant apprenant = apprenantRepository.findById(dto.getApprenantId())
-        .orElseThrow(() -> new RuntimeException("Apprenant non trouvé"));
-    Chapitre chapitre = chapitreRepository.findById(dto.getChapitreId())
-        .orElseThrow(() -> new RuntimeException("Chapitre non trouvé"));
 
-    EtatChapitre etatChapitre = new EtatChapitre();
-    etatChapitre.setEtat(dto.getEtat()); 
-    etatChapitre.setApprenant(apprenant);
-    etatChapitre.setChapitre(chapitre);
-
-    EtatChapitre saved = etatChapitreRepository.save(etatChapitre);
-
-    EtatChapitreDTO response = new EtatChapitreDTO(
-        saved.getId(),
-        saved.getEtat(),
-        apprenant.getId(),
-        chapitre.getId()
-    );
-
-    return ResponseEntity.ok(response);
-}
 
 
     @GetMapping("/apprenant/{id}")
     public List<EtatChapitreProjection> getByApprenant(@PathVariable Long id) {
         return etatChapitreRepository.findByApprenantId(id);
     }
+    @PostMapping
+public ResponseEntity<?> createOrUpdateEtat(@RequestBody EtatChapitreRequestDTO dto) {
+    Apprenant apprenant = apprenantRepository.findById(dto.getApprenantId())
+        .orElseThrow(() -> new RuntimeException("Apprenant non trouvé"));
+    Chapitre chapitre = chapitreRepository.findById(dto.getChapitreId())
+        .orElseThrow(() -> new RuntimeException("Chapitre non trouvé"));
+
+    // 🔒 Si etat = true, on vérifie toutes les sections
+    if (dto.getEtat()) {
+        int nonValidees = etatSectionRepository.countSectionsNonValidees(dto.getApprenantId(), dto.getChapitreId());
+        if (nonValidees > 0) {
+            return ResponseEntity.badRequest()
+                .body("Impossible de valider ce chapitre : toutes les sections ne sont pas encore validées.");
+        }
+    }
+
+    EtatChapitre existing = etatChapitreRepository.findByApprenantIdAndChapitreId(dto.getApprenantId(), dto.getChapitreId());
+    EtatChapitre saved;
+
+    if (existing != null) {
+        existing.setEtat(dto.getEtat());
+        saved = etatChapitreRepository.save(existing);
+    } else {
+        EtatChapitre etatChapitre = new EtatChapitre();
+        etatChapitre.setEtat(dto.getEtat());
+        etatChapitre.setApprenant(apprenant);
+        etatChapitre.setChapitre(chapitre);
+        saved = etatChapitreRepository.save(etatChapitre);
+    }
+
+    return ResponseEntity.ok(new EtatChapitreDTO(
+        saved.getId(), saved.getEtat(), apprenant.getId(), chapitre.getId()
+    ));
+}
+@GetMapping("/test/countNonValidees")
+public int testCountNonValidees(@RequestParam Long apprenantId, @RequestParam Long chapitreId) {
+    return etatSectionRepository.countSectionsNonValidees(apprenantId, chapitreId);
+}
+
 }

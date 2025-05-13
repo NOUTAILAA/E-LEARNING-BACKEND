@@ -13,4 +13,6 @@ public interface EtatChapitreRepository extends JpaRepository<EtatChapitre, Long
 @Query("SELECT e.id as id, e.etat as etat, e.apprenant.id as apprenantId, e.chapitre.id as chapitreId " +
        "FROM EtatChapitre e WHERE e.apprenant.id = :apprenantId")
 List<EtatChapitreProjection> findByApprenantId(@Param("apprenantId") Long apprenantId);
+EtatChapitre findByApprenantIdAndChapitreId(Long apprenantId, Long chapitreId);
+
 }
