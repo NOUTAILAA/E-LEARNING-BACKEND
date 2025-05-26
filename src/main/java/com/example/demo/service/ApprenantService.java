@@ -75,11 +75,7 @@ public class ApprenantService {
             apprenant.setSexe(apprenantDetails.getSexe());
             apprenant.setEmail(apprenantDetails.getEmail());
 
-            // Si un mot de passe est fourni, le hacher et le mettre à jour
-            if (apprenantDetails.getPassword() != null) {
-                String hashedPassword = passwordEncoder.encode(apprenantDetails.getPassword());
-                apprenant.setPassword(hashedPassword);
-            }
+        
 
             return apprenantRepository.save(apprenant);
         }

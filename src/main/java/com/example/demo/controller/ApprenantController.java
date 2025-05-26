@@ -74,30 +74,34 @@ public class ApprenantController {
     }
 
     // Mettre à jour un apprenant par ID
-    @PutMapping("/{id}")
-    public ResponseEntity<Apprenant> update(@PathVariable Long id, @RequestBody ApprenantRequestDTO dto) {
-        Optional<Apprenant> optional = apprenantService.findById(id);
-        if (optional.isEmpty()) return ResponseEntity.notFound().build();
+   @PutMapping("/{id}")
+public ResponseEntity<Apprenant> update(@PathVariable Long id, @RequestBody ApprenantRequestDTO dto) {
+    Optional<Apprenant> optional = apprenantService.findById(id);
+    if (optional.isEmpty()) return ResponseEntity.notFound().build();
 
-        Apprenant apprenant = optional.get();
-        apprenant.setNom(dto.getNom());
-        apprenant.setPrenom(dto.getPrenom());
-        apprenant.setSexe(dto.getSexe());
-        apprenant.setTelephone(dto.getTelephone());
-        apprenant.setEmail(dto.getEmail());
+    Apprenant existing = optional.get();
+    String oldPassword = existing.getPassword();
 
-        LocalDate localDate = LocalDate.parse(dto.getDateNaissance());
-        Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
-        apprenant.setDateNaissance(date);
+    existing.setNom(dto.getNom());
+    existing.setPrenom(dto.getPrenom());
+    existing.setSexe(dto.getSexe());
+    existing.setTelephone(dto.getTelephone());
+    existing.setEmail(dto.getEmail());
 
+    LocalDate localDate = LocalDate.parse(dto.getDateNaissance());
+    Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+    existing.setDateNaissance(date);
 
-        if (dto.getDepartementId() != null) {
-            Departement departement = new Departement();
-            departement.setId(dto.getDepartementId());
-            apprenant.setDepartement(departement);
-        }
-
-        Apprenant updated = apprenantService.update(apprenant);
-        return ResponseEntity.ok(updated);
+    if (dto.getDepartementId() != null) {
+        Departement departement = new Departement();
+        departement.setId(dto.getDepartementId());
+        existing.setDepartement(departement);
     }
+
+    // 🔐 NE PAS toucher au mot de passe
+    existing.setPassword(oldPassword);
+
+    Apprenant updated = apprenantService.update(existing);
+    return ResponseEntity.ok(updated);
+}
 }
