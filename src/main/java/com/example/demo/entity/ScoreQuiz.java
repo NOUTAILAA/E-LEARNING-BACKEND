@@ -11,12 +11,21 @@ public class ScoreQuiz {
 
     @ManyToOne
     private Apprenant apprenant;
-
-    private Long quizId;
+@ManyToOne
+private Quiz quizChapitre;
+    @ManyToOne
+    private QuizSection quizSection;
 
     private Double score;
 
     // Getters et Setters
+    public Quiz getQuizChapitre() {
+    return quizChapitre;
+}
+
+public void setQuizChapitre(Quiz quizChapitre) {
+    this.quizChapitre = quizChapitre;
+}
     public Long getId() {
         return id;
     }
@@ -33,12 +42,12 @@ public class ScoreQuiz {
         this.apprenant = apprenant;
     }
 
-    public Long getQuizId() {
-        return quizId;
+    public QuizSection getQuizSection() {
+        return quizSection;
     }
 
-    public void setQuizId(Long quizId) {
-        this.quizId = quizId;
+    public void setQuizSection(QuizSection quizSection) {
+        this.quizSection = quizSection;
     }
 
     public Double getScore() {

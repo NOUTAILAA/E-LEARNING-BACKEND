@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 public class QuizSection {
@@ -19,8 +20,9 @@ public class QuizSection {
 
     private Section section;
 
-    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<PropositionSection> propositions;
+@OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL)
+@JsonManagedReference
+private List<PropositionSection> propositions;
 
     // Getters et Setters
     public Long getId() { return id; }

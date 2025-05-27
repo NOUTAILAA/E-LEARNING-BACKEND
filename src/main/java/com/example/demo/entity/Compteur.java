@@ -14,11 +14,13 @@ public class Compteur {
     @ManyToOne
     private Section section;
 
-    @ManyToOne
-    private QuizSection quizSection;
+@ManyToOne(optional = true)
+@JoinColumn(name = "quiz_section_id", nullable = true)
+private QuizSection quizSection;
 
-    @ManyToOne
-    private Quiz quizChapitre;
+@ManyToOne(optional = true)
+@JoinColumn(name = "quiz_chapitre_id", nullable = true)
+private Quiz quizChapitre;
 
     private Double tempsPasse; // en minutes ou secondes
 

@@ -48,11 +48,22 @@ public class CompteurService {
     }
 public Compteur saveFromDTO(CompteurRequestDTO dto) {
     Apprenant apprenant = apprenantRepository.findById(dto.getApprenantId()).orElse(null);
-    Section section = sectionRepository.findById(dto.getSectionId()).orElse(null);
-    QuizSection quizSection = dto.getQuizSectionId() != null ? 
-        quizSectionRepository.findById(dto.getQuizSectionId()).orElse(null) : null;
-    Quiz quizChapitre = dto.getQuizChapitreId() != null ? 
-        quizChapitreRepository.findById(dto.getQuizChapitreId()).orElse(null) : null;
+Section section = null;
+if (dto.getSectionId() != null) {
+    section = sectionRepository.findById(dto.getSectionId())
+        .orElseThrow(() -> new IllegalArgumentException("Section introuvable avec ID " + dto.getSectionId()));
+}
+QuizSection quizSection = null;
+if (dto.getQuizSectionId() != null) {
+    quizSection = quizSectionRepository.findById(dto.getQuizSectionId())
+        .orElseThrow(() -> new IllegalArgumentException("QuizSection introuvable avec ID " + dto.getQuizSectionId()));
+}
+
+    Quiz quizChapitre = null;
+if (dto.getQuizChapitreId() != null) {
+    quizChapitre = quizChapitreRepository.findById(dto.getQuizChapitreId())
+        .orElseThrow(() -> new IllegalArgumentException("QuizChapitre introuvable avec ID " + dto.getQuizChapitreId()));
+}
 
     Compteur compteur = new Compteur();
     compteur.setApprenant(apprenant);

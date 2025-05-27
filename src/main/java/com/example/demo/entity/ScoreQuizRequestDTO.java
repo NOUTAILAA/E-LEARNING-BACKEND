@@ -1,3 +1,4 @@
+// ✅ ScoreQuizRequestDTO.java
 package com.example.demo.entity;
 
 public class ScoreQuizRequestDTO {
@@ -5,14 +6,21 @@ public class ScoreQuizRequestDTO {
     private Long apprenantId;
     private Long quizSectionId;
     private double score;
+private Long quizChapitreId;
 
-    // Getters et Setters
+public Long getQuizChapitreId() {
+    return quizChapitreId;
+}
 
-    public Long getApprenant() {
+public void setQuizChapitreId(Long quizChapitreId) {
+    this.quizChapitreId = quizChapitreId;
+}
+
+    public Long getApprenantId() {
         return apprenantId;
     }
 
-    public void setApprenant(Long apprenantId) {
+    public void setApprenantId(Long apprenantId) {
         this.apprenantId = apprenantId;
     }
 
@@ -31,6 +39,4 @@ public class ScoreQuizRequestDTO {
     public void setScore(double score) {
         this.score = score;
     }
-    
-public Long getQuizId() { return quizSectionId; }
 }

@@ -1,5 +1,7 @@
 package com.example.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -13,9 +15,10 @@ public class PropositionSection {
 
     private boolean correcte; // ✅ Manquait !
 
-    @ManyToOne
-    @JoinColumn(name = "quiz_section_id")
-    private QuizSection quiz;
+@ManyToOne
+@JoinColumn(name = "quiz_section_id")
+@JsonBackReference
+private QuizSection quiz;
 
     // === Getters & Setters ===
 
