@@ -120,7 +120,7 @@ public ResponseEntity<CoursDTO> createCours(@RequestBody CoursRequestDTO dto) {
     }
 
     @GetMapping("/termines/apprenant/{id}")
-    public List<CoursDTO> getCoursTermines(@PathVariable Long id) {
+    public List<Cours> getCoursTermines(@PathVariable Long id) {
         return coursService.findCoursTerminesByApprenant(id);
     }
     @GetMapping("/consultes/apprenant/{id}")

@@ -65,6 +65,7 @@ if (dto.getQuizChapitreId() != null) {
         .orElseThrow(() -> new IllegalArgumentException("QuizChapitre introuvable avec ID " + dto.getQuizChapitreId()));
 }
 
+
     Compteur compteur = new Compteur();
     compteur.setApprenant(apprenant);
     compteur.setSection(section);

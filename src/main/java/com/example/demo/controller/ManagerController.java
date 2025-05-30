@@ -50,33 +50,34 @@ public class ManagerController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
-    // Ajout du PUT Mapping pour mettre à jour un manager
     @PutMapping("/{id}")
-    public Manager update(@PathVariable Long id, @RequestBody Manager managerDetails) {
-        return managerService.findById(id)
-                .map(manager -> {
-                    // Mettre à jour les champs du manager avec les nouveaux détails
-                    manager.setNom(managerDetails.getNom());
-                    manager.setPrenom(managerDetails.getPrenom());
-                    manager.setDateNaissance(managerDetails.getDateNaissance());
-                    manager.setTelephone(managerDetails.getTelephone());
-                    manager.setSexe(managerDetails.getSexe());
-                    manager.setEmail(managerDetails.getEmail());
-                    manager.setRole(managerDetails.getRole());
-                    manager.setEtat(managerDetails.getEtat());
-                    manager.setPhoto(managerDetails.getPhoto());
-                    
-                    // Mettre à jour le département
-                    if (managerDetails.getDepartement() != null) {
-                        Departement departement = departementService.findById(managerDetails.getDepartement().getId())
-                            .orElseThrow(() -> new IllegalArgumentException("Département non trouvé"));
-                        manager.setDepartement(departement);
-                    }
+public ResponseEntity<Manager> update(@PathVariable Long id, @RequestBody ManagerRequestDTO dto) {
+    return managerService.findById(id)
+        .map(manager -> {
+            manager.setNom(dto.getNom());
+            manager.setPrenom(dto.getPrenom());
+            manager.setEmail(dto.getEmail());
+            manager.setTelephone(dto.getTelephone());
+            manager.setSexe(dto.getSexe());
+            manager.setRole(dto.getRole());
 
-                    return managerService.save(manager);  // Sauvegarder le manager mis à jour
-                })
-                .orElseThrow(() -> new IllegalArgumentException("Manager avec ID " + id + " non trouvé"));
-    }
+            // Conversion date string → java.util.Date
+            LocalDate localDate = LocalDate.parse(dto.getDateNaissance());
+            Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+            manager.setDateNaissance(date);
+
+            // Mettre à jour le département
+            if (dto.getDepartementId() != null) {
+                Departement departement = departementService.findById(dto.getDepartementId())
+                        .orElseThrow(() -> new IllegalArgumentException("Département non trouvé"));
+                manager.setDepartement(departement);
+            }
+
+            return ResponseEntity.ok(managerService.save(manager));
+        })
+        .orElse(ResponseEntity.notFound().build());
+}
+
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
         managerService.delete(id);

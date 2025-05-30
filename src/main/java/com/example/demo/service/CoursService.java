@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class CoursService {
@@ -48,13 +47,10 @@ public class CoursService {
         return coursRepository.findCoursNonConsultesByApprenant(apprenantId, departementId);
     }
   
-       /*  public List<Cours> getCoursTermines(Long apprenantId) {
+        public List<Cours> findCoursTerminesByApprenant(Long apprenantId) {
             return coursRepository.findCoursTerminesParApprenant(apprenantId);
-        }*/
-        public List<CoursDTO> findCoursTerminesByApprenant(Long apprenantId) {
-    List<Cours> coursList = coursRepository.findCoursTermines(apprenantId);
-    return coursList.stream().map(CoursDTO::new).collect(Collectors.toList());
-}
+        }
+
 
 public List<CoursDTO> getCoursConsultesParApprenant(Long apprenantId) {
     return coursRepository.findCoursConsultesParApprenant(apprenantId);
