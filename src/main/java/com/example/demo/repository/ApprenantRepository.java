@@ -11,7 +11,7 @@ import com.example.demo.entity.Apprenant;
 @Repository
 public interface ApprenantRepository extends JpaRepository<Apprenant, Long> {
     Optional<Apprenant> findByEmailAndPassword(String email, String password);
-    Optional<Apprenant> findByEmail(String email);
+    Optional<Apprenant> findByEmailIgnoreCase(String email);
     List<Apprenant> findByManagerIsNullAndDepartementId(Long departementId);
 
 }

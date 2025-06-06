@@ -95,6 +95,18 @@ public ResponseEntity<List<Apprenant>> getApprenantsByManager(@PathVariable Long
             .map(manager -> ResponseEntity.ok(manager.getApprenants()))
             .orElse(ResponseEntity.notFound().build());
 }
+@DeleteMapping("/{managerId}/unassign-apprenant/{apprenantId}")
+public ResponseEntity<?> unassignApprenant(
+        @PathVariable Long managerId,
+        @PathVariable Long apprenantId) {
+    try {
+        managerService.unassignApprenant(managerId, apprenantId);
+        return ResponseEntity.ok().build();
+    } catch (Exception e) {
+        return ResponseEntity.badRequest().body("Erreur lors de la désassignation");
+    }
+}
+
 @GetMapping("/{managerId}/apprenants-non-assignes")
 public List<Apprenant> getApprenantsNonAssignesDuDepartement(@PathVariable Long managerId) {
     Manager manager = managerService.findById(managerId)
@@ -114,7 +126,7 @@ public ResponseEntity<List<Apprenant>> getApprenantsByManagerEmail(@PathVariable
 }
 @GetMapping("/email")
 public ResponseEntity<Manager> getByEmail(@RequestParam String email) {
-    Optional<Manager> manager = managerRepository.findByEmail(email);
+    Optional<Manager> manager = managerRepository.findByEmailIgnoreCase(email);
     return manager.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
 }
 

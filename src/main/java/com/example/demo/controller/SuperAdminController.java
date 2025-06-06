@@ -28,7 +28,7 @@ public class SuperAdminController {
     }
     @GetMapping("/email")
     public SuperAdmin getByEmail(@RequestParam String email) {
-        return superAdminRepository.findByEmail(email).orElse(null);
+        return superAdminRepository.findByEmailIgnoreCase(email).orElse(null);
     }
 
     @PostMapping

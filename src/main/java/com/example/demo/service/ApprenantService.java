@@ -33,7 +33,25 @@ public class ApprenantService {
 
   
 
-    
+    public Apprenant savee(Apprenant apprenant) {
+        if (apprenant.getRole() == null || apprenant.getRole().isEmpty()) {
+            apprenant.setRole("apprenant");
+        }
+
+        if (apprenant.getDepartement() != null) {
+            Departement departement = departementRepository.findById(apprenant.getDepartement().getId())
+                .orElseThrow(() -> new IllegalArgumentException("Département non trouvé"));
+            apprenant.setDepartement(departement);
+        }
+
+
+        // 3. Sauvegarder l’apprenant
+        Apprenant savedApprenant = apprenantRepository.save(apprenant);
+
+
+        return savedApprenant;
+    }
+
 
     public Apprenant save(Apprenant apprenant) {
         if (apprenant.getRole() == null || apprenant.getRole().isEmpty()) {
@@ -101,4 +119,11 @@ public class ApprenantService {
         Optional<Apprenant> optional = apprenantRepository.findById(id);
         return optional.orElse(null);
     }
+    public Optional<Apprenant> findByEmail(String email) {
+        return apprenantRepository.findByEmailIgnoreCase(email);
+}
+public String encodePassword(String plainPassword) {
+    return passwordEncoder.encode(plainPassword);
+}
+
 }

@@ -31,11 +31,26 @@ public class ManagerService {
     public List<Manager> findAll() {
         return managerRepository.findAll();
     }
+public Manager unassignApprenant(Long managerId, Long apprenantId) {
+    Manager manager = managerRepository.findById(managerId)
+        .orElseThrow(() -> new IllegalArgumentException("Manager non trouvé"));
 
- 
+    // Supprimer du côté manager
+    manager.getApprenants().removeIf(a -> a.getId().equals(apprenantId));
+
+    // Supprimer aussi du côté apprenant (⚠️ sinon la relation est toujours en BDD)
+    Apprenant apprenant = apprenantRepository.findById(apprenantId)
+        .orElseThrow(() -> new IllegalArgumentException("Apprenant non trouvé"));
+
+    apprenant.setManager(null);  // ⚠️ C’est ce qui supprime la FK en base
+    apprenantRepository.save(apprenant);
+
+    return managerRepository.save(manager);
+}
+
     public Manager save(Manager manager) {
         // Vérifier s’il existe un autre utilisateur avec cet email
-        Optional<Manager> existingByEmail = managerRepository.findByEmail(manager.getEmail());
+        Optional<Manager> existingByEmail = managerRepository.findByEmailIgnoreCase(manager.getEmail());
         if (existingByEmail.isPresent() && !existingByEmail.get().getId().equals(manager.getId())) {
             throw new IllegalArgumentException("Un utilisateur avec cet email existe déjà.");
         }
@@ -67,6 +82,25 @@ public class ManagerService {
         }
 
         return managerRepository.save(manager);  // Mise à jour normale
+    }
+
+    public Manager savee(Manager manager) {
+        if (manager.getRole() == null || manager.getRole().isEmpty()) {
+            manager.setRole("manager");
+        }
+
+        if (manager.getDepartement() != null) {
+            Departement departement = departementRepository.findById(manager.getDepartement().getId())
+                .orElseThrow(() -> new IllegalArgumentException("Département non trouvé"));
+            manager.setDepartement(departement);
+        }
+
+
+        // 3. Sauvegarder l’apprenant
+        Manager savedManager = managerRepository.save(manager);
+
+
+        return savedManager;
     }
 
 
@@ -112,7 +146,7 @@ public Manager assignApprenantsToManager(Long managerId, List<Long> apprenantIds
         return apprenantRepository.findByManagerIsNullAndDepartementId(departementId);
     }
     public Optional<Manager> findByEmail(String email) {
-        return managerRepository.findByEmail(email);
+        return managerRepository.findByEmailIgnoreCase(email);
     }
     
 }

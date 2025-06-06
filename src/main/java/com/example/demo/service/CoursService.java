@@ -56,5 +56,8 @@ public List<CoursDTO> getCoursConsultesParApprenant(Long apprenantId) {
     return coursRepository.findCoursConsultesParApprenant(apprenantId);
 }
 
+public List<String> getProjectNamesByApprenant(Long apprenantId) {
+    return coursRepository.findProjectNamesByApprenantManager(apprenantId);
+}
 
 }

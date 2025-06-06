@@ -127,5 +127,9 @@ public ResponseEntity<CoursDTO> createCours(@RequestBody CoursRequestDTO dto) {
     public List<CoursDTO> getCoursConsultes(@PathVariable Long id) {
         return coursService.getCoursConsultesParApprenant(id);
     }
-    
+    @GetMapping("/projets/apprenant/{id}")
+public List<String> getProjectNamesByApprenant(@PathVariable Long id) {
+    return coursService.getProjectNamesByApprenant(id);
+}
+
 }

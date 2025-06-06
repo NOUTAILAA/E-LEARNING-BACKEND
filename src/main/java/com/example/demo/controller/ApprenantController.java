@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.dto.ApprenantRequestDTO;
 import com.example.demo.entity.Apprenant;
+import com.example.demo.entity.ApprenantRequesttDTO;
 import com.example.demo.entity.Departement;
 import com.example.demo.service.ApprenantService;
 
@@ -72,6 +74,37 @@ public class ApprenantController {
             return ResponseEntity.notFound().build();
         }
     }
+    
+@PostMapping("/manager")
+public ResponseEntity<Apprenant> createWithManager(@RequestBody ApprenantRequesttDTO dto) {
+    Apprenant apprenant = new Apprenant();
+    apprenant.setNom(dto.getNom());
+    apprenant.setPrenom(dto.getPrenom());
+    apprenant.setSexe(dto.getSexe());
+    apprenant.setTelephone(dto.getTelephone());
+    apprenant.setEmail(dto.getEmail());
+
+    LocalDate localDate = LocalDate.parse(dto.getDateNaissance());
+    Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+    apprenant.setDateNaissance(date);
+
+    // Département
+    if (dto.getDepartementId() != null) {
+        Departement departement = new Departement();
+        departement.setId(dto.getDepartementId());
+        apprenant.setDepartement(departement);
+    }
+
+    // 🔗 Manager
+    if (dto.getManagerId() != null) {
+        com.example.demo.entity.Manager manager = new com.example.demo.entity.Manager();
+        manager.setId(dto.getManagerId());
+        apprenant.setManager(manager);
+    }
+
+    Apprenant saved = apprenantService.save(apprenant);
+    return ResponseEntity.ok(saved);
+}
 
     // Mettre à jour un apprenant par ID
    @PutMapping("/{id}")
@@ -104,4 +137,20 @@ public ResponseEntity<Apprenant> update(@PathVariable Long id, @RequestBody Appr
     Apprenant updated = apprenantService.update(existing);
     return ResponseEntity.ok(updated);
 }
+@PostMapping("/reset-password")
+public ResponseEntity<String> resetApprenantPassword(@RequestBody Map<String, String> payload) {
+    String email = payload.get("email");
+    String newPassword = payload.get("newPassword");
+
+    Optional<Apprenant> apprenantOpt = apprenantService.findByEmail(email); 
+    if (apprenantOpt.isPresent()) {
+        Apprenant apprenant = apprenantOpt.get();
+        apprenant.setPassword(apprenantService.encodePassword(newPassword)); // méthode à créer
+        apprenantService.savee(apprenant);
+        return ResponseEntity.ok("🔐 Mot de passe apprenant mis à jour avec succès.");
+    }
+
+    return ResponseEntity.status(404).body("❌ Apprenant introuvable avec cet email.");
+}
+
 }

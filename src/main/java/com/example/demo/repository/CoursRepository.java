@@ -22,19 +22,21 @@ List<CoursProjection> findCoursSansProjet(@Param("projetId") Long projetId);
 
 
 @Query("""
-    SELECT c.id AS id, c.titre AS titre, c.description AS description, 
-           c.tempsEstimer AS tempsEstimer, c.projet.nom AS projetNom
+    SELECT c.id as id, c.titre as titre, c.description as description, 
+           c.tempsEstimer as tempsEstimer, c.projet.nom as projetNom
     FROM Cours c
     WHERE c.projet.departement.id = :departementId
-    AND c.id NOT IN (
-        SELECT DISTINCT s.chapitre.cours.id
-        FROM EtatSection es
-        JOIN es.section s
-        WHERE es.apprenant.id = :apprenantId AND es.etat = true
-    )
+      AND c.projet.manager.id = (
+          SELECT a.manager.id FROM Apprenant a WHERE a.id = :apprenantId
+      )
+      AND c.id NOT IN (
+          SELECT DISTINCT s.chapitre.cours.id
+          FROM EtatSection es
+          JOIN es.section s
+          WHERE es.apprenant.id = :apprenantId AND es.etat = true
+      )
 """)
-List<CoursProjection> findCoursNonConsultesByApprenant(Long apprenantId, Long departementId); 
-
+List<CoursProjection> findCoursNonConsultesByApprenant(@Param("apprenantId") Long apprenantId, @Param("departementId") Long departementId);
 
 
 
@@ -69,6 +71,7 @@ List<Cours> findCoursTerminesParApprenant(@Param("apprenantId") Long apprenantId
 """)
 List<Cours> findCoursTermines(@Param("apprenantId") Long apprenantId);
 
+
 @Query("""
     SELECT DISTINCT new com.example.demo.entity.CoursDTO(
         c.id, c.titre, c.description, c.tempsEstimer, c.projet.id, c.projet.nom
@@ -77,8 +80,22 @@ List<Cours> findCoursTermines(@Param("apprenantId") Long apprenantId);
     JOIN c.chapitres ch
     JOIN ch.sections s
     JOIN EtatSection es ON es.section.id = s.id
-    WHERE es.apprenant.id = :apprenantId AND es.etat = true
+    WHERE es.apprenant.id = :apprenantId
+      AND es.etat = true
+      AND c.projet.manager.id = (
+          SELECT a.manager.id FROM Apprenant a WHERE a.id = :apprenantId
+      )
 """)
 List<CoursDTO> findCoursConsultesParApprenant(@Param("apprenantId") Long apprenantId);
+// affichage des noms de projets
+@Query("""
+    SELECT DISTINCT c.projet.nom
+    FROM Cours c
+    WHERE c.projet.manager.id = (
+        SELECT a.manager.id FROM Apprenant a WHERE a.id = :apprenantId
+    )
+""")
+List<String> findProjectNamesByApprenantManager(@Param("apprenantId") Long apprenantId);
 
 }
+

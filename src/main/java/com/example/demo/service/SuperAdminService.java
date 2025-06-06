@@ -32,6 +32,9 @@ public class SuperAdminService {
     public Optional<SuperAdmin> findById(Long id) {
         return superAdminRepository.findById(id);
     }
+public Optional<SuperAdmin> findByEmail(String email) {
+    return superAdminRepository.findByEmailIgnoreCase(email);
+}
 
     public void delete(Long id) {
         superAdminRepository.deleteById(id);

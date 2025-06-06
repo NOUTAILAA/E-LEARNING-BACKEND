@@ -37,7 +37,7 @@ public class AdminController {
     }
     @GetMapping("/email")
     public Admin getByEmail(@RequestParam String email) {
-        return adminRepository.findByEmail(email).orElse(null);
+        return adminRepository.findByEmailIgnoreCase(email).orElse(null);
     }
     @GetMapping("/{id}")
     public ResponseEntity<Admin> getById(@PathVariable Long id) {
