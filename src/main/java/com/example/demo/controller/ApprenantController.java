@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.dto.ApprenantRequestDTO;
 import com.example.demo.entity.Apprenant;
+import com.example.demo.entity.ApprenantDTO;
 import com.example.demo.entity.ApprenantRequesttDTO;
 import com.example.demo.entity.Departement;
 import com.example.demo.service.ApprenantService;
@@ -57,11 +59,31 @@ public class ApprenantController {
     }
 
     // Récupérer un apprenant par ID
-    @GetMapping("/{id}")
-    public ResponseEntity<Apprenant> getById(@PathVariable Long id) {
-        Optional<Apprenant> apprenant = apprenantService.findById(id);
-        return apprenant.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
-    }
+@GetMapping("/{id}")
+public ResponseEntity<ApprenantDTO> getById(@PathVariable Long id) {
+    Optional<Apprenant> optional = apprenantService.findById(id);
+    if (optional.isEmpty()) return ResponseEntity.notFound().build();
+
+    Apprenant apprenant = optional.get();
+
+    ApprenantDTO dto = new ApprenantDTO();
+    dto.setId(apprenant.getId());
+    dto.setNom(apprenant.getNom());
+    dto.setPrenom(apprenant.getPrenom());
+    dto.setEmail(apprenant.getEmail());
+    dto.setTelephone(apprenant.getTelephone());
+    dto.setSexe(apprenant.getSexe());
+    dto.setDateNaissance(new SimpleDateFormat("yyyy-MM-dd").format(apprenant.getDateNaissance()));
+
+    if (apprenant.getDepartement() != null)
+        dto.setDepartementId(apprenant.getDepartement().getId());
+
+    if (apprenant.getManager() != null)
+        dto.setManagerId(apprenant.getManager().getId());
+
+    return ResponseEntity.ok(dto);
+}
+
 
     // Supprimer un apprenant par ID
     @DeleteMapping("/{id}")
@@ -151,6 +173,42 @@ public ResponseEntity<String> resetApprenantPassword(@RequestBody Map<String, St
     }
 
     return ResponseEntity.status(404).body("❌ Apprenant introuvable avec cet email.");
+}
+@PostMapping("/create-with-manager")
+public ResponseEntity<?> createApprenantWithManager(@RequestBody ApprenantRequesttDTO dto) {
+    Apprenant apprenant = new Apprenant();
+    apprenant.setNom(dto.getNom());
+    apprenant.setPrenom(dto.getPrenom());
+    apprenant.setSexe(dto.getSexe());
+    apprenant.setTelephone(dto.getTelephone());
+    apprenant.setEmail(dto.getEmail());
+
+    try {
+        LocalDate localDate = LocalDate.parse(dto.getDateNaissance());
+        Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+        apprenant.setDateNaissance(date);
+    } catch (Exception e) {
+        return ResponseEntity.badRequest().body("❌ Format de date invalide.");
+    }
+
+    // 🔗 Associer le département
+    if (dto.getDepartementId() != null) {
+        Departement departement = new Departement();
+        departement.setId(dto.getDepartementId());
+        apprenant.setDepartement(departement);
+    }
+
+    // 🔗 Associer le manager
+    if (dto.getManagerId() != null) {
+        com.example.demo.entity.Manager manager = new com.example.demo.entity.Manager();
+        manager.setId(dto.getManagerId());
+        apprenant.setManager(manager);
+    } else {
+        return ResponseEntity.badRequest().body("❌ ManagerId est requis.");
+    }
+
+    Apprenant saved = apprenantService.save(apprenant); // génère mdp, envoie mail
+    return ResponseEntity.ok(saved);
 }
 
 }
