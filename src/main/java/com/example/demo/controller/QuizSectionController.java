@@ -47,8 +47,10 @@ public ResponseEntity<QuizSection> updateQuiz(@PathVariable Long id, @RequestBod
         quizSectionService.deleteQuiz(id);
     }
 
-    @GetMapping("/{id}")
-    public QuizSection getQuizById(@PathVariable Long id) {
-        return quizSectionService.getQuizById(id);
-    }
+   @GetMapping("/{id}")
+public QuizSectionDTO getQuizById(@PathVariable Long id) {
+    QuizSection quiz = quizSectionService.getQuizById(id);
+    return new QuizSectionDTO(quiz.getId(), quiz.getQuestion(), quiz.getSection().getId());
+}
+
 }
