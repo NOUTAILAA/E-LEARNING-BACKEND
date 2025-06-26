@@ -2,6 +2,7 @@ package com.example.demo.entity;
 
 import jakarta.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Section {
@@ -27,8 +28,19 @@ public class Section {
     @ManyToOne
     @JoinColumn(name = "chapitre_id")
     private Chapitre chapitre;
+        // ====== Getters & Setters ======
 
-    // ====== Getters & Setters ======
+@OneToMany(mappedBy = "section", cascade = CascadeType.ALL, orphanRemoval = true)
+private List<QuizSection> quizSections;
+
+public List<QuizSection> getQuizSections() {
+    return quizSections;
+}
+
+public void setQuizSections(List<QuizSection> quizSections) {
+    this.quizSections = quizSections;
+}
+
     public Long getId() {
         return id;
     }

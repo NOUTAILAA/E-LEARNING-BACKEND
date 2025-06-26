@@ -16,7 +16,7 @@ public class QuizSection {
 
     @ManyToOne
     @JoinColumn(name = "section_id")
-        @JsonIgnore
+    @JsonIgnore
 
     private Section section;
 
