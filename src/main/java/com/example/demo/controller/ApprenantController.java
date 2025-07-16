@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.dto.ApprenantRequestDTO;
 import com.example.demo.entity.Apprenant;
-import com.example.demo.entity.ApprenantDTO;
+import com.example.demo.entity.ApprenantDTOO;
 import com.example.demo.entity.ApprenantRequesttDTO;
 import com.example.demo.entity.Departement;
 import com.example.demo.service.ApprenantService;
@@ -60,13 +60,13 @@ public class ApprenantController {
 
     // Récupérer un apprenant par ID
 @GetMapping("/{id}")
-public ResponseEntity<ApprenantDTO> getById(@PathVariable Long id) {
+public ResponseEntity<ApprenantDTOO> getById(@PathVariable Long id) {
     Optional<Apprenant> optional = apprenantService.findById(id);
     if (optional.isEmpty()) return ResponseEntity.notFound().build();
 
     Apprenant apprenant = optional.get();
 
-    ApprenantDTO dto = new ApprenantDTO();
+    ApprenantDTOO dto = new ApprenantDTOO();
     dto.setId(apprenant.getId());
     dto.setNom(apprenant.getNom());
     dto.setPrenom(apprenant.getPrenom());
@@ -77,6 +77,10 @@ public ResponseEntity<ApprenantDTO> getById(@PathVariable Long id) {
 
     if (apprenant.getDepartement() != null)
         dto.setDepartementId(apprenant.getDepartement().getId());
+    if (apprenant.getDepartement() != null) {
+        dto.setDepartementId(apprenant.getDepartement().getId());
+        dto.setDepartementNom(apprenant.getDepartement().getNom());
+    }
 
     if (apprenant.getManager() != null)
         dto.setManagerId(apprenant.getManager().getId());
